@@ -191,6 +191,7 @@ function loadPage(pageName, sectionId) {
         
         if (pageName === 'home') {
             initSubscribeForm(appContainer);
+            loadLatestYouTubeVideo(appContainer);
         }
 
         // Re-init modals
@@ -302,6 +303,44 @@ function initSubscribeForm(context) {
             }, 1200);
         });
     }
+}
+
+function loadLatestYouTubeVideo(context) {
+    const container = context.querySelector('#dynamic-yt-container');
+    if (!container) return;
+
+    const channelId = 'UC510n17nJ6J-6x8p4R8971g';
+    const rssUrl = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`);
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'ok' && data.items.length > 0) {
+                const latestVideo = data.items[0];
+                const videoUrl = latestVideo.link;
+                const videoId = getYouTubeID(videoUrl);
+                
+                if (videoId) {
+                    container.innerHTML = `
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/${videoId}"
+                            title="${latestVideo.title}"
+                            style="border:none; border-radius:8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    `;
+                } else {
+                    container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">Could not parse latest video.</p>';
+                }
+            } else {
+                container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">Unable to load latest video at this time.</p>';
+            }
+        })
+        .catch(err => {
+            console.error('Error fetching YouTube RSS:', err);
+            container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">Unable to load latest video at this time.</p>';
+        });
 }
 
 // Navigation State Management
