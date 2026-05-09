@@ -1,1 +1,1266 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora Ngin - Portfolio</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Transition handling */
+        #app-container {
+            transition: opacity 0.2s ease-in-out;
+            opacity: 1;
+            min-height: 80vh;
+        }
+
+        .fading {
+            opacity: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-content">
+            <a href="?page=home" onclick="event.preventDefault(); loadPage('home');" class="logo-link">
+                <img src="images/logo.png" alt="Sora Ngin Logo" class="logo-img">
+                <span class="logo-text">Sora Ngin</span>
+            </a>
+
+            <div class="header-right-group">
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="mobile-nav-container">
+                    <!-- Clean row of social media icons -->
+                    <div class="header-social-links">
+                        <a href="https://www.youtube.com/@SoraNgin" target="_blank" title="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/SoraEntertainment" target="_blank" title="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@sorangin" target="_blank" title="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/sorangin" target="_blank" title="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.subscribestar.com/sorangin" target="_blank" title="Patreon"><i
+                                class="fab fa-patreon"></i></a>
+                    </div>
+
+                    <nav class="main-nav">
+                        <div class="nav-item has-dropdown">
+                            <a href="?page=animations" onclick="event.preventDefault(); loadPage('animations');"
+                                class="nav-link">Animations <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?page=animations-stick"
+                                        onclick="event.preventDefault(); loadPage('animations-stick');">Stick
+                                        Animations</a></li>
+                                <li><a href="?page=animations-costco"
+                                        onclick="event.preventDefault(); loadPage('animations-costco');">Costco
+                                        Series</a></li>
+                                <li><a href="?page=animations-2d"
+                                        onclick="event.preventDefault(); loadPage('animations-2d');">2D Animations</a>
+                                </li>
+                                <li><a href="?page=animations-misc"
+                                        onclick="event.preventDefault(); loadPage('animations-misc');">Misc</a></li>
+                            </ul>
+                        </div>
+                        <a href="?page=games" onclick="event.preventDefault(); loadPage('games');">Games</a>
+                        <div class="nav-item has-dropdown">
+                            <a href="?page=art-illustrations"
+                                onclick="event.preventDefault(); loadPage('art-illustrations');" class="nav-link">Art <i
+                                    class="fas fa-chevron-down dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?page=art-illustrations"
+                                        onclick="event.preventDefault(); loadPage('art-illustrations');">Illustrations</a>
+                                </li>
+                                <li><a href="?page=art-sketches"
+                                        onclick="event.preventDefault(); loadPage('art-sketches');">Sketches</a></li>
+                                <li><a href="?page=art-drawlloween-2022"
+                                        onclick="event.preventDefault(); loadPage('art-drawlloween-2022');">Drawlloween
+                                        2022</a></li>
+                                <li><a href="?page=art-inktober-2017"
+                                        onclick="event.preventDefault(); loadPage('art-inktober-2017');">Inktober
+                                        2017</a>
+                                </li>
+                                <li><a href="?page=art-inktober-2018"
+                                        onclick="event.preventDefault(); loadPage('art-inktober-2018');">Inktober
+                                        2018</a>
+                                </li>
+                                <li><a href="?page=art-reddit-gets-drawn"
+                                        onclick="event.preventDefault(); loadPage('art-reddit-gets-drawn');">RedditGetsDrawn</a>
+                                </li>
+                                <li><a href="?page=art-pixel-art"
+                                        onclick="event.preventDefault(); loadPage('art-pixel-art');">Pixel Art</a></li>
+                            </ul>
+                        </div>
+                        <a href="?page=comics" onclick="event.preventDefault(); loadPage('comics');">Comics</a>
+                        <a href="?page=about" onclick="event.preventDefault(); loadPage('about');">About</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-container" class="content-area">
+        <!-- SPA Content Injected Here -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer portfolio-footer" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Sora Ngin Logo" class="footer-logo-img">
+                <span class="logo-text">Sora Ngin</span>
+            </div>
+
+            <div class="footer-copyright" style="flex-basis: 100%; text-align: center; margin-top: 1rem;">
+                <p>© <span id="current-year"></span> Sora Ngin. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close video">&times;</button>
+            <div class="video-responsive">
+                <div id="player"></div> <!-- YouTube API will replace this -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Images -->
+    <div id="image-lightbox" class="modal-overlay">
+        <div class="modal-container image-modal-container gallery-mode">
+            <button class="modal-close" aria-label="Close image">&times;</button>
+
+            <div class="lightbox-main">
+                <button class="lightbox-nav-btn prev-btn" aria-label="Previous"><i
+                        class="fas fa-chevron-left"></i></button>
+                <div class="lightbox-image-wrapper">
+                    <img id="lightbox-img" src="" alt="Full view">
+                </div>
+                <button class="lightbox-nav-btn next-btn" aria-label="Next"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div id="lightbox-thumbnails" class="lightbox-thumbnails">
+                <!-- Thumbnails injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ALL PAGE TEMPLATES (SPA) -->
+    <!-- ====================================================== -->
+
+    <!-- HOME TEMPLATE -->
+    <template id="tpl-home">
+        <!-- 1. NEWEST WORK -->
+        <section id="newest" class="portfolio-section" style="padding-top: 0;">
+            <a href="https://www.youtube.com/@SoraNgin" target="_blank" class="section-title-link">
+                <h2 class="section-title" style="margin-bottom: 1.5rem;">Newest</h2>
+            </a>
+            <div class="yt-feed-container">
+                <iframe
+                    src="https://www.youtube.com/embed/videoseries?list=UU_EY0v8qbaEBTzYNNxC9qkQ"
+                    title="Latest YouTube Videos"
+                    style="border:none; border-radius:8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- 2. ANIMATION -->
+        <section id="animation" class="portfolio-section">
+            <a href="?page=animations" onclick="event.preventDefault(); loadPage('animations');"
+                class="section-title-link">
+                <h2 class="section-title">Animations</h2>
+            </a>
+            <div class="portfolio-grid">
+                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/embed/5ljmrYM_QV0">
+                    <div class="card-image-container">
+                        <img src="images/yoinktheking_anim.gif" alt="Yoink the King Animation" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">A Time To Kill</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card video-trigger"
+                    data-video="https://www.youtube.com/watch?v=8Ros9ZS53ls">
+                    <div class="card-image-container">
+                        <img src="images/frostfire_anim.gif" alt="Frostfire Magic Effects" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Sora's StickToons - Season 1</h3>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                    <div class="card-image-container">
+                        <img src="images/knights_gambit_anim.gif" alt="Knight's Gambit Gameplay"
+                            class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Sora's StickToons - Season 2</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. GAMES -->
+        <section id="games" class="portfolio-section">
+            <a href="?page=games" onclick="event.preventDefault(); loadPage('games');" class="section-title-link">
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">Games</h2>
+            </a>
+            <div class="portfolio-grid">
+                <a href="KnightsGambit/index.html" class="portfolio-card">
+                    <div class="card-image-container">
+                        <img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit"
+                            class="portfolio-image" data-static-src="images/knights_vs_goblins_screenshot.png"
+                            data-gif-src="images/knights_gambit_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Knight's Gambit</h3>
+                    </div>
+                </a>
+
+                <a href="KingsfallChess" class="portfolio-card">
+                    <div class="card-image-container">
+                        <img src="images/chess_screenshot.jpg" alt="Kingsfall Chess" class="portfolio-image"
+                            data-static-src="images/chess_screenshot.jpg" data-gif-src="images/chess_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Kingsfall Chess</h3>
+                    </div>
+                </a>
+
+                <a href="tcg.html" class="portfolio-card">
+                    <div class="card-image-container">
+                        <img src="images/tcg_screenshot.png" alt="Risen Realms" class="portfolio-image"
+                            data-static-src="images/tcg_screenshot.png" data-gif-src="images/tcg_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Risen Realms</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. ILLUSTRATIONS -->
+        <section id="illustrations" class="portfolio-section">
+            <a href="?page=illustrations" onclick="event.preventDefault(); loadPage('illustrations');"
+                class="section-title-link">
+                <h2 class="section-title">Illustrations & Concepts</h2>
+            </a>
+            <div class="portfolio-grid">
+                <a href="images/ashesofveridian.jpg" class="portfolio-card lightbox-trigger">
+                    <div class="card-image-container">
+                        <img src="images/ashesofveridian.jpg" alt="Ashes of Veridian Concept" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Ashes of Veridian</h3>
+                    </div>
+                </a>
+
+                <a href="images/thereturn.jpg" class="portfolio-card lightbox-trigger">
+                    <div class="card-image-container">
+                        <img src="images/thereturn.jpg" alt="The Return Concept" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">The Return Concept</h3>
+                    </div>
+                </a>
+
+                <a href="images/ninjaarena.jpg" class="portfolio-card lightbox-trigger">
+                    <div class="card-image-container">
+                        <img src="images/ninjaarena.jpg" alt="Ninja Arena Character Select" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Stick Ninja Roster</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 5. COMICS -->
+        <section id="comics" class="portfolio-section">
+            <a href="?page=comics" onclick="event.preventDefault(); loadPage('comics');" class="section-title-link">
+                <h2 class="section-title">Comics</h2>
+            </a>
+            <div class="portfolio-grid">
+                <a href="images/smallworld1.jpg" class="portfolio-card lightbox-trigger">
+                    <div class="card-image-container">
+                        <img src="images/smallworld1.jpg" alt="Comic Preview 1" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">The Orientation</h3>
+                    </div>
+                </a>
+
+                <a href="images/smallworld2.jpg" class="portfolio-card lightbox-trigger">
+                    <div class="card-image-container">
+                        <img src="images/smallworld2.jpg" alt="Comic Preview 2" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Customer Service</h3>
+                    </div>
+                </a>
+
+                <a href="images/ninjaarena.jpg" class="portfolio-card lightbox-trigger">
+                    <div class="card-image-container">
+                        <img src="images/ninjaarena.jpg" alt="Comic Preview 3" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">The Encounter</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 6. SUPPORT & SUBSCRIBE SECTION -->
+        <section id="support-subscribe" class="support-subscribe-section">
+            <div class="support-subscribe-container">
+                <!-- Donate Part -->
+                <div class="support-box donate-box text-center">
+                    <div class="support-info">
+                        <h2 class="support-title">Support My Work</h2>
+                        <p class="support-desc">If you enjoy my games and animations, consider supporting my creative
+                            journey. Every contribution helps!</p>
+                    </div>
+                    <div class="support-action">
+                        <a href="https://www.paypal.com/donate/?cmd=_donations&business=Sorangin%40gmail.com"
+                            target="_blank" rel="noopener noreferrer" class="custom-donate-btn">
+                            <img src="images/donate.png" alt="Donate via PayPal" class="donate-img-btn">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Subscribe Part -->
+                <div class="support-box subscribe-box">
+                    <div class="support-info">
+                        <h2 class="support-title">Stay Updated</h2>
+                        <p class="support-desc">Join the newsletter to get notified about new game releases and
+                            animation premieres.</p>
+                    </div>
+                    <form id="subscribe-form" class="subscribe-form">
+                        <div class="input-group">
+                            <input type="email" id="subscriber-email" placeholder="Enter your email" required>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </div>
+                        <p id="subscribe-message" class="subscribe-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ANIMATIONS HUB TEMPLATE -->
+    <template id="tpl-animations">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            My Animations</h1>
+
+        <div class="animations-section-grid">
+            <!-- 1. STICK ANIMATIONS -->
+            <a href="?page=animations-stick" onclick="event.preventDefault(); loadPage('animations-stick');"
+                class="portfolio-section category-card">
+                <h2 class="section-title">Stick Animations</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="card-image-container">
+                            <img src="images/ninjaarena.jpg" alt="Stick Animations" class="portfolio-image">
+                            <div class="image-overlay"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 2. COSTCO SERIES -->
+            <a href="?page=animations-costco" onclick="event.preventDefault(); loadPage('animations-costco');"
+                class="portfolio-section category-card">
+                <h2 class="section-title">Costco Series</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card empty-card">
+                        <div class="card-content text-center"
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                            <i class="fas fa-shopping-cart"
+                                style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
+                            <h3 class="portfolio-title">View Episodes</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 3. 2D ANIMATIONS -->
+            <a href="?page=animations-2d" onclick="event.preventDefault(); loadPage('animations-2d');"
+                class="portfolio-section category-card">
+                <h2 class="section-title">2D Animations</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="card-image-container">
+                            <img src="images/yoinktheking_anim.gif" alt="2D Animations" class="portfolio-image">
+                            <div class="image-overlay"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 4. MISC -->
+            </p>
+        </div>
+        </div>
+        </div>
+        </section>
+        </div>
+    </template>
+
+    <!-- GAMES LIBRARY TEMPLATE -->
+    <template id="tpl-games">
+        <section id="main-games" class="game-section featured-games">
+            <h2 class="section-title">Featured Creations</h2>
+            <div class="game-grid">
+                <a href="rota" class="game-card" data-tags="Survival, Arcade">
+                    <div class="card-image-container">
+                        <img src="images/rota_screenshot.png" alt="Revenge of the Ants" class="game-image"
+                            data-static-src="images/rota_screenshot.png" data-gif-src="images/rota_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Revenge of the Ants</h3>
+                        <p class="game-description">Giant ants are out for revenge! Defend your kingdom as a valiant
+                            knight.</p>
+                    </div>
+                </a>
+                <a href="KnightsGambit/index.html" class="game-card" data-tags="Strategy, Turn-Based">
+                    <div class="card-image-container">
+                        <img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit" class="game-image"
+                            data-static-src="images/knights_vs_goblins_screenshot.png"
+                            data-gif-src="images/knights_gambit_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Knight's Gambit</h3>
+                        <p class="game-description">Outmaneuver goblin hordes on a perilous battlefield.</p>
+                    </div>
+                </a>
+                <a href="KingsfallChess" class="game-card" data-tags="Strategy, Chess">
+                    <div class="card-image-container">
+                        <img src="images/chess_screenshot.jpg" alt="Kingsfall Chess" class="game-image"
+                            data-static-src="images/chess_screenshot.jpg" data-gif-src="images/chess_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Kingsfall Chess</h3>
+                        <p class="game-description">A unique twist on classic chess with unique art and challenging AI
+                            opponents.</p>
+                    </div>
+                </a>
+                <a href="tcg.html" class="game-card" data-tags="Card Game, Strategy">
+                    <div class="card-image-container">
+                        <img src="images/tcg_screenshot.png" alt="Risen Realms" class="game-image"
+                            data-static-src="images/tcg_screenshot.png" data-gif-src="images/tcg_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Risen Realms</h3>
+                        <p class="game-description">Build powerful decks and battle opponents in this strategic trading
+                            card game.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="in-development" class="game-section development-games">
+            <h2 class="section-title">Upcoming Adventures</h2>
+            <div class="game-grid">
+                <a href="?page=yoink-the-king" onclick="event.preventDefault(); loadPage('yoink-the-king');"
+                    class="game-card">
+                    <div class="card-image-container">
+                        <img src="images/yoinktheking_anim.gif" alt="Yoink the King" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Yoink the King [2018]</h3>
+                        <p class="game-description">Arrows, swords, and kidnapped kings... Outsmart your opponents!</p>
+                    </div>
+                </a>
+                <a href="?page=frostfire" onclick="event.preventDefault(); loadPage('frostfire');" class="game-card">
+                    <div class="card-image-container">
+                        <img src="images/frostfire_anim.gif" alt="Frostfire" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Frostfire [2010]</h3>
+                        <p class="game-description">Harness frost powers to stop the malevolent Fire Wizards.</p>
+                    </div>
+                </a>
+                <a href="?page=small-world" onclick="event.preventDefault(); loadPage('small-world');"
+                    class="game-card">
+                    <div class="card-image-container">
+                        <img src="images/smallworld.jpg" alt="Small World" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Small World [2010]</h3>
+                        <p class="game-description">Six heroes must unite and shatter the iron-fisted grip of the
+                            overlords.</p>
+                    </div>
+                </a>
+                <a href="?page=the-return" onclick="event.preventDefault(); loadPage('the-return');" class="game-card">
+                    <div class="card-image-container">
+                        <img src="images/thereturn.jpg" alt="The Return" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">The Return [2010]</h3>
+                        <p class="game-description">Risen from the grave, Gregory must navigate a dangerous world.</p>
+                    </div>
+                </a>
+                <a href="?page=ashes-of-veridian" onclick="event.preventDefault(); loadPage('ashes-of-veridian');"
+                    class="game-card">
+                    <div class="card-image-container">
+                        <img src="images/ashesofveridian.jpg" alt="Ashes of Veridian" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Ashes of Veridian [2010]</h3>
+                        <p class="game-description">Journey through shadows in this isometric action RPG.</p>
+                    </div>
+                </a>
+                <a href="?page=ninja-arena" onclick="event.preventDefault(); loadPage('ninja-arena');"
+                    class="game-card">
+                    <div class="card-image-container">
+                        <img src="images/ninjaarena.jpg" alt="Ninja Arena" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Stick Ninja Showdown! [2011]</h3>
+                        <p class="game-description">Step into the ninja arena as one of many charming stick figure
+                            ninjas!</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="prototypes" class="game-section prototype-section">
+            <h2 class="section-title">Prototypes & Experiments</h2>
+            <div class="game-grid">
+                <a href="experiments/MedievalMath.html" class="game-card prototype-card">
+                    <div class="card-image-container">
+                        <img src="images/medieval_math_screenshot.jpg" alt="Medieval Math" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Medieval Math</h3>
+                    </div>
+                </a>
+                <a href="experiments/ASCII.html" class="game-card prototype-card">
+                    <div class="card-image-container">
+                        <img src="images/ascii_screenshot.jpg" alt="ASCII Adventure" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">ASCII Adventure</h3>
+                    </div>
+                </a>
+                <a href="experiments/ColorCascade.html" class="game-card prototype-card">
+                    <div class="card-image-container">
+                        <img src="images/color_cascade_screenshot.jpg" alt="Color Cascade" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Color Cascade</h3>
+                    </div>
+                </a>
+                <a href="experiments/GoblinSiegeDefense.html" class="game-card prototype-card">
+                    <div class="card-image-container">
+                        <img src="images/goblin_siege_defense_screenshot.jpg" alt="Goblin Siege Defense"
+                            class="game-image">
+                        <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Goblin Siege Defense</h3>
+                    </div>
+                </a>
+                <a href="experiments/GoblinTypingInvasion.html" class="game-card prototype-card">
+                    <div class="card-image-container">
+                        <img src="images/typing_invasion_screenshot.jpg" alt="Typing Knight" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Typing Knight</h3>
+                    </div>
+                </a>
+                <a href="experiments/PyroKnightDash.html" class="game-card prototype-card">
+                    <div class="card-image-container">
+                        <img src="images/pyro_knight_dash_screenshot.jpg" alt="Pyro Knight Dash" class="game-image">
+                        <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Pyro Knight Dash</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </template>
+
+    <!-- GAME TEMPLATE: YOINK -->
+    <template id="tpl-yoink-the-king">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Yoink the King <span class="release-year">[2018]</span></h1>
+                <p class="game-status"><i class="fas fa-cogs"></i> In Development</p>
+                <div class="game-detail-tags">
+                    <span class="tag">Strategy</span>
+                    <span class="tag">Multiplayer</span>
+                    <span class="tag">Action</span>
+                    <span class="tag tag-dev">Humor</span>
+                </div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/5ljmrYM_QV0" title="YouTube video player" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Arrows, swords, and kidnapped kings... Dive into a hilariously chaotic strategy game where you
+                    control a swordsman and archer to outsmart opponents online or against the computer. Sneak through
+                    enemy bases by land, air, or underground to capture their king!</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Screenshots & Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/yoinktheking_anim.gif" alt="Yoink the King 1">
+                    <img src="images/yoink_gameplay_mockup_1.png" alt="Yoink the King - Gameplay Mockup">
+                    <img src="images/yoink_character_design.png" alt="Yoink the King - Character Designs">
+                    <img src="images/placeholder_screenshot.png" alt="Yoink the King - Placeholder">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features (Planned)</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Hilarious & Chaotic Strategy Gameplay</li>
+                    <li><i class="fas fa-check"></i> Online Multiplayer & Challenging AI</li>
+                    <li><i class="fas fa-check"></i> Simultaneous Control of Swordsman & Archer</li>
+                    <li><i class="fas fa-check"></i> Multiple Infiltration Routes (Land, Air, Underground)</li>
+                    <li><i class="fas fa-check"></i> Capture-the-Flag Style Objective (Yoink the King!)</li>
+                    <li><i class="fas fa-check"></i> Unique Art Style & Animations</li>
+                    <li><i class="fas fa-check"></i> Environmental Interaction</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Download</h2>
+                <p>
+                    <a href="https://drive.google.com/drive/folders/1cqYEcw-YmphrO6LQfPUDJ4Ub860ZAYYW?usp=drive_link"
+                        class="cta-button" title="Download Demo" target="_blank" rel="noopener noreferrer">
+                        Download Demo <i class="fas fa-download"></i>
+                    </a>
+                </p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+    </template>
+
+    <!-- GAME TEMPLATE: FROSTFIRE -->
+    <template id="tpl-frostfire">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Frostfire <span class="release-year">[2010]</span></h1>
+                <p class="game-status"><i class="fas fa-cogs"></i> In Development</p>
+            </header>
+            <section class="game-trailer">
+                <div class="image-placeholder"><img src="images/frostfire0.jpg" alt="Frostfire Screenshot"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>In a world ravaged by a fiery invasion, Roman the Wizard must harness his frost powers to stop the
+                    malevolent Fire Wizards from uniting a world-ending orb.</p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+    </template>
+
+    <!-- GAME TEMPLATE: SMALL WORLD -->
+    <template id="tpl-small-world">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Small World <span class="release-year">[2010]</span></h1>
+                <p class="game-status"><i class="fas fa-cogs"></i> In Development</p>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/smallworld.jpg" alt="Small World"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Six heroes, each wielding distinct talents, must unite and shatter the iron-fisted grip of the
+                    overlords.</p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+    </template>
+
+    <!-- GAME TEMPLATE: THE RETURN -->
+    <template id="tpl-the-return">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>The Return <span class="release-year">[2010]</span></h1>
+                <p class="game-status"><i class="fas fa-cogs"></i> In Development</p>
+                <div class="game-detail-tags"><span class="tag">Adventure</span><span
+                        class="tag">Story-Driven</span><span class="tag tag-dev">Atmospheric</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"> <img src="images/thereturn.jpg" alt="The Return"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Risen from the grave with no memory but the pull of an eerie voice, Gregory must navigate a dangerous
+                    world shrouded in mystery and follow the haunting call to uncover his past.</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/return_environment_concept.png" alt="The Return - Environment Concept Art">
+                    <img src="images/return_character_sketch.png" alt="The Return - Character Sketch">
+                    <img src="images/placeholder_screenshot.png" alt="The Return - Placeholder 1">
+                    <img src="images/placeholder_screenshot.png" alt="The Return - Placeholder 2">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features (Planned)</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Compelling Character-Driven Narrative</li>
+                    <li><i class="fas fa-check"></i> Atmospheric and Evocative World Design</li>
+                    <li><i class="fas fa-check"></i> Exploration Focused Gameplay</li>
+                    <li><i class="fas fa-check"></i> Meaningful Dialogue and Player Choices</li>
+                    <li><i class="fas fa-check"></i> Uncover Lore Through Environmental Storytelling</li>
+                    <li><i class="fas fa-check"></i> Unique Soundtrack</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Get Involved / Download</h2>
+                <p>Development on 'The Return' has recently resumed. Follow along for updates.</p>
+                <a href="#" class="cta-button disabled" title="Demo not yet available">Download Demo (Coming Soon) <i
+                        class="fas fa-download"></i></a>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+    </template>
+
+    <!-- GAME TEMPLATE: ASHES OF VERIDIAN -->
+    <template id="tpl-ashes-of-veridian">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Ashes of Veridian <span class="release-year">[2010]</span></h1>
+                <p class="game-status"><i class="fas fa-cogs"></i> In Development</p>
+                <div class="game-detail-tags"><span class="tag">Action RPG</span><span class="tag">Isometric</span><span
+                        class="tag tag-dev">Post-Apocalyptic</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/ashesofveridian.jpg" alt="Ashes of Veridian"
+                        class="game-image"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Once a legendary king, now a broken prisoner on the brink of despair. When a mysterious demon offers
+                    a chance to bring his deceased wife back from the dead, Cedric finds a new will to live. Journey
+                    through shadows in this isometric action RPG, battling hordes of enemies and uncovering dark secrets
+                    as you follow the demon's cryptic guidance.</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/shattered_world_concept.png" alt="The Shattered - World Concept Art">
+                    <img src="images/shattered_ability_mockup.png" alt="The Shattered - Ability Mockup">
+                    <img src="images/shattered_creature_design.png" alt="The Shattered - Creature Design">
+                    <img src="images/placeholder_screenshot.png" alt="The Shattered - Placeholder">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features (Planned)</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Explore a Fragmented, Surreal World</li>
+                    <li><i class="fas fa-check"></i> Fast-Paced Combat with Reality-Bending Abilities</li>
+                    <li><i class="fas fa-check"></i> Deep Mystery and Lore</li>
+                    <li><i class="fas fa-check"></i> Unique Visual Style Depicting a Broken Reality</li>
+                    <li><i class="fas fa-check"></i> Character Progression and Customization</li>
+                    <li><i class="fas fa-check"></i> Challenging Puzzles Involving World Manipulation</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Get Involved / Download</h2>
+                <p>This project is ambitious and currently being prototyped. Follow development news!</p>
+                <a href="#" class="cta-button disabled" title="Demo not yet available">Download Demo (Coming Soon) <i
+                        class="fas fa-download"></i></a>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+    </template>
+
+    <!-- GAME TEMPLATE: NINJA ARENA -->
+    <template id="tpl-ninja-arena">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Stick Ninja Showdown! <span class="release-year">[2011]</span></h1>
+                <p class="game-status"><i class="fas fa-cogs"></i> In Development</p>
+                <div class="game-detail-tags"><span class="tag">Action</span><span class="tag">Fighting</span><span
+                        class="tag tag-dev">Multiplayer</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/ninjaarena.jpg" alt="Ninja Arena"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Step into the ninja arena as one of many charming stick figure ninjas! Choose from classes like
+                    archer, berserker, and wizard, master unique abilities and battle it out with up to 6 players in
+                    this platform fighting frenzy!</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/ninja_arena_char_concept.png" alt="Ninja Arena - Character Concepts">
+                    <img src="images/ninja_arena_stage_concept.png" alt="Ninja Arena - Arena Concept Art">
+                    <img src="images/ninja_arena_combat_mockup.png" alt="Ninja Arena - Combat Mockup">
+                    <img src="images/placeholder_screenshot.png" alt="Ninja Arena - Placeholder">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features (Planned)</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Fast-Paced, Acrobatic Ninja Combat</li>
+                    <li><i class="fas fa-check"></i> Roster of Unique Ninja Characters with Different Styles</li>
+                    <li><i class="fas fa-check"></i> Dynamic Arenas with Interactable Elements</li>
+                    <li><i class="fas fa-check"></i> Skill-Based Gameplay: Combos, Parries, Special Moves</li>
+                    <li><i class="fas fa-check"></i> Online & Local Multiplayer Modes</li>
+                    <li><i class="fas fa-check"></i> Ranking and Progression System</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Get Involved / Download</h2>
+                <p>Prototyping for 'Ninja Arena' is underway. Follow for development insights!</p>
+                <a href="#" class="cta-button disabled" title="Demo not yet available">Download Demo (Coming Soon) <i
+                        class="fas fa-download"></i></a>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+    </template>
+
+    <!-- ART: ILLUSTRATIONS -->
+    <template id="tpl-art-illustrations">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Illustrations</h1>
+        <div class="portfolio-grid">
+            <a href="images/ashesofveridian.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/ashesofveridian.jpg" alt="Illustration 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/ninjaarena.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/ninjaarena.jpg" alt="Illustration 2"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/smallworld.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld.jpg" alt="Illustration 3"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/thereturn.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/thereturn.jpg" alt="Illustration 4"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ART: SKETCHES -->
+    <template id="tpl-art-sketches">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Sketches</h1>
+        <div class="portfolio-grid">
+            <a href="images/smallworld1.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld1.jpg" alt="Sketch 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/smallworld2.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld2.jpg" alt="Sketch 2"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/smallworld3.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld3.jpg" alt="Sketch 3"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ART: DRAWLLOWEEN 2022 -->
+    <template id="tpl-art-drawlloween-2022">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Drawlloween 2022</h1>
+        <div class="portfolio-grid">
+            <a href="images/frostfire0.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/frostfire0.jpg" alt="Drawlloween 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/frostfire1.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/frostfire1.jpg" alt="Drawlloween 2"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ART: INKTOBER 2017 -->
+    <template id="tpl-art-inktober-2017">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Inktober 2017</h1>
+        <div class="portfolio-grid">
+            <a href="images/smallworld4.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld4.jpg" alt="Inktober 2017 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/smallworld5.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld5.jpg" alt="Inktober 2017 2"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ART: INKTOBER 2018 -->
+    <template id="tpl-art-inktober-2018">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Inktober 2018</h1>
+        <div class="portfolio-grid">
+            <a href="images/smallworld6.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld6.jpg" alt="Inktober 2018 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/smallworld7.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/smallworld7.jpg" alt="Inktober 2018 2"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ART: REDDIT GETS DRAWN -->
+    <template id="tpl-art-reddit-gets-drawn">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Reddit Gets Drawn</h1>
+        <div class="portfolio-grid">
+            <a href="images/frostfire4.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/frostfire4.jpg" alt="Reddit 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/frostfire5.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/frostfire5.jpg" alt="Reddit 2"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ART: PIXEL ART -->
+    <template id="tpl-art-pixel-art">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Pixel Art</h1>
+        <div class="portfolio-grid">
+            <a href="images/yoinktheking_anim.gif" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/yoinktheking_anim.gif" alt="Pixel Art 1"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/chess_anim.gif" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/chess_anim.gif" alt="Pixel Art 2"
+                        class="portfolio-image"></div>
+            </a>
+            <a href="images/knights_gambit_anim.gif" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="images/knights_gambit_anim.gif" alt="Pixel Art 3"
+                        class="portfolio-image"></div>
+            </a>
+        </div>
+    </template>
+
+    <!-- COMICS TEMPLATE -->
+    <template id="tpl-comics">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Comics</h1>
+
+        <div class="comics-container">
+            <!-- SERIES 1: THE WAREHOUSE CHRONICLES -->
+            <section class="comic-series">
+                <div class="series-header">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">The Warehouse Chronicles</h2>
+                    <span class="series-tag">New Series</span>
+                </div>
+
+                <div class="comic-feed">
+                    <a href="images/smallworld1.jpg" class="comic-card lightbox-trigger">
+                        <div class="comic-preview">
+                            <img src="images/smallworld1.jpg" alt="Warehouse Strip 1">
+                            <div class="comic-overlay">
+                                <span class="strip-num">#1</span>
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                        </div>
+                        <div class="comic-info">
+                            <h3>The Orientation</h3>
+                            <span class="comic-date">May 2026</span>
+                        </div>
+                    </a>
+                    <a href="images/smallworld2.jpg" class="comic-card lightbox-trigger">
+                        <div class="comic-preview">
+                            <img src="images/smallworld2.jpg" alt="Warehouse Strip 2">
+                            <div class="comic-overlay">
+                                <span class="strip-num">#2</span>
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                        </div>
+                        <div class="comic-info">
+                            <h3>Customer Service</h3>
+                            <span class="comic-date">June 2026</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SERIES 2: STICK BATTLES -->
+            <section class="comic-series">
+                <div class="series-header">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Stick Battles</h2>
+                </div>
+
+                <div class="comic-feed">
+                    <a href="images/ninjaarena.jpg" class="comic-card lightbox-trigger">
+                        <div class="comic-preview">
+                            <img src="images/ninjaarena.jpg" alt="Stick Battle 1">
+                            <div class="comic-overlay">
+                                <span class="strip-num">#1</span>
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                        </div>
+                        <div class="comic-info">
+                            <h3>The Encounter</h3>
+                            <span class="comic-date">July 2026</span>
+                        </div>
+                    </a>
+                    <a href="images/thereturn.jpg" class="comic-card lightbox-trigger">
+                        <div class="comic-preview">
+                            <img src="images/thereturn.jpg" alt="Stick Battle 2">
+                            <div class="comic-overlay">
+                                <span class="strip-num">#2</span>
+                                <i class="fas fa-expand-alt"></i>
+                            </div>
+                        </div>
+                        <div class="comic-info">
+                            <h3>Vengeance</h3>
+                            <span class="comic-date">Aug 2026</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SERIES 3: MISC SHORTS -->
+            <section class="comic-series">
+                <div class="series-header">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Misc Shorts</h2>
+                </div>
+
+                <div class="comic-grid">
+                    <a href="images/smallworld3.jpg" class="portfolio-card lightbox-trigger">
+                        <div class="card-image-container"><img src="images/smallworld3.jpg" alt="Misc Comic 1"
+                                class="portfolio-image"></div>
+                    </a>
+                    <a href="images/smallworld4.jpg" class="portfolio-card lightbox-trigger">
+                        <div class="card-image-container"><img src="images/smallworld4.jpg" alt="Misc Comic 2"
+                                class="portfolio-image"></div>
+                    </a>
+                    <a href="images/smallworld5.jpg" class="portfolio-card lightbox-trigger">
+                        <div class="card-image-container"><img src="images/smallworld5.jpg" alt="Misc Comic 3"
+                                class="portfolio-image"></div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </template>
+
+    <!-- ANIMATIONS: STICK -->
+    <template id="tpl-animations-stick">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Stick Animations</h1>
+        <div class="portfolio-grid">
+            <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=R7UON6Z_iRQ">
+                <div class="card-image-container">
+                    <img src="images/ninjaarena.jpg" alt="Stick Ninja Battle" class="portfolio-image">
+                    <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="portfolio-title">Stick Ninja Duel</h3>
+                </div>
+            </a>
+            <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=J_8S_h8l_7k">
+                <div class="card-image-container">
+                    <img src="images/ashesofveridian.jpg" alt="Ashes of Veridian" class="portfolio-image">
+                    <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="portfolio-title">Ashes of Veridian</h3>
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ANIMATIONS: COSTCO -->
+    <template id="tpl-animations-costco">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Costco Series</h1>
+        <div class="portfolio-grid">
+            <div class="portfolio-card empty-card">
+                <div class="card-content text-center"
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                    <i class="fas fa-shopping-cart"
+                        style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
+                    <h3 class="portfolio-title">Episode 1 Coming Soon</h3>
+                    <p class="portfolio-description" style="color: var(--text-muted);">Stay tuned for the premiere.</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- ANIMATIONS: 2D -->
+    <template id="tpl-animations-2d">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            2D Animations</h1>
+        <div class="portfolio-grid">
+            <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=5ljmrYM_QV0">
+                <div class="card-image-container">
+                    <img src="images/yoinktheking_anim.gif" alt="Yoink the King Animation" class="portfolio-image">
+                    <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="portfolio-title">Yoink the King Trailer</h3>
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ANIMATIONS: MISC -->
+    <template id="tpl-animations-misc">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
+            Misc Animations</h1>
+        <div class="portfolio-grid">
+            <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=J_8S_h8l_7k">
+                <div class="card-image-container">
+                    <img src="images/ashesofveridian.jpg" alt="Misc Animation 1" class="portfolio-image">
+                    <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="portfolio-title">Archived Project</h3>
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <!-- ABOUT TEMPLATE -->
+    <template id="tpl-about">
+        <section class="about-section portfolio-section">
+            <h1 class="hero-name"
+                style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">About Me</h1>
+
+            <div class="about-container">
+                <div class="about-image-column">
+                    <div class="about-avatar">
+                        <img src="images/logo.png" alt="Sora Ngin Profile Picture">
+                    </div>
+                    <div class="resume-download">
+                        <a href="resume.pdf" class="custom-donate-btn resume-btn" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fas fa-file-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-content-column">
+                    <h2>Hi, I'm Sora Ngin</h2>
+                    <p class="about-bio">I'm a passionate animator, game developer, and illustrator dedicated to
+                        bringing dynamic characters and stories to life. With a strong background in both 2D animation
+                        and interactive game design, I strive to create engaging experiences that blend exciting action
+                        with memorable artistry.</p>
+                    <p class="about-bio">Whether I'm animating stick-figure showdowns, designing intricate pixel art for
+                        retro-inspired RPGs, or creating detailed concept illustrations, my focus is always on
+                        delivering high-quality, entertaining content.</p>
+
+                    <div class="skills-container">
+                        <div class="skill-group">
+                            <h3><i class="fas fa-magic"></i> Animation & Art</h3>
+                            <ul>
+                                <li>2D Frame-by-Frame Animation</li>
+                                <li>Character Design & Concept Art</li>
+                                <li>Pixel Art & Sprite Creation</li>
+                                <li>Storyboarding</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h3><i class="fas fa-code"></i> Game Development</h3>
+                            <ul>
+                                <li>Game Design & Mechanics</li>
+                                <li>JavaScript / HTML5 / CSS</li>
+                                <li>C# & Unity</li>
+                                <li>UI/UX Design for Games</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
