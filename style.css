@@ -97,8 +97,8 @@ body {
 }
 
 .logo-img {
-    height: 40px;
-    margin-right: 10px;
+    height: 55px;
+    margin-right: 0;
 }
 
 .logo-text {
@@ -413,7 +413,7 @@ body {
     font-weight: 500;
     color: var(--text-color);
 }
-.footer-logo-img { height: 30px; margin-right: 8px; }
+
 
 .footer-info { text-align: left; font-size: 0.9rem; flex-grow: 1; }
 .footer-info p { margin-bottom: 5px; }
