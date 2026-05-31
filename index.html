@@ -46,7 +46,7 @@
                 <img src="images/logo.png" alt="Sora Ngin Logo" class="logo-img">
             </a>
 
-            <div class="header-right-group">
+            <div class="header-right-group" style="display: flex; align-items: center; gap: 1.5rem;">
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -117,6 +117,9 @@
                         <a href="?page=about" onclick="event.preventDefault(); loadPage('about');">About</a>
                     </nav>
                 </div>
+                <a href="#" class="custom-donate-btn donate-trigger" title="Support My Work" style="display: flex; align-items: center;">
+                    <img src="images/donate.png" alt="Donate Options" class="donate-img-btn" style="max-height: 65px; width: auto; transition: transform 0.3s ease;">
+                </a>
             </div>
         </div>
     </header>
@@ -126,12 +129,22 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer portfolio-footer" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
-        <div class="footer-content">
-
-
-            <div class="footer-copyright" style="flex-basis: 100%; text-align: center; margin-top: 1rem;">
-                <p>© <span id="current-year"></span> Sora Ngin. All Rights Reserved.</p>
+    <footer class="site-footer portfolio-footer" style="padding-top: 3rem; padding-bottom: 1.5rem;">
+        <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem; align-items: flex-start; width: 100%;">
+            
+            <!-- Subscribe Widget -->
+            <div class="footer-widget" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 3rem;">
+                <div style="flex: 0 1 auto;">
+                    <h3 style="color: var(--text-color); font-family: var(--font-display); margin-bottom: 0.5rem; font-size: 1.3rem;">Stay Updated</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Join the newsletter to get notified about new releases!</p>
+                </div>
+                <div style="flex: 0 1 auto; display: flex; flex-direction: column; position: relative;">
+                    <form id="subscribe-form" class="subscribe-form" style="display: flex; gap: 0.5rem; width: 100%; width: 400px;">
+                        <input type="email" id="subscriber-email" placeholder="Enter your email" required style="flex: 1; padding: 0.6rem 1rem; border-radius: var(--border-radius); border: 1px solid var(--border-color); background: rgba(255,255,255,0.05); color: white; outline: none;">
+                        <button type="submit" class="subscribe-btn" style="padding: 0.6rem 1.2rem; background-color: var(--accent-color); color: var(--background-color); border: none; border-radius: var(--border-radius); font-weight: 600; cursor: pointer; transition: background-color 0.3s ease;">Subscribe</button>
+                    </form>
+                    <p id="subscribe-message" class="subscribe-message" style="position: absolute; top: 100%; left: 0; font-size: 0.85rem; margin-top: 0.4rem; white-space: nowrap;"></p>
+                </div>
             </div>
         </div>
     </footer>
@@ -169,19 +182,52 @@
         </div>
     </div>
 
+    <!-- Donate Modal -->
+    <div id="donate-modal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 400px; background-color: var(--card-background); border-radius: var(--border-radius); padding: 2.5rem 2rem; text-align: center; border: 1px solid var(--border-color); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+            <button class="modal-close" aria-label="Close donate options" style="top: 15px; right: 20px; font-size: 2rem; color: var(--text-muted);">&times;</button>
+            <h2 style="font-family: var(--font-display); color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.8rem;">Support My Work</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Select your preferred platform below. 100% of Venmo contributions go directly to supporting my work.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <a href="https://venmo.com/u/SoraNgin" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: #008CFF; border-color: #008CFF; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding: 1rem;">
+                    <i class="fab fa-venmo" style="margin-right: 10px; font-size: 1.3rem;"></i> Donate with Venmo
+                </a>
+                
+                <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                    <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--border-color);">
+                    <span style="padding: 0 1rem; color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">OR</span>
+                    <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--border-color);">
+                </div>
+
+                <a href="https://paypal.me/sorangin" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: transparent; border-color: var(--border-color); color: var(--text-color); width: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding: 1rem; transition: border-color 0.3s, color 0.3s;">
+                    <i class="fab fa-paypal" style="color: #0079C1; margin-right: 10px; font-size: 1.3rem;"></i> Donate with PayPal
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- ====================================================== -->
     <!-- ALL PAGE TEMPLATES (SPA) -->
     <!-- ====================================================== -->
 
     <!-- HOME TEMPLATE -->
     <template id="tpl-home">
-        <!-- 1. NEWEST WORK -->
-        <section id="newest" class="portfolio-section" style="padding-top: 0;">
-            <a href="https://www.youtube.com/@SoraNgin" target="_blank" class="section-title-link">
-                <h2 class="section-title" style="margin-bottom: 1.5rem;">Newest</h2>
-            </a>
-            <div class="yt-feed-container" id="dynamic-yt-container">
-                <p style="color: var(--text-muted); padding: 2rem;">Loading latest video...</p>
+        <!-- LATEST ON YOUTUBE -->
+        <section id="latest-youtube" class="portfolio-section">
+            <div class="yt-section-header">
+                <a href="https://www.youtube.com/@SoraNgin" target="_blank" class="section-title-link">
+                    <h2 class="section-title">Newest</h2>
+                </a>
+                <a href="https://www.youtube.com/@SoraNgin" target="_blank" class="yt-channel-btn">
+                    Visit Channel <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <div id="yt-feed-container" class="portfolio-grid">
+                <div class="yt-card-skeleton" style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 3rem 0;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-color);"></i>
+                    <p style="font-family: var(--font-primary); font-size: 1.1rem;">Loading latest uploads...</p>
+                </div>
             </div>
         </section>
 
@@ -345,41 +391,6 @@
             </div>
         </section>
 
-        <!-- 6. SUPPORT & SUBSCRIBE SECTION -->
-        <section id="support-subscribe" class="support-subscribe-section">
-            <div class="support-subscribe-container">
-                <!-- Donate Part -->
-                <div class="support-box donate-box text-center">
-                    <div class="support-info">
-                        <h2 class="support-title">Support My Work</h2>
-                        <p class="support-desc">If you enjoy my games and animations, consider supporting my creative
-                            journey. Every contribution helps!</p>
-                    </div>
-                    <div class="support-action">
-                        <a href="https://www.paypal.com/donate/?cmd=_donations&business=Sorangin%40gmail.com"
-                            target="_blank" rel="noopener noreferrer" class="custom-donate-btn">
-                            <img src="images/donate.png" alt="Donate via PayPal" class="donate-img-btn">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Subscribe Part -->
-                <div class="support-box subscribe-box">
-                    <div class="support-info">
-                        <h2 class="support-title">Stay Updated</h2>
-                        <p class="support-desc">Join the newsletter to get notified about new game releases and
-                            animation premieres.</p>
-                    </div>
-                    <form id="subscribe-form" class="subscribe-form">
-                        <div class="input-group">
-                            <input type="email" id="subscriber-email" placeholder="Enter your email" required>
-                            <button type="submit" class="subscribe-btn">Subscribe</button>
-                        </div>
-                        <p id="subscribe-message" class="subscribe-message"></p>
-                    </form>
-                </div>
-            </div>
-        </section>
     </template>
 
     <!-- ANIMATIONS HUB TEMPLATE -->

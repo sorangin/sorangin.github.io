@@ -191,7 +191,7 @@ function loadPage(pageName, sectionId) {
         
         if (pageName === 'home') {
             initSubscribeForm(appContainer);
-            loadLatestYouTubeVideo(appContainer);
+            loadYouTubeFeed(appContainer);
         }
 
         // Re-init modals
@@ -305,41 +305,97 @@ function initSubscribeForm(context) {
     }
 }
 
-function loadLatestYouTubeVideo(context) {
-    const container = context.querySelector('#dynamic-yt-container');
-    if (!container) return;
+function loadYouTubeFeed(container) {
+    const feedContainer = container.querySelector('#yt-feed-container');
+    if (!feedContainer) return;
 
-    const channelId = 'UC510n17nJ6J-6x8p4R8971g';
-    const rssUrl = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`);
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+    const channelId = "UC_EY0v8qbaEBTzYNNxC9qkQ";
+    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+    const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
-    fetch(apiUrl)
-        .then(response => response.json())
+    // Premium fallback videos representing recent Costco worker animations
+    const fallbackVideos = [
+        {
+            title: "Costco - Produce",
+            id: "afWWQYQYnoI",
+            thumbnail: "https://i.ytimg.com/vi/afWWQYQYnoI/hqdefault.jpg"
+        },
+        {
+            title: "Day in the Life of a Costco Worker - Pharmacy",
+            id: "cDaHmPKWqQo",
+            thumbnail: "https://i.ytimg.com/vi/cDaHmPKWqQo/hqdefault.jpg"
+        },
+        {
+            title: "Day in the Life of a Costco Worker - Assistant",
+            id: "vSi6EDyK2EI",
+            thumbnail: "https://i.ytimg.com/vi/vSi6EDyK2EI/hqdefault.jpg"
+        }
+    ];
+
+    function renderVideos(videos) {
+        feedContainer.innerHTML = '';
+        videos.forEach(video => {
+            const card = document.createElement('a');
+            card.className = 'portfolio-card video-trigger';
+            card.href = `https://www.youtube.com/watch?v=${video.id}`;
+            card.setAttribute('data-video', `https://www.youtube.com/watch?v=${video.id}`);
+
+            // Unescape HTML entities in titles
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = video.title;
+            const cleanTitle = tempDiv.textContent || tempDiv.innerText || video.title;
+
+            card.innerHTML = `
+                <div class="card-image-container">
+                    <img class="portfolio-image yt-thumb-img" src="${video.thumbnail}" alt="${cleanTitle}" loading="lazy">
+                    <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="portfolio-title">${cleanTitle}</h3>
+                </div>
+            `;
+
+            feedContainer.appendChild(card);
+        });
+
+        // Re-initialize modal triggers for the new dynamic elements
+        initModals(feedContainer);
+    }
+
+    // Try fetching live data
+    fetch(rss2jsonUrl)
+        .then(response => {
+            if (!response.ok) throw new Error("Feed request failed");
+            return response.json();
+        })
         .then(data => {
-            if (data.status === 'ok' && data.items.length > 0) {
-                const latestVideo = data.items[0];
-                const videoUrl = latestVideo.link;
-                const videoId = getYouTubeID(videoUrl);
-                
-                if (videoId) {
-                    container.innerHTML = `
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/${videoId}"
-                            title="${latestVideo.title}"
-                            style="border:none; border-radius:8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                    `;
-                } else {
-                    container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">Could not parse latest video.</p>';
-                }
+            if (data.status === 'ok' && data.items && data.items.length > 0) {
+                const videos = data.items.slice(0, 3).map(item => {
+                    let videoId = '';
+                    if (item.link) {
+                        const match = item.link.match(/(v=|\/shorts\/|\/embed\/|youtu\.be\/)([^#\&\?\/]+)/);
+                        if (match) videoId = match[2];
+                    }
+                    if (!videoId && item.guid) {
+                        const parts = item.guid.split(':');
+                        videoId = parts[parts.length - 1];
+                    }
+                    
+                    return {
+                        title: item.title,
+                        id: videoId || item.guid,
+                        thumbnail: item.thumbnail || `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
+                    };
+                });
+                renderVideos(videos);
             } else {
-                container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">Unable to load latest video at this time.</p>';
+                console.warn("Feed data empty or bad status, using fallbacks");
+                renderVideos(fallbackVideos);
             }
         })
-        .catch(err => {
-            console.error('Error fetching YouTube RSS:', err);
-            container.innerHTML = '<p style="color: var(--text-muted); padding: 2rem;">Unable to load latest video at this time.</p>';
+        .catch(error => {
+            console.error("Failed to load live YouTube feed:", error);
+            renderVideos(fallbackVideos);
         });
 }
 
@@ -412,13 +468,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowRight') navigateGallery(1);
         }
     });
-    
-    // Update Copyright Year
-    const yearSpan = document.getElementById('current-year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
 
+    // Global Modals (Donate)
+    const donateTriggers = document.querySelectorAll('.donate-trigger');
+    const donateModal = document.getElementById('donate-modal');
+    donateTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (donateModal) {
+                donateModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Global Subscribe Form
+    initSubscribeForm(document);
+    
     // Back to Top Button
     const backToTopButton = document.getElementById('back-to-top');
     if (backToTopButton) {
@@ -437,19 +503,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Modal Closing Logic (Global) ---
     const closeModal = () => {
-        const videoModal = document.getElementById('video-modal');
-        const imageLightbox = document.getElementById('image-lightbox');
+        document.querySelectorAll('.modal-overlay.show').forEach(modal => {
+            modal.classList.remove('show');
+        });
         
+        // Stop video by clearing the container
+        const videoModal = document.getElementById('video-modal');
         if (videoModal) {
-            videoModal.classList.remove('show');
-            // Stop video by clearing the container
             const videoContainer = videoModal.querySelector('.video-responsive');
             if (videoContainer) {
                 videoContainer.innerHTML = '<div id="player"></div>';
             }
         }
         
-        if (imageLightbox) imageLightbox.classList.remove('show');
         document.body.style.overflow = 'auto'; // Re-enable background scrolling
     };
 
