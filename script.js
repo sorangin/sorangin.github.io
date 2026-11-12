@@ -47,30 +47,30 @@ function initComicResume(container) {
     if (!book || book.dataset.comicInit) return;
     book.dataset.comicInit = '1';
 
-    const pages = book.querySelectorAll('.comic-page');
+    const coverLeaf = book.querySelector('.leaf-cover');
+    const lastLeaf = book.querySelector('.leaf-last');
     const hint = book.closest('.comic-resume')?.querySelector('.comic-hint');
     const hints = [
         'Click the comic to open it',
         'Click to flip to the back cover',
         'Click to close the comic'
     ];
-    let flipping = false;
+    let state = 0;
+    let busy = false;
+
+    const goTo = (next) => {
+        busy = true;
+        state = next;
+        book.dataset.state = String(next);
+        coverLeaf.classList.toggle('flipped', next >= 1);
+        lastLeaf.classList.toggle('flipped', next >= 2);
+        if (hint) hint.textContent = hints[next];
+        setTimeout(() => { busy = false; }, 820);
+    };
 
     const flip = () => {
-        if (flipping || pages.length < 2) return;
-        flipping = true;
-        book.classList.add('flipping');
-        setTimeout(() => {
-            const next = (parseInt(book.dataset.state, 10) + 1) % pages.length;
-            book.dataset.state = String(next);
-            pages.forEach((page, i) => page.classList.toggle('is-active', i === next));
-            book.classList.toggle('is-open', next === 1);
-            if (hint) hint.textContent = hints[next];
-        }, 200);
-        setTimeout(() => {
-            book.classList.remove('flipping');
-            flipping = false;
-        }, 460);
+        if (busy) return;
+        goTo((state + 1) % 3);
     };
 
     book.addEventListener('click', flip);
