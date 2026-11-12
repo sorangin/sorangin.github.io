@@ -1914,3 +1914,63 @@ body {
         position: static;
     }
 }
+
+/* --- Comic Book Resume (About page) --- */
+.comic-resume {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.comic-resume-title {
+    font-family: var(--font-display);
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.comic-book {
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    perspective: 1400px;
+    transition: max-width 0.45s ease;
+}
+
+.comic-book.is-open {
+    max-width: 880px;
+}
+
+.comic-book.flipping {
+    animation: comicFlip 0.45s ease;
+    transform-origin: left center;
+}
+
+@keyframes comicFlip {
+    0% { transform: rotateY(0deg); opacity: 1; }
+    45% { transform: rotateY(-26deg); opacity: 0.35; }
+    55% { transform: rotateY(-26deg); opacity: 0.35; }
+    100% { transform: rotateY(0deg); opacity: 1; }
+}
+
+.comic-page {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.comic-page.is-active {
+    display: block;
+}
+
+.comic-hint {
+    margin-top: 1rem;
+    opacity: 0.75;
+    font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .comic-book.flipping {
+        animation: none;
+    }
+}
