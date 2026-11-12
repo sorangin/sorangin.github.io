@@ -1788,7 +1788,7 @@
     <template id="tpl-about">
         <section class="about-section portfolio-section">
             <h1 class="hero-name"
-                style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">About Me</h1>
+                style="font-size: 3.5rem; text-align: center; margin-bottom: 1.25rem; text-transform: none;">About Me</h1>
 
             <div class="about-container">
                 <div class="about-image-column">
@@ -1799,48 +1799,38 @@
 
                 <div class="about-content-column">
                     <h2>Hi, I'm Sora Ngin</h2>
-                    <p class="about-bio">I'm a passionate animator, game developer, and illustrator dedicated to
-                        bringing dynamic characters and stories to life. With a strong background in both 2D animation
-                        and interactive game design, I strive to create engaging experiences that blend exciting action
-                        with memorable artistry.</p>
-                    <p class="about-bio">Whether I'm animating stick-figure showdowns, designing intricate pixel art for
-                        retro-inspired RPGs, or creating detailed concept illustrations, my focus is always on
-                        delivering high-quality, entertaining content.</p>
+                    <p class="about-bio">I'm an animator, game developer, and illustrator bringing dynamic characters and stories to life — from stick-figure showdowns and pixel art for retro-inspired RPGs to detailed concept illustrations, always focused on high-quality, entertaining work.</p>
 
-                    <div class="skills-container">
-                        <div class="skill-group">
-                            <h3><i class="fas fa-magic"></i> Animation & Art</h3>
-                            <ul>
-                                <li>2D Frame-by-Frame Animation</li>
-                                <li>Character Design & Concept Art</li>
-                                <li>Pixel Art & Sprite Creation</li>
-                                <li>Storyboarding</li>
-                            </ul>
-                        </div>
-                        <div class="skill-group">
-                            <h3><i class="fas fa-code"></i> Game Development</h3>
-                            <ul>
-                                <li>Game Design & Mechanics</li>
-                                <li>JavaScript / HTML5 / CSS</li>
-                                <li>C# & Unity</li>
-                                <li>UI/UX Design for Games</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                                    </div>
             </div>
         
             <div class="comic-resume">
-                <h2 class="comic-resume-title">My Resume, in Comic Form</h2>
-                <div class="comic-book" data-state="0" role="button" tabindex="0"
-                    aria-label="Comic book resume - click to flip the page" title="Click to flip the page">
-                    <img class="comic-page is-active" src="images/resume1.webp"
-                        alt="Comic resume front cover - The Adventures of Sora Ngin">
-                    <img class="comic-page" src="images/resume2.webp"
-                        alt="Comic resume inside pages - the legend and the skills list" loading="lazy">
-                    <img class="comic-page" src="images/resume3.webp"
-                        alt="Comic resume back cover - Animator and Illustrator from California, contact details"
-                        loading="lazy">
+                <h2 class="comic-resume-title">Resume</h2>
+                <div class="comic-stage">
+                    <div class="comic-book" data-state="0" role="button" tabindex="0"
+                        aria-label="Comic book resume - click to turn the page" title="Click to turn the page">
+                        <img class="comic-base" src="images/resume2.webp"
+                            alt="Comic resume inside pages - the legend and the skills list">
+                        <div class="comic-spine"></div>
+                        <div class="comic-leaf leaf-cover">
+                            <div class="leaf-face leaf-front">
+                                <img src="images/resume1.webp"
+                                    alt="Comic resume front cover - The Adventures of Sora Ngin">
+                            </div>
+                            <div class="leaf-face leaf-back">
+                                <img class="half half-left" src="images/resume2.webp" alt="" aria-hidden="true">
+                            </div>
+                        </div>
+                        <div class="comic-leaf leaf-last">
+                            <div class="leaf-face leaf-front">
+                                <img class="half half-right" src="images/resume2.webp" alt="" aria-hidden="true">
+                            </div>
+                            <div class="leaf-face leaf-back">
+                                <img src="images/resume3.webp"
+                                    alt="Comic resume back cover - Animator and Illustrator from California, contact details">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p class="comic-hint">Click the comic to open it</p>
             </div>
