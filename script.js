@@ -60,12 +60,22 @@ function initComicResume(container) {
 
     const goTo = (next) => {
         busy = true;
+        const moving = [];
+        if ((state >= 1) !== (next >= 1)) moving.push(coverLeaf);
+        if ((state >= 2) !== (next >= 2)) moving.push(lastLeaf);
+        moving.forEach((leaf) => {
+            leaf.classList.add('turning');
+            if (next < state) leaf.classList.add('closing');
+        });
         state = next;
         book.dataset.state = String(next);
         coverLeaf.classList.toggle('flipped', next >= 1);
         lastLeaf.classList.toggle('flipped', next >= 2);
         if (hint) hint.textContent = hints[next];
-        setTimeout(() => { busy = false; }, 820);
+        setTimeout(() => {
+            moving.forEach((leaf) => leaf.classList.remove('turning', 'closing'));
+            busy = false;
+        }, 820);
     };
 
     const flip = () => {

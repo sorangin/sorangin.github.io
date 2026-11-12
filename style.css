@@ -1989,7 +1989,7 @@ body {
     height: 100%;
     transform-origin: left center;
     transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.25, 0.6, 0.3, 1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.6, 0.3, 1), visibility 0s 0s;
 }
 
 .leaf-cover {
@@ -2000,11 +2000,35 @@ body {
     z-index: 3;
 }
 
+.comic-book[data-state="0"] .leaf-last {
+    visibility: hidden;
+    transition: transform 0.8s cubic-bezier(0.25, 0.6, 0.3, 1), visibility 0s 0.8s;
+}
+
 .comic-leaf.flipped {
     transform: rotateY(-180deg);
 }
 
-.leaf-face {
+.seg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.seg-a {
+    left: 0;
+    width: 50%;
+}
+
+.seg-b {
+    left: 100%;
+    width: 100%;
+    transform-origin: left center;
+    transition: transform 0.35s ease;
+}
+
+.mini-face {
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -2014,30 +2038,73 @@ body {
     box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
 }
 
-.leaf-back {
+.mini-back {
     transform: rotateY(180deg);
 }
 
-.leaf-face img {
+.mini-face img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.leaf-face img.half {
+.mini-face img.slice {
     position: absolute;
     top: 0;
-    width: 200%;
+    height: 100%;
     max-width: none;
 }
 
-.leaf-face img.half-left {
+.mini-face img.w2 {
+    width: 200%;
+}
+
+.mini-face img.w4 {
+    width: 400%;
+}
+
+.mini-face img.o0 {
     left: 0;
 }
 
-.leaf-face img.half-right {
+.mini-face img.o1 {
     left: -100%;
+}
+
+.mini-face img.o2 {
+    left: -200%;
+}
+
+.mini-face img.o3 {
+    left: -300%;
+}
+
+.comic-leaf.turning .seg-b {
+    animation: segBend 0.8s cubic-bezier(0.25, 0.6, 0.3, 1);
+}
+
+.comic-leaf.turning.closing .seg-b {
+    animation-name: segBendBack;
+}
+
+@keyframes segBend {
+    0%, 100% { transform: rotateY(0deg); }
+    50% { transform: rotateY(20deg); }
+}
+
+@keyframes segBendBack {
+    0%, 100% { transform: rotateY(0deg); }
+    50% { transform: rotateY(-20deg); }
+}
+
+.comic-leaf.turning .mini-face img {
+    animation: pageShade 0.8s ease;
+}
+
+@keyframes pageShade {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(0.8); }
 }
 
 .comic-hint {
@@ -2046,9 +2113,36 @@ body {
     font-size: 0.95rem;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .comic-book[data-state="0"]:hover .leaf-cover {
+        transform: rotateY(-16deg);
+        transition-duration: 0.35s;
+    }
+
+    .comic-book[data-state="0"]:hover .leaf-cover .seg-b {
+        transform: rotateY(10deg);
+    }
+
+    .comic-book[data-state="1"]:hover .leaf-last {
+        transform: rotateY(-12deg);
+        transition-duration: 0.35s;
+    }
+
+    .comic-book[data-state="2"]:hover .leaf-last.flipped {
+        transform: rotateY(-164deg);
+        transition-duration: 0.35s;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .comic-book,
-    .comic-leaf {
+    .comic-leaf,
+    .seg-b {
         transition: none;
+    }
+
+    .comic-leaf.turning .seg-b,
+    .comic-leaf.turning .mini-face img {
+        animation: none;
     }
 }
