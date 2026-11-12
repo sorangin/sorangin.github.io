@@ -1297,8 +1297,13 @@ body {
 /* Responsive Overrides (Mobile/Tablet) */
 @media (max-width: 768px) {
     .header-right-group {
-        flex-direction: column;
+        flex-direction: row; /* Must stay a row: a column stacks the donate + menu buttons inside the 70px header, clipping the top and spilling the button over the page */
+        align-items: center;
         gap: 1rem;
+    }
+
+    .site-footer.portfolio-footer {
+        padding-bottom: 5.5rem !important; /* Clearance so the floating back-to-top button never covers the subscribe form */
     }
     
     .hero-section {
@@ -1646,7 +1651,7 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 80px 20px 20px 20px;
+        padding: 80px 20px calc(20px + env(safe-area-inset-bottom)) 20px;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
         transform: translateX(100%);
         visibility: hidden;
