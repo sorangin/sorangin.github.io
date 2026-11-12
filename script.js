@@ -80,6 +80,28 @@ function initComicResume(container) {
 
     const flip = () => {
         if (busy) return;
+        if (state === 2) {
+            // From the back cover, flip the whole closed book over to the front
+            // cover in one motion - no leafing back through the inside pages.
+            busy = true;
+            book.classList.add('book-flip');
+            setTimeout(() => {
+                book.classList.add('no-anim');
+                state = 0;
+                book.dataset.state = '0';
+                coverLeaf.classList.remove('flipped');
+                lastLeaf.classList.remove('flipped');
+                if (hint) hint.textContent = hints[0];
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => book.classList.remove('no-anim'));
+                });
+            }, 250);
+            setTimeout(() => {
+                book.classList.remove('book-flip');
+                busy = false;
+            }, 520);
+            return;
+        }
         goTo((state + 1) % 3);
     };
 
