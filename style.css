@@ -1964,7 +1964,7 @@ body {
 
 .comic-book.no-anim .comic-leaf,
 .comic-book.no-anim .book-shadow {
-    transition: none;
+    transition: none !important;
 }
 
 .book-shadow {
