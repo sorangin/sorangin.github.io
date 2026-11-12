@@ -42,6 +42,46 @@ function initCardHoverEffects(container) {
     });
 }
 
+function initComicResume(container) {
+    const book = (container || document).querySelector('.comic-book');
+    if (!book || book.dataset.comicInit) return;
+    book.dataset.comicInit = '1';
+
+    const pages = book.querySelectorAll('.comic-page');
+    const hint = book.closest('.comic-resume')?.querySelector('.comic-hint');
+    const hints = [
+        'Click the comic to open it',
+        'Click to flip to the back cover',
+        'Click to close the comic'
+    ];
+    let flipping = false;
+
+    const flip = () => {
+        if (flipping || pages.length < 2) return;
+        flipping = true;
+        book.classList.add('flipping');
+        setTimeout(() => {
+            const next = (parseInt(book.dataset.state, 10) + 1) % pages.length;
+            book.dataset.state = String(next);
+            pages.forEach((page, i) => page.classList.toggle('is-active', i === next));
+            book.classList.toggle('is-open', next === 1);
+            if (hint) hint.textContent = hints[next];
+        }, 200);
+        setTimeout(() => {
+            book.classList.remove('flipping');
+            flipping = false;
+        }, 460);
+    };
+
+    book.addEventListener('click', flip);
+    book.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            flip();
+        }
+    });
+}
+
 // --- YouTube Integration ---
 let ytPlayer;
 
@@ -196,6 +236,7 @@ function loadPage(pageName, sectionId) {
 
         // Re-init modals
         initModals(appContainer);
+        initComicResume(appContainer);
 
         // Update URL
         let newUrl = pageName === 'home' ? window.location.pathname : `?page=${pageName}`;
