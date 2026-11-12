@@ -257,16 +257,6 @@ function getIcon(type) {
     }
 }
 
-function updateNavState(pageName) {
-    const navLinks = document.querySelectorAll('.main-nav a');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href');
-        if (href && (href.includes(pageName) || (pageName === 'home' && href.includes('index.html')))) {
-            link.classList.add('active');
-        }
-    });
-}
 
 
 
@@ -446,6 +436,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.toggle('mobile-nav-open');
         });
     }
+
+    // Close mobile menu when tapping outside the panel or pressing Escape
+    document.addEventListener('click', (e) => {
+        if (!document.body.classList.contains('mobile-nav-open')) return;
+        if (!e.target.closest('.mobile-nav-container') && !e.target.closest('.mobile-menu-toggle')) {
+            document.body.classList.remove('mobile-nav-open');
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') document.body.classList.remove('mobile-nav-open');
+    });
 
     // Close mobile menu when a link is clicked
     const mobileNavLinks = document.querySelectorAll('.main-nav a, .dropdown-menu a, .header-social-links a');

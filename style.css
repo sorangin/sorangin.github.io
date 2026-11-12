@@ -39,6 +39,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px; /* Base font size */
+    overflow-x: hidden;
+    overflow-x: clip; /* Off-canvas panels must not widen the page */
 }
 
 body {
@@ -47,6 +49,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    overflow-x: clip;
     position: relative; /* For noise overlay */
 }
 
@@ -752,16 +755,10 @@ body {
 @media (max-width: 768px) {
     html { font-size: 15px; }
 
-    .site-header {
-         height: auto;
-         padding-block: calc(var(--base-spacing)*0.5);
-         position: static; /* Remove sticky header on mobile for simplicity or specific design choice */
-    }
      .header-content {
-        flex-direction: column;
-        gap: 10px;
         padding: 0 var(--base-spacing);
      }
+    .donate-img-btn { max-height: 48px !important; } /* Keep the donate button inside the 70px mobile header */
     .main-nav { margin-top: 0; } /* Removed if flex-direction: column already gives spacing via gap */
 
     .content-area { padding: var(--base-spacing); }
@@ -1617,6 +1614,7 @@ body {
     color: var(--text-color);
     font-size: 1.8rem;
     cursor: pointer;
+    position: relative;
     z-index: 1002;
 }
 
@@ -1628,22 +1626,31 @@ body {
 @media (max-width: 1024px) {
     .mobile-menu-toggle {
         display: block;
+        order: 3; /* Far-right corner of the header, after the donate button */
+    }
+
+    /* Show an X while the menu is open */
+    body.mobile-nav-open .mobile-menu-toggle .fa-bars::before {
+        content: "\f00d";
     }
 
     .mobile-nav-container {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 80%;
         max-width: 400px;
         height: 100vh;
+        height: 100dvh;
         background-color: var(--card-background);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 80px 20px 20px 20px;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
         z-index: 1001;
         overflow-y: auto;
     }
@@ -1653,7 +1660,9 @@ body {
     }
 
     body.mobile-nav-open .mobile-nav-container {
-        right: 0;
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
     }
 
     .main-nav {
