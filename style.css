@@ -51,6 +51,7 @@ body {
     overflow-x: hidden;
     overflow-x: clip;
     position: relative; /* For noise overlay */
+    padding-top: var(--header-height); /* Reserve space for the fixed header */
 }
 
 /* Subtle Noise Overlay */
@@ -69,8 +70,10 @@ body {
 .site-header {
     background-color: rgba(31, 32, 40, 0.85);
     backdrop-filter: blur(10px);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: var(--header-height);
     z-index: 1000;
