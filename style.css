@@ -2112,3 +2112,14 @@ body {
         animation: none;
     }
 }
+
+/* Home feature cards that show full artwork (Illustrations & Comics):
+   natural aspect ratio, never cropped */
+.card-image-container.natural {
+    aspect-ratio: auto;
+}
+
+.card-image-container.natural .portfolio-image {
+    height: auto;
+    object-fit: initial;
+}
