@@ -568,6 +568,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevBtn) prevBtn.onclick = (e) => { e.stopPropagation(); navigateGallery(-1); };
     if (nextBtn) nextBtn.onclick = (e) => { e.stopPropagation(); navigateGallery(1); };
 
+    // Touch swipe: swipe left/right on the image to move through the gallery.
+    // Swipes starting on the thumbnail strip are left alone so it can scroll.
+    const lightboxEl = document.getElementById('image-lightbox');
+    if (lightboxEl) {
+        let swipeX = null, swipeY = null;
+        lightboxEl.addEventListener('touchstart', (e) => {
+            if (e.target.closest('.lightbox-thumbnails')) { swipeX = null; return; }
+            swipeX = e.changedTouches[0].screenX;
+            swipeY = e.changedTouches[0].screenY;
+        }, { passive: true });
+        lightboxEl.addEventListener('touchend', (e) => {
+            if (swipeX === null) return;
+            const dx = e.changedTouches[0].screenX - swipeX;
+            const dy = e.changedTouches[0].screenY - swipeY;
+            swipeX = null;
+            if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+                navigateGallery(dx < 0 ? 1 : -1);
+            }
+        }, { passive: true });
+    }
+
     document.addEventListener('keydown', (e) => {
         const lightbox = document.getElementById('image-lightbox');
         if (lightbox && lightbox.classList.contains('show')) {
