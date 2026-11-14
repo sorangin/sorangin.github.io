@@ -2254,3 +2254,29 @@ body {
 #image-lightbox.single .lightbox-thumbnails {
     display: none;
 }
+
+/* === Site-wide intuitiveness pass === */
+/* "Download Demo (Coming Soon)" is not a link - stop it acting clickable */
+.cta-button.disabled {
+    pointer-events: none;
+}
+/* Back-to-top hides while the footer is on screen (JS toggles the class) */
+#back-to-top.show.footer-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+/* About avatar is the wide logo - show it whole inside the circle
+   instead of cropping the edges of the wordmark off */
+.about-avatar img {
+    object-fit: contain;
+    padding: 22px;
+    box-sizing: border-box;
+}
+/* Games page: whole screenshots, not cropped to 16:9 - in-game UI
+   along the edges (health bars etc.) was getting sliced off */
+.game-section .card-image-container {
+    background: #0c0c0f;
+}
+.game-section .card-image-container img {
+    object-fit: contain;
+}

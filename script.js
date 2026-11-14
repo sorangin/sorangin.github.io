@@ -641,6 +641,15 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // Keep the button from covering the footer (it used to sit on top of
+        // the Subscribe button): hide it while the footer is on screen
+        const footer = document.querySelector('.site-footer');
+        if (footer && 'IntersectionObserver' in window) {
+            new IntersectionObserver((entries) => {
+                entries.forEach(en => backToTopButton.classList.toggle('footer-hide', en.isIntersecting));
+            }).observe(footer);
+        }
     }
 
     // --- Modal Closing Logic (Global) ---
