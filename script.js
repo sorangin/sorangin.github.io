@@ -142,7 +142,7 @@ function initModals(context) {
                 }
             } else if (videoUrl && videoUrl.includes('vimeo') && videoModal) {
                 const container = videoModal.querySelector('.video-responsive');
-                container.innerHTML = `<iframe src="${videoUrl}?autoplay=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+                container.innerHTML = `<iframe src="${videoUrl}?autoplay=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>`;
                 videoModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             }
