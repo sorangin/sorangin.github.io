@@ -2213,3 +2213,44 @@ body {
         height: 46px;
     }
 }
+
+/* === Viewer polish: aligned thumbnails, unmistakable highlight, caption === */
+.lightbox-thumbnails {
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+}
+/* Centre the strip when it fits, without breaking scrolling when it overflows */
+.lightbox-thumbnails > :first-child { margin-left: auto; }
+.lightbox-thumbnails > :last-child { margin-right: auto; }
+.thumb-item {
+    opacity: 0.45;
+    flex-shrink: 0;
+}
+/* The current image's thumbnail: full brightness and a ring - and it stays
+   in line with the others (the old style also lifted and scaled it) */
+.thumb-item.active {
+    opacity: 1;
+    transform: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 1px var(--accent-color), 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+.lightbox-meta {
+    text-align: center;
+    padding: 12px 16px 0;
+}
+#lightbox-caption {
+    color: #f2f2f2;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#lightbox-counter {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+}
+/* Single-image galleries: no arrows or thumbnail strip needed */
+#image-lightbox.single .lightbox-nav-btn,
+#image-lightbox.single .lightbox-thumbnails {
+    display: none;
+}
