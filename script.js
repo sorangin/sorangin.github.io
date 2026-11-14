@@ -192,6 +192,13 @@ function updateLightbox() {
         }, 150);
         
         renderThumbnails();
+
+        const caption = document.getElementById('lightbox-caption');
+        const counter = document.getElementById('lightbox-counter');
+        if (caption) caption.textContent = item.alt || '';
+        if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${currentGalleryItems.length}`;
+        const lb = document.getElementById('image-lightbox');
+        if (lb) lb.classList.toggle('single', currentGalleryItems.length <= 1);
     }
 }
 
@@ -212,7 +219,14 @@ function renderThumbnails() {
         container.appendChild(thumb);
         
         if (index === currentGalleryIndex) {
-            thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            // Scroll only the thumbnail strip so the current thumb centres
+            // itself (scrollIntoView also dragged the page behind around)
+            requestAnimationFrame(() => {
+                const tr = thumb.getBoundingClientRect();
+                const cr = container.getBoundingClientRect();
+                const left = container.scrollLeft + (tr.left - cr.left) - (cr.width - tr.width) / 2;
+                container.scrollTo({ left, behavior: 'smooth' });
+            });
         }
     });
 }
@@ -652,10 +666,20 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', closeModal);
     });
 
-    // Close on clicking the dark background
+    // Close on clicking the dark background - or anywhere off the content:
+    // in the image viewer, anything that is not the image itself, the arrows,
+    // the thumbnails, or the close button exits; same idea for the video modal.
     document.querySelectorAll('.modal-overlay').forEach(overlay => {
         overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) closeModal();
+            if (e.target === overlay) { closeModal(); return; }
+            if (overlay.id === 'image-lightbox') {
+                const img = document.getElementById('lightbox-img');
+                if (e.target !== img && !e.target.closest('.lightbox-nav-btn, .thumb-item, .modal-close')) {
+                    closeModal();
+                }
+            } else if (overlay.id === 'video-modal') {
+                if (!e.target.closest('.video-responsive, .modal-close')) closeModal();
+            }
         });
     });
 
