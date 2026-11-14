@@ -355,29 +355,38 @@ function initSubscribeForm(context) {
     if (form && messageEl) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const email = emailInput.value;
-            
-            // Premium feedback logic
+            const email = emailInput.value.trim();
+            if (!email) return;
+
             messageEl.textContent = 'Subscribing...';
             messageEl.className = 'subscribe-message';
             messageEl.style.opacity = '1';
-            
-            // Simulate API call
-            setTimeout(() => {
-                messageEl.textContent = 'Thanks for subscribing! Check your inbox soon.';
-                messageEl.classList.add('success');
-                emailInput.value = '';
-                
-                // Clear message after a while
-                setTimeout(() => {
-                    messageEl.style.opacity = '0';
+
+            // Real signup: post the email to the Kit "Website Footer" form.
+            // Kit is double opt-in, so the subscriber gets a confirmation
+            // email and only joins the list after clicking it.
+            const body = new FormData();
+            body.append('email_address', email);
+            fetch(form.action, { method: 'POST', body, mode: 'no-cors' })
+                .then(() => {
+                    messageEl.textContent = 'Almost done! Check your inbox to confirm.';
+                    messageEl.classList.add('success');
+                    emailInput.value = '';
+
+                    // Clear message after a while
                     setTimeout(() => {
-                        messageEl.textContent = '';
-                        messageEl.style.opacity = '1';
-                        messageEl.className = 'subscribe-message';
-                    }, 500);
-                }, 5000);
-            }, 1200);
+                        messageEl.style.opacity = '0';
+                        setTimeout(() => {
+                            messageEl.textContent = '';
+                            messageEl.style.opacity = '1';
+                            messageEl.className = 'subscribe-message';
+                        }, 500);
+                    }, 8000);
+                })
+                .catch(() => {
+                    // In-page post failed - fall back to a normal form submit
+                    form.submit();
+                });
         });
     }
 }
