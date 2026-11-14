@@ -1645,6 +1645,14 @@ body {
     .has-dropdown:focus-within .dropdown-menu {
         display: block;
     }
+
+    .has-dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .has-dropdown.open .dropdown-icon {
+        transform: rotate(180deg);
+    }
 }
 
 /* === About Page Styles === */

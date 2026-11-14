@@ -529,6 +529,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Mobile dropdowns: first tap on a parent item expands its submenu,
+    // second tap follows the link. Capture phase runs before the inline
+    // onclick navigation so the first tap can be intercepted.
+    document.addEventListener('click', (e) => {
+        const subLink = e.target.closest('.dropdown-menu a');
+        if (subLink) {
+            document.querySelectorAll('.has-dropdown.open').forEach(item => item.classList.remove('open'));
+            return;
+        }
+        const parentLink = e.target.closest('.has-dropdown > .nav-link');
+        if (!parentLink) return;
+        if (!window.matchMedia('(max-width: 1024px)').matches) return;
+        const item = parentLink.closest('.has-dropdown');
+        if (item.classList.contains('open')) return; // already open: let it navigate
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelectorAll('.has-dropdown.open').forEach(other => {
+            if (other !== item) other.classList.remove('open');
+        });
+        item.classList.add('open');
+    }, true);
+
     // Gallery Navigation
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
