@@ -2131,3 +2131,10 @@ body {
     height: auto;
     object-fit: initial;
 }
+
+/* Touch devices have no hover: keep portfolio card titles visible instead of slid away */
+@media (hover: none) {
+    .portfolio-card .card-content {
+        transform: none;
+    }
+}

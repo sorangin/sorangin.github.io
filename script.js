@@ -142,7 +142,7 @@ function initModals(context) {
                 }
             } else if (videoUrl && videoUrl.includes('vimeo') && videoModal) {
                 const container = videoModal.querySelector('.video-responsive');
-                container.innerHTML = `<iframe src="${videoUrl}?autoplay=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>`;
+                container.innerHTML = `<iframe src="${videoUrl}?autoplay=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
                 videoModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             }
@@ -529,26 +529,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile dropdowns: first tap on a parent item expands its submenu,
-    // second tap follows the link. Capture phase runs before the inline
-    // onclick navigation so the first tap can be intercepted.
+    // Dropdown parent links (Animations, Art) have no inline onclick; this
+    // capture-phase handler owns their clicks. Desktop: navigate. Mobile:
+    // first tap expands the submenu, second tap navigates. Capture phase +
+    // stopPropagation keep the menu's close-on-link-click listener from
+    // firing on the first tap.
     document.addEventListener('click', (e) => {
         const subLink = e.target.closest('.dropdown-menu a');
         if (subLink) {
             document.querySelectorAll('.has-dropdown.open').forEach(item => item.classList.remove('open'));
             return;
         }
-        const parentLink = e.target.closest('.has-dropdown > .nav-link');
+        const parentLink = e.target.closest('.has-dropdown > .nav-link[data-page]');
         if (!parentLink) return;
-        if (!window.matchMedia('(max-width: 1024px)').matches) return;
-        const item = parentLink.closest('.has-dropdown');
-        if (item.classList.contains('open')) return; // already open: let it navigate
         e.preventDefault();
-        e.stopPropagation();
-        document.querySelectorAll('.has-dropdown.open').forEach(other => {
-            if (other !== item) other.classList.remove('open');
-        });
-        item.classList.add('open');
+        const item = parentLink.closest('.has-dropdown');
+        const page = parentLink.getAttribute('data-page');
+        if (!window.matchMedia('(max-width: 1024px)').matches) {
+            loadPage(page);
+            return;
+        }
+        if (item.classList.contains('open')) {
+            document.querySelectorAll('.has-dropdown.open').forEach(i => i.classList.remove('open'));
+            document.body.classList.remove('mobile-nav-open');
+            loadPage(page);
+        } else {
+            e.stopPropagation();
+            document.querySelectorAll('.has-dropdown.open').forEach(other => {
+                if (other !== item) other.classList.remove('open');
+            });
+            item.classList.add('open');
+        }
     }, true);
 
     // Gallery Navigation
