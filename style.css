@@ -2280,3 +2280,10 @@ body {
 .game-section .card-image-container img {
     object-fit: contain;
 }
+
+/* Social row: inline Fourthwall brand SVG sized to match the Font Awesome icons */
+.header-social-links .fw-icon {
+    width: 1.35em;
+    height: auto;
+    display: block;
+}
