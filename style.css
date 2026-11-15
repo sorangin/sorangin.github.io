@@ -2281,9 +2281,8 @@ body {
     object-fit: contain;
 }
 
-/* Social row: inline Fourthwall brand SVG sized to match the Font Awesome icons */
-.header-social-links .fw-icon {
-    width: 1.35em;
+.header-social-links .kofi-icon {
+    width: 1.05em;
     height: auto;
     display: block;
 }
