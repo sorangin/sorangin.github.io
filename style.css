@@ -2286,3 +2286,17 @@ body {
     height: auto;
     display: block;
 }
+
+/* Social row: center all six icons on one line; brand SVGs carry their own sizes */
+.header-social-links {
+    align-items: center;
+}
+.header-social-links a {
+    display: inline-flex;
+    align-items: center;
+}
+.header-social-links .fw-icon {
+    width: 1.35em;
+    height: auto;
+    display: block;
+}
