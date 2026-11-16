@@ -192,7 +192,7 @@ function initGameGate(context) {
             if (btn.hasAttribute('data-pending')) {
                 btn.classList.remove('unlocked');
                 const pnote = btn.querySelector('.gate-note') || (btn.parentElement ? btn.parentElement.querySelector('.gate-note') : null);
-                if (pnote) pnote.innerHTML = '<i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members &middot; Demo coming soon';
+                if (pnote) pnote.innerHTML = '<i class="fas fa-lock"></i> Rank 3+ members &middot; Demo coming soon';
                 return;
             }
             const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
@@ -203,8 +203,8 @@ function initGameGate(context) {
                 note.innerHTML = ok
                     ? '<i class="fas fa-lock-open"></i> Unlocked on this device'
                     : (tier >= 4
-                        ? '<i class="fas fa-lock"></i> Fourthwall Rank 4 members'
-                        : '<i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members');
+                        ? '<i class="fas fa-lock"></i> Rank 4 members'
+                        : '<i class="fas fa-lock"></i> Rank 3+ members');
             }
         });
     }
