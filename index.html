@@ -451,20 +451,7 @@
         <section id="main-games" class="game-section featured-games">
             <h2 class="section-title">Featured Creations</h2>
             <div class="game-grid">
-                <a href="#" class="game-card gate-play" data-game="revenge-of-the-ants" data-tier="4"" data-tags="Survival, Arcade">
-                    <div class="card-image-container">
-                        <img src="images/rota_screenshot.png" alt="Revenge of the Ants" class="game-image"
-                            data-static-src="images/rota_screenshot.png" data-gif-src="images/rota_anim.gif">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="game-title">Revenge of the Ants</h3>
-                        <p class="game-description">Giant ants are out for revenge! Defend your kingdom as a valiant
-                            knight.</p>
-                    <p class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</p>
-                    </div>
-                </a>
-                <a href="#" class="game-card gate-play" data-game="knights-gambit" data-tier="4"" data-tags="Strategy, Turn-Based">
+                <a href="?page=knights-gambit" onclick="event.preventDefault(); loadPage('knights-gambit');" class="game-card"" data-tags="Strategy, Turn-Based">
                     <div class="card-image-container">
                         <img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit" class="game-image"
                             data-static-src="images/knights_vs_goblins_screenshot.png"
@@ -474,10 +461,21 @@
                     <div class="card-content">
                         <h3 class="game-title">Knight's Gambit</h3>
                         <p class="game-description">Outmaneuver goblin hordes on a perilous battlefield.</p>
-                    <p class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</p>
                     </div>
                 </a>
-                <a href="#" class="game-card gate-play" data-game="kingsfall-chess" data-tier="4"" data-tags="Strategy, Chess">
+                <a href="?page=revenge-of-the-ants" onclick="event.preventDefault(); loadPage('revenge-of-the-ants');" class="game-card"" data-tags="Survival, Arcade">
+                    <div class="card-image-container">
+                        <img src="images/rota_screenshot.png" alt="Revenge of the Ants" class="game-image"
+                            data-static-src="images/rota_screenshot.png" data-gif-src="images/rota_anim.gif">
+                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="game-title">Revenge of the Ants</h3>
+                        <p class="game-description">Giant ants are out for revenge! Defend your kingdom as a valiant
+                            knight.</p>
+                    </div>
+                </a>
+                <a href="?page=kingsfall-chess" onclick="event.preventDefault(); loadPage('kingsfall-chess');" class="game-card"" data-tags="Strategy, Chess">
                     <div class="card-image-container">
                         <img src="images/chess_screenshot.jpg" alt="Kingsfall Chess" class="game-image"
                             data-static-src="images/chess_screenshot.jpg" data-gif-src="images/chess_anim.gif">
@@ -487,10 +485,9 @@
                         <h3 class="game-title">Kingsfall Chess</h3>
                         <p class="game-description">A unique twist on classic chess with unique art and challenging AI
                             opponents.</p>
-                    <p class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</p>
                     </div>
                 </a>
-                <a href="#" class="game-card gate-play" data-game="risen-realms" data-tier="4"" data-tags="Card Game, Strategy">
+                <a href="?page=risen-realms" onclick="event.preventDefault(); loadPage('risen-realms');" class="game-card"" data-tags="Card Game, Strategy">
                     <div class="card-image-container">
                         <img src="images/tcg_screenshot.png" alt="Risen Realms" class="game-image"
                             data-static-src="images/tcg_screenshot.png" data-gif-src="images/tcg_anim.gif">
@@ -500,7 +497,6 @@
                         <h3 class="game-title">Risen Realms</h3>
                         <p class="game-description">Build powerful decks and battle opponents in this strategic trading
                             card game.</p>
-                    <p class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</p>
                     </div>
                 </a>
             </div>
@@ -651,6 +647,202 @@
     </template>
 
     <!-- GAME TEMPLATE: YOINK -->
+    <template id="tpl-knights-gambit">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Knight's Gambit</h1>
+                <p class="game-status"><i class="fas fa-gamepad"></i> Playable in Browser</p>
+                <div class="game-detail-tags"><span class="tag">Strategy</span><span class="tag">Turn-Based</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Outmaneuver goblin hordes on a perilous battlefield. Knight's Gambit is a turn-based strategy game where every move counts: position your knights, plan ahead, and hold the line against the goblin army.</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Screenshots & Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit - Screenshot">
+                    <img src="images/knights_gambit_anim.gif" alt="Knight's Gambit - Animated">
+                    <img src="images/knights_vs_goblins_anim.gif" alt="Knight's Gambit - Knights vs Goblins">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Turn-Based Tactical Battles</li>
+                    <li><i class="fas fa-check"></i> Battle Goblin Hordes</li>
+                    <li><i class="fas fa-check"></i> Multiple Difficulty Levels</li>
+                    <li><i class="fas fa-check"></i> Hand-Drawn Art and Animation</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Play</h2>
+                <p>
+                    <a href="#"
+                        class="cta-button gate-play disabled" data-game="knights-gambit-demo" data-tier="3" data-pending="1" title="Play the Demo">
+                        Play the Demo <i class="fas fa-play"></i>
+                    </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members &middot; Demo coming soon</span>
+                </p>
+                <p>
+                    <a href="#"
+                        class="cta-button gate-play" data-game="knights-gambit" data-tier="4" title="Play the Full Game" target="_blank" rel="noopener noreferrer">
+                        Play the Full Game <i class="fas fa-play"></i>
+                    </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</span>
+                </p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+</template>
+    
+    <template id="tpl-revenge-of-the-ants">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Revenge of the Ants</h1>
+                <p class="game-status"><i class="fas fa-gamepad"></i> Playable in Browser</p>
+                <div class="game-detail-tags"><span class="tag">Survival</span><span class="tag">Arcade</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/rota_screenshot.png" alt="Revenge of the Ants"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Giant ants are out for revenge! Defend your kingdom as a valiant knight in this fast-paced survival arcade game, and hold out against the swarm for as long as you can.</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Screenshots & Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/rota_screenshot.png" alt="Revenge of the Ants - Screenshot">
+                    <img src="images/rota_anim.gif" alt="Revenge of the Ants - Animated">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Fast-Paced Arcade Action</li>
+                    <li><i class="fas fa-check"></i> Survival Gameplay</li>
+                    <li><i class="fas fa-check"></i> Defend the Kingdom</li>
+                    <li><i class="fas fa-check"></i> Giant Ant Enemies</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Play</h2>
+                <p>
+                    <a href="#"
+                        class="cta-button gate-play" data-game="revenge-of-the-ants" data-tier="4" title="Play Revenge of the Ants" target="_blank" rel="noopener noreferrer">
+                        Play Now <i class="fas fa-play"></i>
+                    </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</span>
+                </p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+</template>
+    
+    <template id="tpl-kingsfall-chess">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Kingsfall Chess</h1>
+                <p class="game-status"><i class="fas fa-gamepad"></i> Playable in Browser</p>
+                <div class="game-detail-tags"><span class="tag">Strategy</span><span class="tag">Chess</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/chess_screenshot.jpg" alt="Kingsfall Chess"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>A unique twist on classic chess with unique art and challenging AI opponents. Kingsfall Chess reimagines the game of kings: learn the new rules, outthink the AI, and topple the enemy king.</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Screenshots & Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/chess_screenshot.jpg" alt="Kingsfall Chess - Screenshot">
+                    <img src="images/chess_anim.gif" alt="Kingsfall Chess - Animated">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> A Twist on Classic Chess</li>
+                    <li><i class="fas fa-check"></i> Challenging AI Opponents</li>
+                    <li><i class="fas fa-check"></i> Unique Original Art</li>
+                    <li><i class="fas fa-check"></i> Deep Strategy Gameplay</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Play</h2>
+                <p>
+                    <a href="#"
+                        class="cta-button gate-play" data-game="kingsfall-chess" data-tier="4" title="Play Kingsfall Chess" target="_blank" rel="noopener noreferrer">
+                        Play Now <i class="fas fa-play"></i>
+                    </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</span>
+                </p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+</template>
+    
+    <template id="tpl-risen-realms">
+        <article class="game-detail-content">
+            <header class="game-detail-header">
+                <h1>Risen Realms</h1>
+                <p class="game-status"><i class="fas fa-gamepad"></i> Playable in Browser</p>
+                <div class="game-detail-tags"><span class="tag">Card Game</span><span class="tag">Strategy</span></div>
+            </header>
+            <section class="game-trailer">
+                <div class="video-placeholder"><img src="images/tcg_screenshot.png" alt="Risen Realms"></div>
+            </section>
+            <section class="game-description-full">
+                <h2>Description</h2>
+                <p>Build powerful decks and battle opponents in this strategic trading card game. Assemble your deck, summon your forces, and outplay your opponent card by card.</p>
+            </section>
+            <section class="game-screenshots">
+                <h2>Screenshots & Concepts</h2>
+                <div class="screenshot-grid">
+                    <img src="images/tcg_screenshot.png" alt="Risen Realms - Screenshot">
+                    <img src="images/tcg_anim.gif" alt="Risen Realms - Animated">
+                </div>
+            </section>
+            <section class="game-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> Build Powerful Decks</li>
+                    <li><i class="fas fa-check"></i> Strategic Card Battles</li>
+                    <li><i class="fas fa-check"></i> Battle Opponents</li>
+                    <li><i class="fas fa-check"></i> Hand-Drawn Card Art</li>
+                </ul>
+            </section>
+            <section class="game-download">
+                <h2>Play</h2>
+                <p>
+                    <a href="#"
+                        class="cta-button gate-play" data-game="risen-realms" data-tier="4" title="Play Risen Realms" target="_blank" rel="noopener noreferrer">
+                        Play Now <i class="fas fa-play"></i>
+                    </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 4 members</span>
+                </p>
+            </section>
+            <nav class="back-link-section">
+                <a href="#" onclick="event.preventDefault(); loadPage('games');" class="back-link"><i
+                        class="fas fa-arrow-left"></i> Back to All Games</a>
+            </nav>
+        </article>
+</template>
+    
     <template id="tpl-yoink-the-king">
         <article class="game-detail-content">
             <header class="game-detail-header">
