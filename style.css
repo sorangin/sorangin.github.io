@@ -2369,3 +2369,50 @@ body {
 .header-social-links a[href*="instagram.com"] { color: #E1306C; }
 .header-social-links a[href*="fourthwall.com"] { color: #FFFFFF; }
 .header-social-links a[href*="ko-fi.com"] { color: #00B9FE; }
+
+/* Same no-box system for home Comics and Games: no outer box or shadow,
+   one shared height, every image at its natural proportional width.
+   (Supersedes the home Comics 2x2 grid from the desktop-fixes pass.) */
+#comics .portfolio-grid,
+#games .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+#comics .portfolio-card,
+#games .portfolio-card {
+    flex: 0 1 auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+#comics .card-image-container,
+#games .card-image-container {
+    aspect-ratio: auto;
+    height: 260px;
+    width: fit-content;
+    margin: 0 auto;
+}
+#comics .card-image-container .portfolio-image,
+#games .card-image-container .portfolio-image {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    #comics .portfolio-grid,
+    #games .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    #comics .card-image-container,
+    #games .card-image-container {
+        height: auto;
+        width: 100%;
+    }
+    #comics .card-image-container .portfolio-image,
+    #games .card-image-container .portfolio-image {
+        width: 100%;
+        height: auto;
+    }
+}
