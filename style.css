@@ -2473,17 +2473,17 @@ body {
 #illustrations .portfolio-grid,
 #comics .portfolio-grid,
 #games .portfolio-grid {
-    gap: 1rem;
+    gap: 10px;
 }
 #animation .portfolio-card,
 #illustrations .portfolio-card,
 #comics .portfolio-card,
 #games .portfolio-card {
-    border-radius: 20px;
+    border-radius: 16px;
 }
 #animation .card-image-container,
 #illustrations .card-image-container,
 #comics .card-image-container,
 #games .card-image-container {
-    border-radius: 20px;
+    border-radius: 16px;
 }
