@@ -2466,3 +2466,24 @@ body {
         height: auto;
     }
 }
+
+/* Home showcase rows, Wix look (Sora, 2026-11-15): deeper rounded
+   corners and tighter gaps between cards */
+#animation .portfolio-grid,
+#illustrations .portfolio-grid,
+#comics .portfolio-grid,
+#games .portfolio-grid {
+    gap: 1rem;
+}
+#animation .portfolio-card,
+#illustrations .portfolio-card,
+#comics .portfolio-card,
+#games .portfolio-card {
+    border-radius: 20px;
+}
+#animation .card-image-container,
+#illustrations .card-image-container,
+#comics .card-image-container,
+#games .card-image-container {
+    border-radius: 20px;
+}
