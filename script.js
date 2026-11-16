@@ -145,8 +145,8 @@ function initVideoShowcase(context) {
 // tier games. To rotate a password, re-encrypt that tier's links JSON with
 // the new password and replace its constants below.
 const GATE_TIERS = {
-    4: { salt: 'vsgscXrImMU5Y98zNPQteg==', iv: 'W/o2s5t8Vd+1IlXS', data: 'x8k5jaNzOXcrTGAvUAOKek8OSEzof0QjeY9Lwogyz/i/FyThAwJ9EKzb8brCkeV+dPyCM1086MwhLERiwf1u7YXt0aRxrQ/i0wC6UwjAMubtPy+1IbL8C6W9SnB0SNcNqp9c4npKwJxX4Wv80VdEm8bOjx/0Hmc+m1uHNJF9Kc0I/EKNzWPw8Oa3fJjc0Hgf+clOGDlV5yhyxIqqkrd31QkdJKKTxvCRGmVb/zQg5rzsmzKaEnOIaGYGRu0FYn3BR1Cquet1HGDkkLhEW5vi41AnNmcyNRhRou0UqSHC55qKbhmC' },
-    3: { salt: 'KIQrvD6UeTXU0B+tStO6pQ==', iv: 'EOBQFk40Ktzmy6Z0', data: 'k5dMZZsyM6FkpRoCT/WBsVurmmg94+4JDspDnQMSJRoHmHSBDaFz42OwuZBFhdPxqjSG21W0xmXESKa/2rhme8Ei6yvrwRBYLRP7gubn1g1GW6ak/37AfJHzdQeWaFMeCO2jVhRPP9rJXFfFcEh1BXr+EmRtlzaO+Mo0ta4LTOw4GJod2dbLB3bfvUbGuF1g+vwHcuu7fhnVfkbFmwN1HRiIsza8cNx5Wh645uue8RN3BS4nOknkxlAzcDuzzPuKD+3n+LJidrT0xrXWoteP01WNuQnwxHlcdYw/749HwJ/uOeCg' }
+    4: { salt: 'oq5lGFem7sZNCDsjDcbhPQ==', iv: '+TQpKLUVusR5jPLa', data: '+MpYeeVQ2ViYJeMOsPhtTmvo7B4vpXS0L+8fQZybhV3cD+lHCwexGL3fZQOLD38AYNa/ffBFcl8erwOA0D7gDA2XNbMiivY5rdE2JAZQo+ILW86Ljg1nBpa+6w4mcg+Q5pnN13rCQWToW7cUZ+P+OYs8+8yO14otSkRBvAMP5KciWJfRAG5QrY7rDn1HhB/GnUyhp/sNwJ7+mD6Aj+GL8i6HLzgogBEENU8NnkeSBMcWaWjig8/p6VBjARKjMmhFwtrOCw5chJBkn5ZveUPfnp70cPTwVGdV3gJ8lhLtVBxYIijToPdBOLzrVvkfupVnmb212CMInYVx8eKSEYbepIB+n87F26gM0gH9/YGMjd6n9YEM9B9R0cjOlc1pOOKnY4aWi+6ZqL15QonyzZ8wmjDSkVcoGtWF4ktqJQIUuYay44XqxKd2OK+rxTOtPNyPPFLYUCtTjB7hfQ5m5DdLnkrttj7jMhwhZShnmjx8J0A9qpDlnrWce/OBLWYRG9IcVbI/ARJK87UKufydbMg+cCejujl6BWfqiyBgk0IeSY6tPe6/kTpprMvZrDf1j1S8Elw38x1U3kX5lAlV+Qohi+bZwEqw6dIq9sTwVSzvxx0fHb8ygLwuT3Oq3RiyVMXELuUIkyNzVwMfSVakkI1PBDMABQirMWR3suA4G/qbj/gKshqTg2lY3GNaYcdFRtM+dqrzgFoqosjl3W2KRcxt2dv3U+cNdvdWEEYdRLxdj+TKU0WCuHqRCyb+SRZWS5XWQ90wxYKsvTMKBZ6j6LDbQJjUB1ebZdWeV+VxLr9GlST1huv2coASHYSudAwTShwBqKyVIwrmrlEJBX1uaYFNh90DTGlDn2XE/wMx' },
+    3: { salt: 'Q4mtoyw7+CCp3ncgt84Ifg==', iv: 'f1ac3JiqsV/eTVQA', data: 'U7q9Z0tN9vbeeAcWaqYwPCVVORWPs9dcZrNkRXZf9NIxMlnxea1+gePSVe+nifk1TaHRcBcpuPgMeeXggtlN4Th0NEgSh98SRp73TDMcrcNJID8KgldLoDO9lLlmebGmq8R5eUxF6gsYRnzvY9VVYVol17JPNdd/X1TIkEca48OUHmDV/rp1r0UEKchp49KyoPJVNy3JbwZs2NsHLjZR/ky0VGpO2A9Fm0ExL22OjNfFmn+MF8EgPmlINgsJBVr+ymYqh2EznpPjvJpXmX4C2XNUn4AT8p6bbyeBFnhuAQ4NxI4ofvrlReONMi63HzhglcBen7XTqrUiL4AhLLbtcaKbqopINRhXhSUeNVMOQJX6so9PRzaGL9aeCKnKZtJUaRNiSUYA1LiK2OTStO8pHoXbx99xzPIjXol274eh4jSvuOdUxe2XO5XbjRcjjvDaW6zpwZwmS75fkLFCzgAH9AvEVaVIsBul8dEM4e8rda4R1YeqKSVoMAPtX62kq+xTE5f7rFh6uZ02LdB9ylTpu8lE1PPxoukbch+H5WblupUgU7BqLjGdfGoKRR5eknuurT+PMYKMdRwkMzG92l5bGkCMEcSS2T5CNisnHEl3qR9CMUX23LUa4x/DI+RL+ytDbYPZuE3CzOzJbOCLd/xgJjTR9acx' }
 };
 let gatePending = null;
 
@@ -188,11 +188,11 @@ function initGameGate(context) {
 
     function refreshButtons() {
         const access = gateGetAccess();
-        document.querySelectorAll('.gate-download').forEach(btn => {
+        document.querySelectorAll('.gate-download, .gate-play').forEach(btn => {
             const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
             const ok = !!(access && access.level >= tier && access.links[btn.getAttribute('data-game')]);
             btn.classList.toggle('unlocked', ok);
-            const note = btn.parentElement ? btn.parentElement.querySelector('.gate-note') : null;
+            const note = btn.querySelector('.gate-note') || (btn.parentElement ? btn.parentElement.querySelector('.gate-note') : null);
             if (note) {
                 note.innerHTML = ok
                     ? '<i class="fas fa-lock-open"></i> Unlocked on this device'
@@ -203,7 +203,7 @@ function initGameGate(context) {
         });
     }
 
-    context.querySelectorAll('.gate-download').forEach(btn => {
+    context.querySelectorAll('.gate-download, .gate-play').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
@@ -215,7 +215,7 @@ function initGameGate(context) {
                 if (error) error.hidden = true;
                 if (modalNote) {
                     modalNote.textContent = (access && tier > access.level)
-                        ? 'This download is for Rank 4 members. Enter the Rank 4 password to unlock it.'
+                        ? 'This one is for Rank 4 members. Enter the Rank 4 password to unlock it.'
                         : '';
                 }
                 if (input) input.value = '';
@@ -236,7 +236,7 @@ function initGameGate(context) {
                 refreshButtons();
                 if (gatePending && access.level < gatePending.tier) {
                     if (error) {
-                        error.textContent = 'That password unlocked Rank ' + access.level + ', but this download needs the Rank 4 password.';
+                        error.textContent = 'That password unlocked Rank ' + access.level + ', but this one needs the Rank 4 password.';
                         error.hidden = false;
                     }
                     return;
