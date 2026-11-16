@@ -620,8 +620,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    });
-
     // Global Subscribe Form
     initSubscribeForm(document);
     
