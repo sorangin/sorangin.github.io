@@ -139,14 +139,16 @@ function initVideoShowcase(context) {
 }
 
 
-// Members-only game downloads. The download links are stored encrypted;
-// the member password (Fourthwall Rank 3 and Rank 4) decrypts them in the
-// browser. To rotate: re-encrypt the links JSON with the new password and
-// replace the three constants below.
-const GATE_SALT = 'MHmrkCzJ3XewZoSPpCAVqg==';
-const GATE_IV = 'mCFMgqJDCcsv6WD8';
-const GATE_PAYLOAD = 'sb75h8VaVWMIwWOSiCLm7XFefTQizS+TGC8t3FX8QDcDdZaCzKzRKc1wYTZh0x9WApFaTkpH+uwqxq0rdIwybo24uEsbQ2j7+MDH2MKH164JLK57TPgA4JfzaJ+KFLqQijkl82bXAjK4dIeGVh7S1UtC42vxtvTE5qhYSSl699u7MKLSMcdlPkuBx9LfI1QHvaHf5XQtlrnq8wIxmfuBPNhG8MbPgOzhbnXzD/CokJwWPneyr6sAi+ReezZbEV8CJEDeCgTFBVxlCEltElO6hy+7RMKy6KxAAXKRQ/L0586PgVgb';
-let gatePendingGame = null;
+// Members-only game downloads. The download links are stored encrypted in
+// two payloads: the Rank 3 password unlocks most games (prototypes and works
+// in progress); the Rank 4 password unlocks everything, including the top
+// tier games. To rotate a password, re-encrypt that tier's links JSON with
+// the new password and replace its constants below.
+const GATE_TIERS = {
+    4: { salt: 't2Gx6Vyj04PO+Z6C05ii6g==', iv: 'Rjw176T14EwwiW56', data: 'guM+LxEXKDmLc83eaRdGaLOatirlxtqDu7xJul8Z3P41wfecY888es+cgVs904KsiTQxudBVjyggByC3yaA5ktBuZoqzH2mUYl8gpUvC2XMcDT4My/LEMfFFYN3kvRo7r7S5FopCJQKr7Y1Eb7/DTnWOqIgRs3jOQ4Rqy2vuDW4NdE1qmsU3X6h7J3Fgz+QKsrYuTDlKK3x3a5BFysA5gr6phKZYbFT95qH085Ovkypm2pL6xDqrs+f4ssHNm5H/m12Lma40ITTGCtBQZ6/iGqlp9SwL0f54shErjN0+DkauUgWb' },
+    3: { salt: 'cJ88vJrfyQb/0tzlPRG16w==', iv: 'PrA3xwgJuvV2vg76', data: '5TvTSgLGLS3fKlf8iSUFTZKsAiwO5YhpdLbC9FTGo/oqsinlWCSxhRhSKToWreY/Jkd+B7VEqWiI1I6MbYYIIaE2iMh61IWskAvD7RzyfMzqPEAgEwcPjlHmVpol5kfq2pvietAv+8OXNJmI5nAFGmg8MPxjzU5qv4EfGhHQUhMj3KCEUkVhUjLsIFfuy6b3R2JLTsOoS849OR8vws8rkSi9I+WCO2kSC8hmq9L8ScpW2c5iKANeG3gLl/cBxCmygFtP1V9rkcUIdw8W7MWBnchkP1ZtRTBxyx4n9temcE1TsCsF' }
+};
+let gatePending = null;
 
 function gateB64ToBytes(b64) {
     const bin = atob(b64);
@@ -155,19 +157,25 @@ function gateB64ToBytes(b64) {
     return bytes;
 }
 
-async function gateTryUnlock(password) {
+async function gateDecrypt(tier, password) {
+    const t = GATE_TIERS[tier];
     const enc = new TextEncoder();
     const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
     const key = await crypto.subtle.deriveKey(
-        { name: 'PBKDF2', salt: gateB64ToBytes(GATE_SALT), iterations: 150000, hash: 'SHA-256' },
+        { name: 'PBKDF2', salt: gateB64ToBytes(t.salt), iterations: 150000, hash: 'SHA-256' },
         keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
     const plain = await crypto.subtle.decrypt(
-        { name: 'AES-GCM', iv: gateB64ToBytes(GATE_IV) }, key, gateB64ToBytes(GATE_PAYLOAD));
+        { name: 'AES-GCM', iv: gateB64ToBytes(t.iv) }, key, gateB64ToBytes(t.data));
     return JSON.parse(new TextDecoder().decode(plain));
 }
 
-function gateGetLinks() {
-    try { return JSON.parse(localStorage.getItem('fw_gate_links') || 'null'); } catch (e) { return null; }
+async function gateTryUnlock(password) {
+    try { return { level: 4, links: await gateDecrypt(4, password) }; }
+    catch (e) { return { level: 3, links: await gateDecrypt(3, password) }; }
+}
+
+function gateGetAccess() {
+    try { return JSON.parse(localStorage.getItem('fw_gate_access') || 'null'); } catch (e) { return null; }
 }
 
 function initGameGate(context) {
@@ -175,28 +183,41 @@ function initGameGate(context) {
     const form = document.getElementById('gate-form');
     const input = document.getElementById('gate-password');
     const error = document.getElementById('gate-error');
+    const modalNote = document.getElementById('gate-modal-note');
+    const defaultError = error ? error.textContent : '';
 
     function refreshButtons() {
-        const links = gateGetLinks();
+        const access = gateGetAccess();
         document.querySelectorAll('.gate-download').forEach(btn => {
-            btn.classList.toggle('unlocked', !!links);
-        });
-        document.querySelectorAll('.gate-note').forEach(note => {
-            note.innerHTML = links
-                ? '<i class="fas fa-lock-open"></i> Unlocked on this device'
-                : '<i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members';
+            const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
+            const ok = !!(access && access.level >= tier && access.links[btn.getAttribute('data-game')]);
+            btn.classList.toggle('unlocked', ok);
+            const note = btn.parentElement ? btn.parentElement.querySelector('.gate-note') : null;
+            if (note) {
+                note.innerHTML = ok
+                    ? '<i class="fas fa-lock-open"></i> Unlocked on this device'
+                    : (tier >= 4
+                        ? '<i class="fas fa-lock"></i> Fourthwall Rank 4 members'
+                        : '<i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members');
+            }
         });
     }
 
     context.querySelectorAll('.gate-download').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const links = gateGetLinks();
-            const url = links && links[btn.getAttribute('data-game')];
+            const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
+            const access = gateGetAccess();
+            const url = access && access.level >= tier && access.links[btn.getAttribute('data-game')];
             if (url) { window.open(url, '_blank', 'noopener'); return; }
-            gatePendingGame = btn.getAttribute('data-game');
+            gatePending = { game: btn.getAttribute('data-game'), tier: tier };
             if (modal) {
                 if (error) error.hidden = true;
+                if (modalNote) {
+                    modalNote.textContent = (access && tier > access.level)
+                        ? 'This download is for Rank 4 members. Enter the Rank 4 password to unlock it.'
+                        : '';
+                }
                 if (input) input.value = '';
                 modal.classList.add('show');
                 if (input) setTimeout(() => input.focus(), 60);
@@ -209,15 +230,23 @@ function initGameGate(context) {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             try {
-                const links = await gateTryUnlock(input.value.trim());
-                localStorage.setItem('fw_gate_links', JSON.stringify(links));
-                modal.classList.remove('show');
+                const access = await gateTryUnlock(input.value.trim());
+                localStorage.setItem('fw_gate_access', JSON.stringify(access));
+                localStorage.removeItem('fw_gate_links');
                 refreshButtons();
-                const url = gatePendingGame && links[gatePendingGame];
-                gatePendingGame = null;
+                if (gatePending && access.level < gatePending.tier) {
+                    if (error) {
+                        error.textContent = 'That password unlocked Rank ' + access.level + ', but this download needs the Rank 4 password.';
+                        error.hidden = false;
+                    }
+                    return;
+                }
+                modal.classList.remove('show');
+                const url = gatePending && access.links[gatePending.game];
+                gatePending = null;
                 if (url) window.open(url, '_blank', 'noopener');
             } catch (err) {
-                if (error) error.hidden = false;
+                if (error) { error.textContent = defaultError; error.hidden = false; }
             }
         });
         const closeBtn = modal.querySelector('.modal-close');

@@ -180,7 +180,8 @@
             <button class="modal-close" aria-label="Close password prompt">&times;</button>
             <div class="gate-box">
                 <h2>Members only</h2>
-                <p>Game downloads are a perk for my Fourthwall members at Rank 3 and Rank 4. Enter the member password to unlock downloads on this device.</p>
+                <p>Game downloads are a perk for my Fourthwall members. Rank 3 unlocks most games, including prototypes and works in progress. Rank 4 unlocks everything, including the top tier games. Enter your member password to unlock downloads on this device.</p>
+                <p id="gate-modal-note" class="gate-modal-note"></p>
                 <form id="gate-form">
                     <input type="password" id="gate-password" placeholder="Member password" autocomplete="off">
                     <button type="submit" class="cta-button">Unlock</button>
@@ -686,7 +687,7 @@
                 <h2>Download</h2>
                 <p>
                     <a href="#"
-                        class="cta-button gate-download" data-game="yoink-the-king" title="Download Demo" target="_blank" rel="noopener noreferrer">
+                        class="cta-button gate-download" data-game="yoink-the-king" data-tier="3" title="Download Demo" target="_blank" rel="noopener noreferrer">
                         Download Demo <i class="fas fa-download"></i>
                     </a>
                         <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members</span>
@@ -794,7 +795,7 @@
                 <h2>Download</h2>
                 <p>
                     <a href="#"
-                        class="cta-button gate-download" data-game="small-world" title="Download Alpha Demo" target="_blank" rel="noopener noreferrer">
+                        class="cta-button gate-download" data-game="small-world" data-tier="3" title="Download Alpha Demo" target="_blank" rel="noopener noreferrer">
                         Download Alpha Demo <i class="fas fa-download"></i>
                     </a>
                         <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members</span>
