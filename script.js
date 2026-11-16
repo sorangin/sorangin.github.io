@@ -145,8 +145,8 @@ function initVideoShowcase(context) {
 // tier games. To rotate a password, re-encrypt that tier's links JSON with
 // the new password and replace its constants below.
 const GATE_TIERS = {
-    4: { salt: 't2Gx6Vyj04PO+Z6C05ii6g==', iv: 'Rjw176T14EwwiW56', data: 'guM+LxEXKDmLc83eaRdGaLOatirlxtqDu7xJul8Z3P41wfecY888es+cgVs904KsiTQxudBVjyggByC3yaA5ktBuZoqzH2mUYl8gpUvC2XMcDT4My/LEMfFFYN3kvRo7r7S5FopCJQKr7Y1Eb7/DTnWOqIgRs3jOQ4Rqy2vuDW4NdE1qmsU3X6h7J3Fgz+QKsrYuTDlKK3x3a5BFysA5gr6phKZYbFT95qH085Ovkypm2pL6xDqrs+f4ssHNm5H/m12Lma40ITTGCtBQZ6/iGqlp9SwL0f54shErjN0+DkauUgWb' },
-    3: { salt: 'cJ88vJrfyQb/0tzlPRG16w==', iv: 'PrA3xwgJuvV2vg76', data: '5TvTSgLGLS3fKlf8iSUFTZKsAiwO5YhpdLbC9FTGo/oqsinlWCSxhRhSKToWreY/Jkd+B7VEqWiI1I6MbYYIIaE2iMh61IWskAvD7RzyfMzqPEAgEwcPjlHmVpol5kfq2pvietAv+8OXNJmI5nAFGmg8MPxjzU5qv4EfGhHQUhMj3KCEUkVhUjLsIFfuy6b3R2JLTsOoS849OR8vws8rkSi9I+WCO2kSC8hmq9L8ScpW2c5iKANeG3gLl/cBxCmygFtP1V9rkcUIdw8W7MWBnchkP1ZtRTBxyx4n9temcE1TsCsF' }
+    4: { salt: 'vsgscXrImMU5Y98zNPQteg==', iv: 'W/o2s5t8Vd+1IlXS', data: 'x8k5jaNzOXcrTGAvUAOKek8OSEzof0QjeY9Lwogyz/i/FyThAwJ9EKzb8brCkeV+dPyCM1086MwhLERiwf1u7YXt0aRxrQ/i0wC6UwjAMubtPy+1IbL8C6W9SnB0SNcNqp9c4npKwJxX4Wv80VdEm8bOjx/0Hmc+m1uHNJF9Kc0I/EKNzWPw8Oa3fJjc0Hgf+clOGDlV5yhyxIqqkrd31QkdJKKTxvCRGmVb/zQg5rzsmzKaEnOIaGYGRu0FYn3BR1Cquet1HGDkkLhEW5vi41AnNmcyNRhRou0UqSHC55qKbhmC' },
+    3: { salt: 'KIQrvD6UeTXU0B+tStO6pQ==', iv: 'EOBQFk40Ktzmy6Z0', data: 'k5dMZZsyM6FkpRoCT/WBsVurmmg94+4JDspDnQMSJRoHmHSBDaFz42OwuZBFhdPxqjSG21W0xmXESKa/2rhme8Ei6yvrwRBYLRP7gubn1g1GW6ak/37AfJHzdQeWaFMeCO2jVhRPP9rJXFfFcEh1BXr+EmRtlzaO+Mo0ta4LTOw4GJod2dbLB3bfvUbGuF1g+vwHcuu7fhnVfkbFmwN1HRiIsza8cNx5Wh645uue8RN3BS4nOknkxlAzcDuzzPuKD+3n+LJidrT0xrXWoteP01WNuQnwxHlcdYw/749HwJ/uOeCg' }
 };
 let gatePending = null;
 
