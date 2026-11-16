@@ -118,6 +118,26 @@ function initComicResume(container) {
 let ytPlayer;
 
 // Reusable modal init for injected templates
+
+function initVideoShowcase(context) {
+    context.querySelectorAll('.video-showcase').forEach(showcase => {
+        const iframe = showcase.querySelector('.showcase-player iframe');
+        const nowTitle = showcase.querySelector('.showcase-now-title');
+        const thumbs = showcase.querySelectorAll('.showcase-thumb');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const embed = thumb.getAttribute('data-embed');
+                if (!embed || !iframe) return;
+                iframe.src = embed + (embed.includes('vimeo') ? '?autoplay=1' : '?autoplay=1&rel=0');
+                iframe.title = thumb.getAttribute('data-title') || '';
+                if (nowTitle) nowTitle.textContent = thumb.getAttribute('data-title') || '';
+                thumbs.forEach(t => t.classList.remove('is-playing'));
+                thumb.classList.add('is-playing');
+            });
+        });
+    });
+}
+
 function initModals(context) {
     const videoModal = document.getElementById('video-modal');
     const videoContainer = videoModal?.querySelector('.video-responsive');
@@ -282,6 +302,7 @@ function loadPage(pageName, sectionId) {
 
         // Re-init modals
         initModals(appContainer);
+        initVideoShowcase(appContainer);
         initComicResume(appContainer);
 
         // Update URL

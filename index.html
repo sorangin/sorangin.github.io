@@ -82,7 +82,7 @@
                                         onclick="event.preventDefault(); loadPage('animations-costco');">Costco
                                         Series</a></li>
                                 <li><a href="?page=animations-2d"
-                                        onclick="event.preventDefault(); loadPage('animations-2d');">2D Animations</a>
+                                        onclick="event.preventDefault(); loadPage('animations-2d');">Animations</a>
                                 </li>
                                 <li><a href="?page=animations-misc"
                                         onclick="event.preventDefault(); loadPage('animations-misc');">Misc</a></li>
@@ -390,75 +390,33 @@
             <a href="?page=animations-stick" onclick="event.preventDefault(); loadPage('animations-stick');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Stick Animations</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="card-image-container">
-                            <img src="https://i.ytimg.com/vi/NAOvn0XvwAY/maxresdefault.jpg" alt="Stick Animations" class="portfolio-image">
-                            <div class="image-overlay"><i class="fas fa-arrow-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="?page=animations-2d" onclick="event.preventDefault(); loadPage('animations-2d');"
-                class="portfolio-section category-card">
-                <h2 class="section-title">2D Animations</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="card-image-container">
-                            <img src="https://i.ytimg.com/vi/EpdP7DglHfw/maxresdefault.jpg" alt="2D Animations" class="portfolio-image">
-                            <div class="image-overlay"><i class="fas fa-arrow-right"></i></div>
-                        </div>
-                    </div>
+                <div class="card-image-container hub-media">
+                    <video src="videos/girls-like-assholes.mp4" class="portfolio-image" autoplay muted loop playsinline aria-label="Stick Animations"></video>
                 </div>
             </a>
             <a href="?page=animations-costco" onclick="event.preventDefault(); loadPage('animations-costco');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Day in the Life of a Costco Worker</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="card-image-container">
-                            <img src="https://i.ytimg.com/vi/f-usoZC0KqI/maxresdefault.jpg" alt="Day in the Life of a Costco Worker" class="portfolio-image">
-                            <div class="image-overlay"><i class="fas fa-arrow-right"></i></div>
-                        </div>
-                    </div>
+                <div class="card-image-container hub-media">
+                    <img src="https://i.ytimg.com/vi/f-usoZC0KqI/maxresdefault.jpg" alt="Day in the Life of a Costco Worker" class="portfolio-image">
+                </div>
+            </a>
+            <a href="?page=animations-2d" onclick="event.preventDefault(); loadPage('animations-2d');"
+                class="portfolio-section category-card">
+                <h2 class="section-title">Animations</h2>
+                <div class="card-image-container hub-media">
+                    <img src="https://i.ytimg.com/vi/EpdP7DglHfw/maxresdefault.jpg" alt="Animations" class="portfolio-image">
                 </div>
             </a>
             <a href="?page=animations-misc" onclick="event.preventDefault(); loadPage('animations-misc');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Misc</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="card-image-container">
-                            <img src="https://i.ytimg.com/vi/zAr3p59q3BM/maxresdefault.jpg" alt="Misc" class="portfolio-image">
-                            <div class="image-overlay"><i class="fas fa-arrow-right"></i></div>
-                        </div>
-                    </div>
+                <div class="card-image-container hub-media">
+                    <img src="https://i.ytimg.com/vi/zAr3p59q3BM/maxresdefault.jpg" alt="Misc Animations" class="portfolio-image">
                 </div>
             </a>
         </div>
-        <h2 class="section-title" style="margin-top: 3rem;">Featured</h2>
-        <div class="portfolio-grid">
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=cCkFl8IUzKE">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/cCkFl8IUzKE/maxresdefault.jpg" alt="Girls Like Assholes" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Girls Like Assholes</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://player.vimeo.com/video/946099115">
-                    <div class="card-image-container">
-                        <img src="https://i.vimeocdn.com/video/1851983170-8ea87a6a37fb30b745b54cf3e0cd8d617991c7b6af66f95fdf9bc550d9774-d_1920x1080" alt="Nara's Journey - Jin's Arrows" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Nara's Journey - Jin's Arrows</h3>
-                    </div>
-                </a>
-        </div>
-    </template>
+</template>
 
     <!-- GAMES LIBRARY TEMPLATE -->
     <template id="tpl-games">
@@ -1723,309 +1681,169 @@
     <template id="tpl-animations-stick">
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Stick Animations</h1>
-        <div class="portfolio-grid">
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=8Ros9ZS53ls">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/8Ros9ZS53ls/maxresdefault.jpg" alt="Cartoon Compilation - Animated Shorts" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Cartoon Compilation - Animated Shorts</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=lN4q30wzfIo">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/lN4q30wzfIo/maxresdefault.jpg" alt="Simon Says" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Simon Says</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=rTHMlj_bH5E">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/rTHMlj_bH5E/maxresdefault.jpg" alt="Simon Says - Extended Cut" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Simon Says - Extended Cut</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=GvFH0-7LMFc">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/GvFH0-7LMFc/maxresdefault.jpg" alt="The Man, The Woman, and The Donkey" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">The Man, The Woman, and The Donkey</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=yD7JKJEjGCY">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/yD7JKJEjGCY/maxresdefault.jpg" alt="The Man, the Woman, and the Donkey (Extended Cut)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">The Man, the Woman, and the Donkey (Extended Cut)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=NAOvn0XvwAY">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/NAOvn0XvwAY/maxresdefault.jpg" alt="Sora's Stick Animation Collection #1" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Sora's Stick Animation Collection #1</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=j4XdbNuFd5k">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/j4XdbNuFd5k/maxresdefault.jpg" alt="Sora's Stick Animation Collection #2" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Sora's Stick Animation Collection #2</h3>
-                    </div>
-                </a>
+        <div class="video-showcase">
+            <div class="showcase-player">
+                <iframe src="https://www.youtube.com/embed/8Ros9ZS53ls" title="Cartoon Compilation - Animated Shorts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="showcase-now-title">Cartoon Compilation - Animated Shorts</p>
+            <div class="showcase-thumbs">
+                <button type="button" class="showcase-thumb is-playing" data-embed="https://www.youtube.com/embed/8Ros9ZS53ls" data-title="Cartoon Compilation - Animated Shorts">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/8Ros9ZS53ls/maxresdefault.jpg" alt="Cartoon Compilation - Animated Shorts" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Cartoon Compilation - Animated Shorts</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/lN4q30wzfIo" data-title="Simon Says">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/lN4q30wzfIo/maxresdefault.jpg" alt="Simon Says" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Simon Says</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/GvFH0-7LMFc" data-title="The Man, The Woman, and The Donkey">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/GvFH0-7LMFc/maxresdefault.jpg" alt="The Man, The Woman, and The Donkey" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">The Man, The Woman, and The Donkey</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/yD7JKJEjGCY" data-title="The Man, the Woman, and the Donkey (Extended Cut)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/yD7JKJEjGCY/maxresdefault.jpg" alt="The Man, the Woman, and the Donkey (Extended Cut)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">The Man, the Woman, and the Donkey (Extended Cut)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/NAOvn0XvwAY" data-title="Sora's Stick Animation Collection #1">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/NAOvn0XvwAY/maxresdefault.jpg" alt="Sora's Stick Animation Collection #1" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Sora's Stick Animation Collection #1</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/j4XdbNuFd5k" data-title="Sora's Stick Animation Collection #2">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/j4XdbNuFd5k/maxresdefault.jpg" alt="Sora's Stick Animation Collection #2" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Sora's Stick Animation Collection #2</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/rTHMlj_bH5E" data-title="Simon Says - Extended Cut">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/rTHMlj_bH5E/maxresdefault.jpg" alt="Simon Says - Extended Cut" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Simon Says - Extended Cut</span>
+                </button>
+            </div>
         </div>
-    </template>
+</template>
 
     <!-- ANIMATIONS: COSTCO -->
     <template id="tpl-animations-costco">
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Day in the Life of a Costco Worker</h1>
-        <div class="portfolio-grid">
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=f-usoZC0KqI">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/f-usoZC0KqI/maxresdefault.jpg" alt="Day in the Life of a Costco Worker [Ep. 1-8]" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Episodes 1-8</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=iQ_S7N0XgkE">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/iQ_S7N0XgkE/maxresdefault.jpg" alt="Day in the Life of a Costco Worker Ep. 9 - Gas Station" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ep. 9 - Gas Station</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=Et_ia8W6M6o">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/Et_ia8W6M6o/maxresdefault.jpg" alt="Day in the Life of a Costco Worker Ep.10 - Cart Pushers" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ep. 10 - Cart Pushers</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=6bzVc1-kN88">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/6bzVc1-kN88/maxresdefault.jpg" alt="Day in the Life of a Costco Worker Ep. 11 - Closing Time" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ep. 11 - Closing Time</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=yl-BdUKEmFA">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/yl-BdUKEmFA/maxresdefault.jpg" alt="Day in the Life of a Costco Worker [Ep. 9-12]" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Episodes 9-12</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=sH8xBbNXnm8">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/sH8xBbNXnm8/maxresdefault.jpg" alt="Day in the Life of a Costco Worker Ep. 1-5 (Censored Versions)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ep. 1-5 (Censored Versions)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=oceDwha_j3I">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/oceDwha_j3I/maxresdefault.jpg" alt="Day in the Life of a Costco Worker - Ep. 1 (Alternate Ending)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ep. 1 (Alternate Ending)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=UrWHSv7Mf7Q">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/UrWHSv7Mf7Q/maxresdefault.jpg" alt="Day in the Life of a Costco Worker - Ep. 8 (Alternate Ending)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ep. 8 (Alternate Ending)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=h-0D-rGhAhA">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/h-0D-rGhAhA/maxresdefault.jpg" alt="Day in the Life of a Costco Worker - Rough Drafts Compilation 1" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Rough Drafts Compilation 1</h3>
-                    </div>
-                </a>
+        <div class="video-showcase">
+            <div class="showcase-player">
+                <iframe src="https://player.vimeo.com/video/863769378" title="Episodes 1-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="showcase-now-title">Episodes 1-8</p>
+            <div class="showcase-thumbs">
+                <button type="button" class="showcase-thumb is-playing" data-embed="https://player.vimeo.com/video/863769378" data-title="Episodes 1-8">
+                    <span class="thumb-media"><img src="https://i.vimeocdn.com/video/1723073020-4a3fafa93aea693c64b3f0f010ff96d6442423b43574167e2d6b85987acadf53-d_295x166?region=us" alt="Episodes 1-8" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Episodes 1-8</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://player.vimeo.com/video/849657514" data-title="Ep. 9 - Gas Station">
+                    <span class="thumb-media"><img src="https://i.vimeocdn.com/video/1703718285-c070b41b18f8ef7cb99418213c2b21dd31e77b865e8911c6c1e49ab1d008186f-d_295x166?region=us" alt="Ep. 9 - Gas Station" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ep. 9 - Gas Station</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/Et_ia8W6M6o" data-title="Ep. 10 - Cart Pushers">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/Et_ia8W6M6o/maxresdefault.jpg" alt="Ep. 10 - Cart Pushers" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ep. 10 - Cart Pushers</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://player.vimeo.com/video/1049879488" data-title="Ep. 11 - Closing Time">
+                    <span class="thumb-media"><img src="https://i.vimeocdn.com/video/1974322402-21f5353707c6fe68aaa8ac55fe95c4821a778dca30967b7d7270e8fb71194b6b-d_295x166?region=us" alt="Ep. 11 - Closing Time" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ep. 11 - Closing Time</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/sH8xBbNXnm8" data-title="Ep. 1-5 (Censored Versions)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/sH8xBbNXnm8/maxresdefault.jpg" alt="Ep. 1-5 (Censored Versions)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ep. 1-5 (Censored Versions)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/oceDwha_j3I" data-title="Ep. 1 (Alternate Ending)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/oceDwha_j3I/maxresdefault.jpg" alt="Ep. 1 (Alternate Ending)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ep. 1 (Alternate Ending)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/UrWHSv7Mf7Q" data-title="Ep. 8 (Alternate Ending)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/UrWHSv7Mf7Q/maxresdefault.jpg" alt="Ep. 8 (Alternate Ending)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ep. 8 (Alternate Ending)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/yl-BdUKEmFA" data-title="Episodes 9-12">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/yl-BdUKEmFA/maxresdefault.jpg" alt="Episodes 9-12" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Episodes 9-12</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/h-0D-rGhAhA" data-title="Rough Drafts Compilation 1">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/h-0D-rGhAhA/maxresdefault.jpg" alt="Rough Drafts Compilation 1" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Rough Drafts Compilation 1</span>
+                </button>
+            </div>
         </div>
-    </template>
+</template>
 
     <!-- ANIMATIONS: 2D -->
     <template id="tpl-animations-2d">
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
-            2D Animations</h1>
-        <div class="portfolio-grid">
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=EpdP7DglHfw">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/EpdP7DglHfw/maxresdefault.jpg" alt="Comptine D'un Autre Ete - The Duel" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Comptine D'un Autre Ete - The Duel</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://player.vimeo.com/video/946099115">
-                    <div class="card-image-container">
-                        <img src="https://i.vimeocdn.com/video/1851983170-8ea87a6a37fb30b745b54cf3e0cd8d617991c7b6af66f95fdf9bc550d9774-d_1920x1080" alt="Nara's Journey - Jin's Arrows" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Nara's Journey - Jin's Arrows</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://player.vimeo.com/video/946099045">
-                    <div class="card-image-container">
-                        <img src="https://i.vimeocdn.com/video/1851983149-5e08d9dea62f5df0322829ff9b25740af810d7bf58fc1e4b8d7c70de5a039579-d_1920x1080" alt="Nara's Journey - Step Away From The Door" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Nara's Journey - Step Away From The Door</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://player.vimeo.com/video/946099002">
-                    <div class="card-image-container">
-                        <img src="https://i.vimeocdn.com/video/1851983044-98d7f850d831ef0713200023d5a6b95a6ea64989a75081294f731cd7cd9e7220-d_1920x1080" alt="Nara's Journey - How The Hell" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Nara's Journey - How The Hell</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=3fBn8ErcbKQ">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/3fBn8ErcbKQ/maxresdefault.jpg" alt="Nara's Journey - Trapped (Animatic)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Nara's Journey - Trapped (Animatic)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=zGgcKl4qwhI">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/zGgcKl4qwhI/maxresdefault.jpg" alt="Nara's Journey - The Siege (Animatic)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Nara's Journey - The Siege (Animatic)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=Fg46tasM1EI">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/Fg46tasM1EI/maxresdefault.jpg" alt="The Heist - Animated Short" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">The Heist - Animated Short</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=Y_BMT4SUezk">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/Y_BMT4SUezk/maxresdefault.jpg" alt="Day in the Life of a Theme Park Worker - Trailer" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Day in the Life of a Theme Park Worker - Trailer</h3>
-                    </div>
-                </a>
+            Animations</h1>
+        <div class="video-showcase">
+            <div class="showcase-player">
+                <iframe src="https://www.youtube.com/embed/EpdP7DglHfw" title="Comptine D'un Autre Ete - The Duel" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="showcase-now-title">Comptine D'un Autre Ete - The Duel</p>
+            <div class="showcase-thumbs">
+                <button type="button" class="showcase-thumb is-playing" data-embed="https://www.youtube.com/embed/EpdP7DglHfw" data-title="Comptine D'un Autre Ete - The Duel">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/EpdP7DglHfw/maxresdefault.jpg" alt="Comptine D'un Autre Ete - The Duel" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Comptine D'un Autre Ete - The Duel</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://player.vimeo.com/video/946099115" data-title="Nara's Journey - Jin's Arrows">
+                    <span class="thumb-media"><img src="https://i.vimeocdn.com/video/1851983170-8ea87a6a37fb30b745b54cf3e0cd8d617991c7b6af66f95fdf9bc550d9774-d_295x166?region=us" alt="Nara's Journey - Jin's Arrows" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Nara's Journey - Jin's Arrows</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://player.vimeo.com/video/946099045" data-title="Nara's Journey - Step Away From The Door">
+                    <span class="thumb-media"><img src="https://i.vimeocdn.com/video/1851983149-5e08d9dea62f5df0322829ff9b25740af810d7bf58fc1e4b8d7c70de5a039579-d_295x166?region=us" alt="Nara's Journey - Step Away From The Door" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Nara's Journey - Step Away From The Door</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://player.vimeo.com/video/946099002" data-title="Nara's Journey - How The Hell">
+                    <span class="thumb-media"><img src="https://i.vimeocdn.com/video/1851983044-98d7f850d831ef0713200023d5a6b95a6ea64989a75081294f731cd7cd9e7220-d_295x166?region=us" alt="Nara's Journey - How The Hell" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Nara's Journey - How The Hell</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/3fBn8ErcbKQ" data-title="Nara's Journey - Trapped (Animatic)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/3fBn8ErcbKQ/maxresdefault.jpg" alt="Nara's Journey - Trapped (Animatic)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Nara's Journey - Trapped (Animatic)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/zGgcKl4qwhI" data-title="Nara's Journey - The Siege (Animatic)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/zGgcKl4qwhI/maxresdefault.jpg" alt="Nara's Journey - The Siege (Animatic)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Nara's Journey - The Siege (Animatic)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/Fg46tasM1EI" data-title="The Heist - Animated Short">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/Fg46tasM1EI/maxresdefault.jpg" alt="The Heist - Animated Short" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">The Heist - Animated Short</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/Y_BMT4SUezk" data-title="Day in the Life of a Theme Park Worker - Trailer">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/Y_BMT4SUezk/maxresdefault.jpg" alt="Day in the Life of a Theme Park Worker - Trailer" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Day in the Life of a Theme Park Worker - Trailer</span>
+                </button>
+            </div>
         </div>
-    </template>
+</template>
 
     <!-- ANIMATIONS: MISC -->
     <template id="tpl-animations-misc">
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Misc Animations</h1>
-        <div class="portfolio-grid">
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=zAr3p59q3BM">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/zAr3p59q3BM/maxresdefault.jpg" alt="Ding Dong Ditch" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Ding Dong Ditch</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=JybU8VgLZTc">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/JybU8VgLZTc/maxresdefault.jpg" alt="The Tornado (2017)" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">The Tornado (2017)</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=mF8JnM4ja3c">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/mF8JnM4ja3c/maxresdefault.jpg" alt="Why Did The Chicken Cross The Road?" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Why Did The Chicken Cross The Road?</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="portfolio-card video-trigger" data-video="https://www.youtube.com/watch?v=3_v2mGCdp0o">
-                    <div class="card-image-container">
-                        <img src="https://i.ytimg.com/vi/3_v2mGCdp0o/maxresdefault.jpg" alt="Animation Exercise - Paper Drop" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Animation Exercise - Paper Drop</h3>
-                    </div>
-                </a>
+        <div class="video-showcase">
+            <div class="showcase-player">
+                <iframe src="https://www.youtube.com/embed/zAr3p59q3BM" title="Ding Dong Ditch" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="showcase-now-title">Ding Dong Ditch</p>
+            <div class="showcase-thumbs">
+                <button type="button" class="showcase-thumb is-playing" data-embed="https://www.youtube.com/embed/zAr3p59q3BM" data-title="Ding Dong Ditch">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/zAr3p59q3BM/maxresdefault.jpg" alt="Ding Dong Ditch" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Ding Dong Ditch</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/JybU8VgLZTc" data-title="The Tornado (2017)">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/JybU8VgLZTc/maxresdefault.jpg" alt="The Tornado (2017)" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">The Tornado (2017)</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/mF8JnM4ja3c" data-title="Why Did The Chicken Cross The Road?">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/mF8JnM4ja3c/maxresdefault.jpg" alt="Why Did The Chicken Cross The Road?" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Why Did The Chicken Cross The Road?</span>
+                </button>
+                <button type="button" class="showcase-thumb" data-embed="https://www.youtube.com/embed/3_v2mGCdp0o" data-title="Animation Exercise - Paper Drop">
+                    <span class="thumb-media"><img src="https://i.ytimg.com/vi/3_v2mGCdp0o/maxresdefault.jpg" alt="Animation Exercise - Paper Drop" loading="lazy"><span class="now-playing-badge">Now Playing</span></span>
+                    <span class="thumb-title">Animation Exercise - Paper Drop</span>
+                </button>
+            </div>
         </div>
-    </template>
+</template>
 
     <!-- ABOUT TEMPLATE -->
     <template id="tpl-about">
