@@ -2322,3 +2322,50 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Illustrations, take two: NO aspect-ratio box at all. The three pieces
+   share one height and keep their natural widths; the card chrome
+   (background + shadow) comes off so nothing frames them. */
+#illustrations .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+#illustrations .portfolio-card {
+    flex: 0 1 auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+#illustrations .card-image-container.natural {
+    aspect-ratio: auto;
+    height: 260px;
+    width: fit-content;
+    margin: 0 auto;
+}
+#illustrations .card-image-container.natural .portfolio-image {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    #illustrations .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    #illustrations .card-image-container.natural {
+        height: auto;
+        width: 100%;
+    }
+    #illustrations .card-image-container.natural .portfolio-image {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Header social icons in their brand colors, readable at a glance */
+.header-social-links a[href*="youtube.com"] { color: #FF0000; }
+.header-social-links a[href*="facebook.com"] { color: #1877F2; }
+.header-social-links a[href*="tiktok.com"] { color: #FFFFFF; }
+.header-social-links a[href*="instagram.com"] { color: #E1306C; }
+.header-social-links a[href*="fourthwall.com"] { color: #FFFFFF; }
+.header-social-links a[href*="ko-fi.com"] { color: #00B9FE; }
