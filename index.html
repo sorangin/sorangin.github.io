@@ -68,9 +68,7 @@
                         <a href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener" title="Fourthwall"><svg width="30" height="19"
                                 class="fw-icon" viewBox="0 0 64 40" aria-hidden="true" focusable="false"><path
                                     fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M30.9431 10.3171L34.8169 30.4553L38.2527 10.3171H47.5259L50.9079 30.4553L54.7816 10.3171H64L57.2361 39.9999H46.817L42.8898 18.0962L38.9621 39.9999H28.4886L21.7247 10.3171H30.9431ZM23.8934 0L22.5295 6.40047H19.9657C16.7474 6.40047 16.0385 6.56593 15.4927 8.82726L15.2199 10.3173H21.7113L20.3469 16.7723H13.8559L9.00082 40H0L4.85511 16.7723H0.81864L2.18257 10.3173H6.16465L6.60116 8.44089C8.01948 1.43455 11.4014 0 19.2563 0H23.8934Z" /></svg></a>
-                        <a href="https://ko-fi.com/sorangin" target="_blank" rel="noopener" title="Ko-fi"><svg width="24" height="24"
-                                class="kofi-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path
-                                    fill="currentColor" d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298" /></svg></a>
+                        
                     </div>
 
                     <nav class="main-nav">
@@ -122,8 +120,8 @@
                         <a href="?page=about" onclick="event.preventDefault(); loadPage('about');">About</a>
                     </nav>
                 </div>
-                <a href="#" class="custom-donate-btn donate-trigger" title="Support My Work" style="display: flex; align-items: center;">
-                    <img src="images/donate.png" alt="Donate Options" class="donate-img-btn" style="max-height: 65px; width: auto; transition: transform 0.3s ease;">
+                <a href="https://ko-fi.com/sorangin" target="_blank" rel="noopener" class="custom-donate-btn" title="Support My Work" style="display: flex; align-items: center;">
+                    <img src="images/donate.png" alt="Donate on Ko-fi" class="donate-img-btn" style="max-height: 65px; width: auto; transition: transform 0.3s ease;">
                 </a>
             </div>
         </div>
@@ -188,31 +186,6 @@
 
             <div id="lightbox-thumbnails" class="lightbox-thumbnails">
                 <!-- Thumbnails injected via JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Donate Modal -->
-    <div id="donate-modal" class="modal-overlay">
-        <div class="modal-container" style="max-width: 400px; background-color: var(--card-background); border-radius: var(--border-radius); padding: 2.5rem 2rem; text-align: center; border: 1px solid var(--border-color); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
-            <button class="modal-close" aria-label="Close donate options" style="top: 15px; right: 20px; font-size: 2rem; color: var(--text-muted);">&times;</button>
-            <h2 style="font-family: var(--font-display); color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.8rem;">Support My Work</h2>
-            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Select your preferred platform below. 100% of Venmo contributions go directly to supporting my work.</p>
-            
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <a href="https://venmo.com/u/SoraNgin" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: #008CFF; border-color: #008CFF; width: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding: 1rem;">
-                    <i class="fab fa-venmo" style="margin-right: 10px; font-size: 1.3rem;"></i> Donate with Venmo
-                </a>
-                
-                <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                    <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--border-color);">
-                    <span style="padding: 0 1rem; color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">OR</span>
-                    <hr style="flex-grow: 1; border: none; border-top: 1px solid var(--border-color);">
-                </div>
-
-                <a href="https://paypal.me/sorangin" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: transparent; border-color: var(--border-color); color: var(--text-color); width: 100%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding: 1rem; transition: border-color 0.3s, color 0.3s;">
-                    <i class="fab fa-paypal" style="color: #0079C1; margin-right: 10px; font-size: 1.3rem;"></i> Donate with PayPal
-                </a>
             </div>
         </div>
     </div>
