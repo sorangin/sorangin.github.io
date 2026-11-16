@@ -2300,3 +2300,25 @@ body {
     height: auto;
     display: block;
 }
+
+/* Home fixes: no underlines under the header social icons (the anchors
+   never opted out of the default link underline); the Illustrations row
+   gets one uniform 3:2 box with whole artwork fitted inside, so the
+   portrait piece shrinks to the same margins as the landscape ones;
+   home Comics grid is 2x2 on desktop */
+.header-social-links a {
+    text-decoration: none;
+}
+#illustrations .card-image-container.natural {
+    aspect-ratio: 3 / 2;
+}
+#illustrations .card-image-container.natural .portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media (min-width: 769px) {
+    #comics .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
