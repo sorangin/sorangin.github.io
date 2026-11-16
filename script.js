@@ -138,6 +138,95 @@ function initVideoShowcase(context) {
     });
 }
 
+
+// Members-only game downloads. The download links are stored encrypted;
+// the member password (Fourthwall Rank 3 and Rank 4) decrypts them in the
+// browser. To rotate: re-encrypt the links JSON with the new password and
+// replace the three constants below.
+const GATE_SALT = 'MHmrkCzJ3XewZoSPpCAVqg==';
+const GATE_IV = 'mCFMgqJDCcsv6WD8';
+const GATE_PAYLOAD = 'sb75h8VaVWMIwWOSiCLm7XFefTQizS+TGC8t3FX8QDcDdZaCzKzRKc1wYTZh0x9WApFaTkpH+uwqxq0rdIwybo24uEsbQ2j7+MDH2MKH164JLK57TPgA4JfzaJ+KFLqQijkl82bXAjK4dIeGVh7S1UtC42vxtvTE5qhYSSl699u7MKLSMcdlPkuBx9LfI1QHvaHf5XQtlrnq8wIxmfuBPNhG8MbPgOzhbnXzD/CokJwWPneyr6sAi+ReezZbEV8CJEDeCgTFBVxlCEltElO6hy+7RMKy6KxAAXKRQ/L0586PgVgb';
+let gatePendingGame = null;
+
+function gateB64ToBytes(b64) {
+    const bin = atob(b64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+}
+
+async function gateTryUnlock(password) {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    const key = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: gateB64ToBytes(GATE_SALT), iterations: 150000, hash: 'SHA-256' },
+        keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+    const plain = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: gateB64ToBytes(GATE_IV) }, key, gateB64ToBytes(GATE_PAYLOAD));
+    return JSON.parse(new TextDecoder().decode(plain));
+}
+
+function gateGetLinks() {
+    try { return JSON.parse(localStorage.getItem('fw_gate_links') || 'null'); } catch (e) { return null; }
+}
+
+function initGameGate(context) {
+    const modal = document.getElementById('gate-modal');
+    const form = document.getElementById('gate-form');
+    const input = document.getElementById('gate-password');
+    const error = document.getElementById('gate-error');
+
+    function refreshButtons() {
+        const links = gateGetLinks();
+        document.querySelectorAll('.gate-download').forEach(btn => {
+            btn.classList.toggle('unlocked', !!links);
+        });
+        document.querySelectorAll('.gate-note').forEach(note => {
+            note.innerHTML = links
+                ? '<i class="fas fa-lock-open"></i> Unlocked on this device'
+                : '<i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members';
+        });
+    }
+
+    context.querySelectorAll('.gate-download').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const links = gateGetLinks();
+            const url = links && links[btn.getAttribute('data-game')];
+            if (url) { window.open(url, '_blank', 'noopener'); return; }
+            gatePendingGame = btn.getAttribute('data-game');
+            if (modal) {
+                if (error) error.hidden = true;
+                if (input) input.value = '';
+                modal.classList.add('show');
+                if (input) setTimeout(() => input.focus(), 60);
+            }
+        });
+    });
+
+    if (form && !form.dataset.bound) {
+        form.dataset.bound = '1';
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            try {
+                const links = await gateTryUnlock(input.value.trim());
+                localStorage.setItem('fw_gate_links', JSON.stringify(links));
+                modal.classList.remove('show');
+                refreshButtons();
+                const url = gatePendingGame && links[gatePendingGame];
+                gatePendingGame = null;
+                if (url) window.open(url, '_blank', 'noopener');
+            } catch (err) {
+                if (error) error.hidden = false;
+            }
+        });
+        const closeBtn = modal.querySelector('.modal-close');
+        if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+        modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('show'); });
+    }
+    refreshButtons();
+}
+
 function initModals(context) {
     const videoModal = document.getElementById('video-modal');
     const videoContainer = videoModal?.querySelector('.video-responsive');
@@ -303,6 +392,7 @@ function loadPage(pageName, sectionId) {
         // Re-init modals
         initModals(appContainer);
         initVideoShowcase(appContainer);
+        initGameGate(appContainer);
         initComicResume(appContainer);
 
         // Update URL

@@ -173,6 +173,24 @@
         </div>
     </div>
 
+
+    <!-- Members Download Gate -->
+    <div id="gate-modal" class="modal-overlay">
+        <div class="modal-container gate-container">
+            <button class="modal-close" aria-label="Close password prompt">&times;</button>
+            <div class="gate-box">
+                <h2>Members only</h2>
+                <p>Game downloads are a perk for my Fourthwall members at Rank 3 and Rank 4. Enter the member password to unlock downloads on this device.</p>
+                <form id="gate-form">
+                    <input type="password" id="gate-password" placeholder="Member password" autocomplete="off">
+                    <button type="submit" class="cta-button">Unlock</button>
+                </form>
+                <p id="gate-error" class="gate-error" hidden>That password did not work. Members can find the current password in the latest members post on Fourthwall.</p>
+                <p class="gate-join">Not a member yet? <a href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Get the password on Fourthwall</a></p>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox for Images -->
     <div id="image-lightbox" class="modal-overlay">
         <div class="modal-container image-modal-container gallery-mode">
@@ -667,10 +685,11 @@
             <section class="game-download">
                 <h2>Download</h2>
                 <p>
-                    <a href="https://drive.google.com/drive/folders/1cqYEcw-YmphrO6LQfPUDJ4Ub860ZAYYW?usp=drive_link"
-                        class="cta-button" title="Download Demo" target="_blank" rel="noopener noreferrer">
+                    <a href="#"
+                        class="cta-button gate-download" data-game="yoink-the-king" title="Download Demo" target="_blank" rel="noopener noreferrer">
                         Download Demo <i class="fas fa-download"></i>
                     </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members</span>
                 </p>
             </section>
             <nav class="back-link-section">
@@ -774,10 +793,11 @@
             <section class="game-download">
                 <h2>Download</h2>
                 <p>
-                    <a href="https://drive.google.com/drive/folders/1Kdi4AZDDK2omA4qoY-baAbtKvDdhIf9J?usp=drive_link"
-                        class="cta-button" title="Download Alpha Demo" target="_blank" rel="noopener noreferrer">
+                    <a href="#"
+                        class="cta-button gate-download" data-game="small-world" title="Download Alpha Demo" target="_blank" rel="noopener noreferrer">
                         Download Alpha Demo <i class="fas fa-download"></i>
                     </a>
+                        <span class="gate-note"><i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members</span>
                 </p>
             </section>
             <nav class="back-link-section">
