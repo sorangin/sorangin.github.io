@@ -97,7 +97,6 @@
                                         onclick="event.preventDefault(); loadPage('animations-misc');">Misc</a></li>
                             </ul>
                         </div>
-                        <a href="?page=games" onclick="event.preventDefault(); loadPage('games');">Games</a>
                         <div class="nav-item has-dropdown">
                             <a href="?page=art-illustrations" class="nav-link" data-page="art-illustrations">Art <i
                                     class="fas fa-chevron-down dropdown-icon"></i></a>
@@ -125,6 +124,7 @@
                                         onclick="event.preventDefault(); loadPage('art-pixel-art');">Pixel Art</a></li>
                             </ul>
                         </div>
+                        <a href="?page=games" onclick="event.preventDefault(); loadPage('games');">Games</a>
                         <a href="?page=comics" onclick="event.preventDefault(); loadPage('comics');">Comics</a>
                         <a href="?page=about" onclick="event.preventDefault(); loadPage('about');">About</a>
                     </nav>
@@ -321,6 +321,47 @@
             </div>
         </section>
         <!-- 4. COMICS -->
+        <section id="games" class="portfolio-section">
+            <a href="?page=games" onclick="event.preventDefault(); loadPage('games');" class="section-title-link">
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">Games</h2>
+            </a>
+            <div class="portfolio-grid">
+                <a href="?page=small-world" onclick="event.preventDefault(); loadPage('small-world');"
+                    class="portfolio-card">
+                    <div class="card-image-container">
+                        <img src="images/smallworld4.jpg" alt="Small World" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">Small World</h3>
+                    </div>
+                </a>
+
+                <a href="?page=frostfire" onclick="event.preventDefault(); loadPage('frostfire');"
+                    class="portfolio-card">
+                    <div class="card-image-container">
+                        <img src="images/home-frostfire.jpg" alt="FrostFire" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">FrostFire</h3>
+                    </div>
+                </a>
+
+                <a href="?page=the-return" onclick="event.preventDefault(); loadPage('the-return');"
+                    class="portfolio-card">
+                    <div class="card-image-container">
+                        <img src="images/thereturn.jpg" alt="The Return" class="portfolio-image">
+                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="portfolio-title">The Return</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    <!-- 5. GAMES -->
         <section id="comics" class="portfolio-section">
             <a href="?page=comics" onclick="event.preventDefault(); loadPage('comics');" class="section-title-link">
                 <h2 class="section-title">Comics</h2>
@@ -363,47 +404,6 @@
                     </div>
                     <div class="card-content">
                         <h3 class="portfolio-title">Clone Machine</h3>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-    <!-- 5. GAMES -->
-        <section id="games" class="portfolio-section">
-            <a href="?page=games" onclick="event.preventDefault(); loadPage('games');" class="section-title-link">
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">Games</h2>
-            </a>
-            <div class="portfolio-grid">
-                <a href="?page=small-world" onclick="event.preventDefault(); loadPage('small-world');"
-                    class="portfolio-card">
-                    <div class="card-image-container">
-                        <img src="images/smallworld4.jpg" alt="Small World" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">Small World</h3>
-                    </div>
-                </a>
-
-                <a href="?page=frostfire" onclick="event.preventDefault(); loadPage('frostfire');"
-                    class="portfolio-card">
-                    <div class="card-image-container">
-                        <img src="images/home-frostfire.jpg" alt="FrostFire" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">FrostFire</h3>
-                    </div>
-                </a>
-
-                <a href="?page=the-return" onclick="event.preventDefault(); loadPage('the-return');"
-                    class="portfolio-card">
-                    <div class="card-image-container">
-                        <img src="images/thereturn.jpg" alt="The Return" class="portfolio-image">
-                        <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="portfolio-title">The Return</h3>
                     </div>
                 </a>
             </div>
