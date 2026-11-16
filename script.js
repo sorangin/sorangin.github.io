@@ -620,17 +620,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Global Modals (Donate)
-    const donateTriggers = document.querySelectorAll('.donate-trigger');
-    const donateModal = document.getElementById('donate-modal');
-    donateTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (donateModal) {
-                donateModal.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-        });
     });
 
     // Global Subscribe Form
