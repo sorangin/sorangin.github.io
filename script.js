@@ -189,6 +189,12 @@ function initGameGate(context) {
     function refreshButtons() {
         const access = gateGetAccess();
         document.querySelectorAll('.gate-download, .gate-play').forEach(btn => {
+            if (btn.hasAttribute('data-pending')) {
+                btn.classList.remove('unlocked');
+                const pnote = btn.querySelector('.gate-note') || (btn.parentElement ? btn.parentElement.querySelector('.gate-note') : null);
+                if (pnote) pnote.innerHTML = '<i class="fas fa-lock"></i> Fourthwall Rank 3 and Rank 4 members &middot; Demo coming soon';
+                return;
+            }
             const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
             const ok = !!(access && access.level >= tier && access.links[btn.getAttribute('data-game')]);
             btn.classList.toggle('unlocked', ok);
@@ -204,6 +210,7 @@ function initGameGate(context) {
     }
 
     context.querySelectorAll('.gate-download, .gate-play').forEach(btn => {
+        if (btn.hasAttribute('data-pending')) return;
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const tier = parseInt(btn.getAttribute('data-tier') || '3', 10);
