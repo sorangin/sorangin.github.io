@@ -136,7 +136,7 @@
                         </div>
                         <a href="/games" onclick="event.preventDefault(); loadPage('games');">Games</a>
                         <a href="/comics" onclick="event.preventDefault(); loadPage('comics');">Comics</a>
-                        <a href="/membership" onclick="event.preventDefault(); loadPage('membership');">Membership</a>
+                        <a href="/membership" onclick="event.preventDefault(); goToMembership();">Membership</a>
                         <a href="/about" onclick="event.preventDefault(); loadPage('about');">About</a>
                     </nav>
                 </div>
@@ -421,9 +421,42 @@
         </section>
         <section id="membership" class="portfolio-section membership-strip">
             <h2 class="section-title">Join the Ranks</h2>
-            <p>Support the cartoons as a member and unlock the game downloads, member-only files, and a monthly illustration.</p>
-            <div class="tier-chips"><span class="tier-chip">Commoner &middot; $5/mo</span><span class="tier-chip">Footman &middot; $10/mo</span><span class="tier-chip">Archer &middot; $30/mo</span></div>
-            <a class="cta-button" href="/membership" onclick="event.preventDefault(); loadPage('membership');">See membership tiers</a>
+            <p>Support the cartoons as a member and unlock the game downloads, member-only files, and a monthly illustration. Memberships are handled through Fourthwall; members receive the download password for their rank.</p>
+            <div class="membership-tiers">
+            <div class="tier-card">
+                <h3>Commoner</h3>
+                <p class="tier-price">$5 <span>/ month</span></p>
+                <ul>
+                    <li>Digital member badge</li>
+                    <li>Member-only posts and files</li>
+                </ul>
+                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
+            </div>
+            <div class="tier-card">
+                <h3>Footman</h3>
+                <p class="tier-price">$10 <span>/ month</span></p>
+                <ul>
+                    <li>Everything in Commoner</li>
+                    <li>Production files, sprites, and wallpapers</li>
+                    <li>Upgraded digital badge</li>
+                </ul>
+                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
+            </div>
+            <div class="tier-card">
+                <h3>Archer</h3>
+                <p class="tier-price">$30 <span>/ month</span></p>
+                <ul>
+                    <li>Everything in Footman</li>
+                    <li>Mailed art print with the real badge card inside the package</li>
+                    <li>Your own stick-figure portrait</li>
+                    <li>A brief cameo in an animation</li>
+                    <li>Preview game builds and beta testing (Rank 3+ downloads)</li>
+                    <li>Game source files (.gmx)</li>
+                </ul>
+                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
+            </div>
+        </div>
+            <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">See membership tiers</a>
         </section>
         </template>
 
@@ -2350,47 +2383,6 @@
             </div>
         </section>
     </template>
-<template id="tpl-membership">
-    <section class="portfolio-section">
-        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem; text-transform: none;">Membership</h1>
-        <p style="text-align: center; max-width: 720px; margin: 0 auto;">Join the ranks on Fourthwall and support the cartoons directly. Members unlock the game downloads on this site, get member-only posts and files, and collect one high-res illustration download every month.</p>
-        <div class="membership-tiers">
-            <div class="tier-card">
-                <h3>Commoner</h3>
-                <p class="tier-price">$5 <span>/ month</span></p>
-                <ul>
-                    <li>Digital member badge</li>
-                    <li>Member-only posts and files</li>
-                </ul>
-                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
-            </div>
-            <div class="tier-card">
-                <h3>Footman</h3>
-                <p class="tier-price">$10 <span>/ month</span></p>
-                <ul>
-                    <li>Everything in Commoner</li>
-                    <li>Production files, sprites, and wallpapers</li>
-                    <li>Upgraded digital badge</li>
-                </ul>
-                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
-            </div>
-            <div class="tier-card">
-                <h3>Archer</h3>
-                <p class="tier-price">$30 <span>/ month</span></p>
-                <ul>
-                    <li>Everything in Footman</li>
-                    <li>Mailed art print with the real badge card inside the package</li>
-                    <li>Your own stick-figure portrait</li>
-                    <li>A brief cameo in an animation</li>
-                    <li>Preview game builds and beta testing (Rank 3+ downloads)</li>
-                    <li>Game source files (.gmx)</li>
-                </ul>
-                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
-            </div>
-        </div>
-        <p style="text-align: center;">Memberships are handled through Fourthwall. Members receive the download password for their rank.</p>
-    </section>
-</template>
 
 
     <script src="script.js"></script>
