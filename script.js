@@ -145,8 +145,8 @@ function initVideoShowcase(context) {
 // tier games. To rotate a password, re-encrypt that tier's links JSON with
 // the new password and replace its constants below.
 const GATE_TIERS = {
-    4: { salt: 'oq5lGFem7sZNCDsjDcbhPQ==', iv: '+TQpKLUVusR5jPLa', data: '+MpYeeVQ2ViYJeMOsPhtTmvo7B4vpXS0L+8fQZybhV3cD+lHCwexGL3fZQOLD38AYNa/ffBFcl8erwOA0D7gDA2XNbMiivY5rdE2JAZQo+ILW86Ljg1nBpa+6w4mcg+Q5pnN13rCQWToW7cUZ+P+OYs8+8yO14otSkRBvAMP5KciWJfRAG5QrY7rDn1HhB/GnUyhp/sNwJ7+mD6Aj+GL8i6HLzgogBEENU8NnkeSBMcWaWjig8/p6VBjARKjMmhFwtrOCw5chJBkn5ZveUPfnp70cPTwVGdV3gJ8lhLtVBxYIijToPdBOLzrVvkfupVnmb212CMInYVx8eKSEYbepIB+n87F26gM0gH9/YGMjd6n9YEM9B9R0cjOlc1pOOKnY4aWi+6ZqL15QonyzZ8wmjDSkVcoGtWF4ktqJQIUuYay44XqxKd2OK+rxTOtPNyPPFLYUCtTjB7hfQ5m5DdLnkrttj7jMhwhZShnmjx8J0A9qpDlnrWce/OBLWYRG9IcVbI/ARJK87UKufydbMg+cCejujl6BWfqiyBgk0IeSY6tPe6/kTpprMvZrDf1j1S8Elw38x1U3kX5lAlV+Qohi+bZwEqw6dIq9sTwVSzvxx0fHb8ygLwuT3Oq3RiyVMXELuUIkyNzVwMfSVakkI1PBDMABQirMWR3suA4G/qbj/gKshqTg2lY3GNaYcdFRtM+dqrzgFoqosjl3W2KRcxt2dv3U+cNdvdWEEYdRLxdj+TKU0WCuHqRCyb+SRZWS5XWQ90wxYKsvTMKBZ6j6LDbQJjUB1ebZdWeV+VxLr9GlST1huv2coASHYSudAwTShwBqKyVIwrmrlEJBX1uaYFNh90DTGlDn2XE/wMx' },
-    3: { salt: 'Q4mtoyw7+CCp3ncgt84Ifg==', iv: 'f1ac3JiqsV/eTVQA', data: 'U7q9Z0tN9vbeeAcWaqYwPCVVORWPs9dcZrNkRXZf9NIxMlnxea1+gePSVe+nifk1TaHRcBcpuPgMeeXggtlN4Th0NEgSh98SRp73TDMcrcNJID8KgldLoDO9lLlmebGmq8R5eUxF6gsYRnzvY9VVYVol17JPNdd/X1TIkEca48OUHmDV/rp1r0UEKchp49KyoPJVNy3JbwZs2NsHLjZR/ky0VGpO2A9Fm0ExL22OjNfFmn+MF8EgPmlINgsJBVr+ymYqh2EznpPjvJpXmX4C2XNUn4AT8p6bbyeBFnhuAQ4NxI4ofvrlReONMi63HzhglcBen7XTqrUiL4AhLLbtcaKbqopINRhXhSUeNVMOQJX6so9PRzaGL9aeCKnKZtJUaRNiSUYA1LiK2OTStO8pHoXbx99xzPIjXol274eh4jSvuOdUxe2XO5XbjRcjjvDaW6zpwZwmS75fkLFCzgAH9AvEVaVIsBul8dEM4e8rda4R1YeqKSVoMAPtX62kq+xTE5f7rFh6uZ02LdB9ylTpu8lE1PPxoukbch+H5WblupUgU7BqLjGdfGoKRR5eknuurT+PMYKMdRwkMzG92l5bGkCMEcSS2T5CNisnHEl3qR9CMUX23LUa4x/DI+RL+ytDbYPZuE3CzOzJbOCLd/xgJjTR9acx' }
+    4: { salt: 'Ul+sWLU6cu/kdhYk5NrhRQ==', iv: 'kQgRqRbOunF/zBuw', data: 'ZNGS2DqG4/SNH1B+Z1ynokpzaWps/tIto3T35yx+xbK+mclMhdXU9QoImCcbpYLHetH5W7FZywRDyir9NS6mWeLLunsgDQIw6drcZX6IYhYi/5L/26jjwfCHuUX3wov9b5vjawb+i4muDtlrsoLfkZdg3/oQM+eq+RrpdvdUxwprxw+PNL7XH9VyL+hV6xYsvV9f8kZXd1sUvf/QDI2Ws0ZLnLqEcdWGeCwsWa8hfgFCXN+lY37srI0+wVcK1RLkbYPEGEpAkWE7/qbpazs7PejHObD3LX5u9Vw21S2JrOn9WMpN4mExby+avtIvvZDlZSkCGXzG8EzvwcEQ7B5p83BUZNBT53arUjjByHUtQ7VapyAsZVpUfl5YTE7P/o1bmZMvs7Y/UMg48AEdzeUeDAPWZH4NPsYPLAJSY/ba65lSPY/wL5N3c1OBqjtpCWJg8QsXselLAKJyfze3QBXbw5nOdweG19kZMs7U5wNsgn6wF+oMZUMN8gCGgGU7nxDU+M8T44KsmtyqTDRBw19sOGRdiJV5dPA5+LQsyM/rQNKBSiAVM5fQElGputZRm64XMCJ9cln8EqG3ZF1vaWzzWPlnZAimXFFAA2+yBo6XvZwG29m9wzSEOS2YOOYZrJsjnQtO4TRq6eiJLZCbgyyv7Frj5vawrUgLD4X5xJfMZQ2VFoUnXpPF9EuzJVhK0AkPsNOkXntkRcewc4PtloVLmm279pRcJ1u104Tu2x0BU5Uul8vacLFXDbVqqgqwpTuwd5MFbOtmPLavpzhQsxXoOghpTgJ1KwFCwvWsD5gXEk1CpbZ0dkABxi5y+uamcWJ+NX6BHT7qump+ScdWy88tmR2hA+2fhoLA+B1JcxOprv7hsTCGqvFZcuBKb18W4iLOW1CZpyZDje+BBshJuWU3/dL/7BDkX/YVBLqHG5k=' },
+    3: { salt: 'P35ezGUKZSOc7NBGD1w4sg==', iv: 'v6HvfwD4TmNMLd0j', data: 'vE3nCdN6qMwDlmqO9QLYJnOxEgR8a6XiJdOeOhjM/oazoiw7NlAT9JfGlhZKRW0Ddi6Td/FtRr2+Sz3/PX8phJWPVBGYeKY1r6aezmYAdVjTzYrq61PsWAfxEbTWZ7O9hAS/IAQ1WIvFI3EC3iIZn9zVqu/KQgcVrcpAcZqZFoU4DVu1OwCZmW+9NgsmKz2ogvVFeyGWe2brWJuCElJ/vcVxJa/sdBrobJO8elFyhX6PnoTViJZwySA4ZeHrvUDky2AFiZQA7FhipdENEpYl/Q8Xe6pWj3tVZCltvVz+MyGsBr7bTWP8ii0p3w+J2FVmRZpKnZnpnEZrtiLoGoNYMB6OATo3nBwOKAw3Mucp/mUjPjghlWSe/HdcFheTzfN7MM2sqPyUL7BI5vzdFxcGaQa2S0EA5T/8gLf3jI6hg7i0zk3NVA9V3qbO0n45AFSACq0J9TnAUbozUbfslgUeYQk6vOs/mzAYq3xtKqFcpVPAyLPpuGE9Pd2rR95gxCiCyTFx9R0h/7h3xxpHVJx9mdhCbwSFa5Rtta0bslMQqNltvEx8mHLJH6CcpvK8wbsg+1FZbePTN3W0QkhRRdIvXL9UDPCgXgQSUiwBUMUVlmW3lBJLQTznyzu6nSLY4nvMlK9XWDdB/Ofe+R8gqNmt/YWzLOLN/qVgDOJWmbvvX5egUWfobrhAUxYTGL/ffLufbU5o' }
 };
 let gatePending = null;
 
@@ -175,7 +175,7 @@ async function gateTryUnlock(password) {
 }
 
 function gateGetAccess() {
-    try { return JSON.parse(localStorage.getItem('fw_gate_access') || 'null'); } catch (e) { return null; }
+    try { return JSON.parse(localStorage.getItem('fw_gate_access_v2') || 'null'); } catch (e) { return null; }
 }
 
 function initGameGate(context) {
@@ -238,8 +238,9 @@ function initGameGate(context) {
             e.preventDefault();
             try {
                 const access = await gateTryUnlock(input.value.trim());
-                localStorage.setItem('fw_gate_access', JSON.stringify(access));
+                localStorage.setItem('fw_gate_access_v2', JSON.stringify(access));
                 localStorage.removeItem('fw_gate_links');
+                localStorage.removeItem('fw_gate_access');
                 refreshButtons();
                 if (gatePending && access.level < gatePending.tier) {
                     if (error) {
@@ -390,6 +391,47 @@ function navigateGallery(direction) {
 const container = document.getElementById('app-container');
 const navLinks = document.querySelectorAll('.main-nav a');
 
+
+// --- Clean URL routing (added 2026-11-17) ---
+const PAGE_PATHS = {
+    "home": "/",
+    "animations": "/animations",
+    "animations-stick": "/animations/stick",
+    "animations-costco": "/animations/costco",
+    "animations-2d": "/animations/2d",
+    "animations-misc": "/animations/misc",
+    "art-illustrations": "/art/illustrations",
+    "art-sketches": "/art/sketches",
+    "art-drawlloween-2022": "/art/drawlloween-2022",
+    "art-inktober-2017": "/art/inktober-2017",
+    "art-inktober-2018": "/art/inktober-2018",
+    "art-reddit-gets-drawn": "/art/reddit-gets-drawn",
+    "art-pixel-art": "/art/pixel-art",
+    "comics": "/comics",
+    "games": "/games",
+    "knights-gambit": "/games/knights-gambit",
+    "revenge-of-the-ants": "/games/revenge-of-the-ants",
+    "kingsfall-chess": "/games/kingsfall-chess",
+    "risen-realms": "/games/risen-realms",
+    "yoink-the-king": "/games/yoink-the-king",
+    "frostfire": "/games/frostfire",
+    "small-world": "/games/small-world",
+    "the-return": "/games/the-return",
+    "ashes-of-veridian": "/games/ashes-of-veridian",
+    "ninja-arena": "/games/ninja-arena",
+    "about": "/about"
+};
+function pagePath(pageName) { return PAGE_PATHS[pageName] || '/'; }
+function pageFromPath(path) {
+    if (!path) return null;
+    let p = path.replace(/\/+$/, '');
+    if (p === '') p = '/';
+    for (const page of Object.keys(PAGE_PATHS)) {
+        if (PAGE_PATHS[page] === p) return page;
+    }
+    return null;
+}
+
 function loadPage(pageName, sectionId) {
     const appContainer = document.getElementById('app-container');
     if (!appContainer) return;
@@ -432,7 +474,7 @@ function loadPage(pageName, sectionId) {
         initComicResume(appContainer);
 
         // Update URL
-        let newUrl = pageName === 'home' ? window.location.pathname : `?page=${pageName}`;
+        let newUrl = pagePath(pageName);
         if (sectionId) newUrl += `#${sectionId}`;
         history.pushState({ page: pageName, sectionId: sectionId }, "", newUrl);
 
@@ -662,8 +704,7 @@ window.onpopstate = function(event) {
     if (event.state && event.state.page) {
         loadPage(event.state.page, event.state.sectionId);
     } else {
-        const urlParams = new URLSearchParams(window.location.search);
-        const page = urlParams.get('page') || 'home';
+        const page = (window.location.pathname !== '/' ? pageFromPath(window.location.pathname) : null) || new URLSearchParams(window.location.search).get('page') || 'home';
         const hash = window.location.hash.substring(1);
         loadPage(page, hash);
     }
@@ -842,7 +883,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Initial SPA Load ---
     const urlParams = new URLSearchParams(window.location.search);
-    const pageToLoad = urlParams.get('page') || 'home';
+    let pageToLoad = null;
+    const spaPath = sessionStorage.getItem('spa_path');
+    if (spaPath) {
+        sessionStorage.removeItem('spa_path');
+        pageToLoad = pageFromPath(spaPath);
+    }
+    if (!pageToLoad && window.location.pathname !== '/') {
+        pageToLoad = pageFromPath(window.location.pathname);
+    }
+    if (!pageToLoad) pageToLoad = urlParams.get('page');
+    if (!pageToLoad || !document.getElementById('tpl-' + pageToLoad)) pageToLoad = 'home';
     const initialHash = window.location.hash.substring(1);
     
     if (document.getElementById('app-container')) {
