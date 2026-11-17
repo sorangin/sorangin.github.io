@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sora Ngin - Portfolio</title>
 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
     <header class="site-header">
         <div class="header-content">
             <a href="/" onclick="event.preventDefault(); loadPage('home');" class="logo-link">
-                <img src="images/logo.png" alt="Sora Ngin Logo" class="logo-img">
+                <img src="/images/logo.png" alt="Sora Ngin Logo" class="logo-img">
             </a>
 
             <div class="header-right-group" style="display: flex; align-items: center; gap: 1.5rem;">
@@ -84,43 +84,43 @@
                         <div class="nav-item has-dropdown">
                             <a href="/animations" class="nav-link" data-page="animations">Animations <i class="fas fa-chevron-down dropdown-icon"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/animations/stick"
+                                <li><a href="/stick"
                                         onclick="event.preventDefault(); loadPage('animations-stick');">Stick
                                         Animations</a></li>
-                                <li><a href="/animations/costco"
+                                <li><a href="/costco"
                                         onclick="event.preventDefault(); loadPage('animations-costco');">Costco
                                         Series</a></li>
-                                <li><a href="/animations/2d"
+                                <li><a href="/2d-animations"
                                         onclick="event.preventDefault(); loadPage('animations-2d');">Animations</a>
                                 </li>
-                                <li><a href="/animations/misc"
+                                <li><a href="/misc"
                                         onclick="event.preventDefault(); loadPage('animations-misc');">Misc</a></li>
                             </ul>
                         </div>
                         <div class="nav-item has-dropdown">
-                            <a href="/art/illustrations" class="nav-link" data-page="art-illustrations">Art <i
+                            <a href="/illustrations" class="nav-link" data-page="art-illustrations">Art <i
                                     class="fas fa-chevron-down dropdown-icon"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/art/illustrations"
+                                <li><a href="/illustrations"
                                         onclick="event.preventDefault(); loadPage('art-illustrations');">Illustrations</a>
                                 </li>
-                                <li><a href="/art/sketches"
+                                <li><a href="/sketches"
                                         onclick="event.preventDefault(); loadPage('art-sketches');">Sketches</a></li>
-                                <li><a href="/art/drawlloween-2022"
+                                <li><a href="/drawlloween-2022"
                                         onclick="event.preventDefault(); loadPage('art-drawlloween-2022');">Drawlloween
                                         2022</a></li>
-                                <li><a href="/art/inktober-2017"
+                                <li><a href="/inktober-2017"
                                         onclick="event.preventDefault(); loadPage('art-inktober-2017');">Inktober
                                         2017</a>
                                 </li>
-                                <li><a href="/art/inktober-2018"
+                                <li><a href="/inktober-2018"
                                         onclick="event.preventDefault(); loadPage('art-inktober-2018');">Inktober
                                         2018</a>
                                 </li>
-                                <li><a href="/art/reddit-gets-drawn"
+                                <li><a href="/reddit-gets-drawn"
                                         onclick="event.preventDefault(); loadPage('art-reddit-gets-drawn');">RedditGetsDrawn</a>
                                 </li>
-                                <li><a href="/art/pixel-art"
+                                <li><a href="/pixel-art"
                                         onclick="event.preventDefault(); loadPage('art-pixel-art');">Pixel Art</a></li>
                             </ul>
                         </div>
@@ -130,7 +130,7 @@
                     </nav>
                 </div>
                 <a href="https://ko-fi.com/sorangin" target="_blank" rel="noopener" class="custom-donate-btn" title="Support My Work" style="display: flex; align-items: center;">
-                    <img src="images/donate.png" alt="Donate on Ko-fi" class="donate-img-btn" style="max-height: 65px; width: auto; transition: transform 0.3s ease;">
+                    <img src="/images/donate.png" alt="Donate on Ko-fi" class="donate-img-btn" style="max-height: 65px; width: auto; transition: transform 0.3s ease;">
                 </a>
             </div>
         </div>
@@ -251,7 +251,7 @@
                 <a href="/animations" onclick="event.preventDefault(); loadPage('animations');"
                     class="portfolio-card">
                     <div class="card-image-container">
-                        <video src="videos/attk-art-style-test.mp4" class="portfolio-image" autoplay muted loop
+                        <video src="/videos/attk-art-style-test.mp4" class="portfolio-image" autoplay muted loop
                             playsinline aria-label="A Time to Kill - Art Style Test"></video>
                     </div>
                     <div class="card-content">
@@ -262,7 +262,7 @@
                 <a href="/animations" onclick="event.preventDefault(); loadPage('animations');"
                     class="portfolio-card">
                     <div class="card-image-container">
-                        <video src="videos/girls-like-assholes.mp4" class="portfolio-image" autoplay muted loop
+                        <video src="/videos/girls-like-assholes.mp4" class="portfolio-image" autoplay muted loop
                             playsinline aria-label="Girls Like Assholes"></video>
                     </div>
                     <div class="card-content">
@@ -273,7 +273,7 @@
                 <a href="/animations" onclick="event.preventDefault(); loadPage('animations');"
                     class="portfolio-card">
                     <div class="card-image-container">
-                        <video src="videos/attk-animated-sketch.mp4" class="portfolio-image" autoplay muted loop
+                        <video src="/videos/attk-animated-sketch.mp4" class="portfolio-image" autoplay muted loop
                             playsinline aria-label="A Time to Kill - Animated Sketch"></video>
                     </div>
                     <div class="card-content">
@@ -284,14 +284,14 @@
         </section>
         <!-- 3. ILLUSTRATIONS -->
         <section id="illustrations" class="portfolio-section">
-            <a href="/art/illustrations" onclick="event.preventDefault(); loadPage('art-illustrations');"
+            <a href="/illustrations" onclick="event.preventDefault(); loadPage('art-illustrations');"
                 class="section-title-link">
                 <h2 class="section-title">Illustrations</h2>
             </a>
             <div class="portfolio-grid">
-                <a href="images/illustrations-kubo-and-the-two-sisters.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/illustrations-kubo-and-the-two-sisters.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/illustrations-kubo-and-the-two-sisters.webp" alt="Kubo and the Two Sisters" class="portfolio-image">
+                        <img src="/images/illustrations-kubo-and-the-two-sisters.webp" alt="Kubo and the Two Sisters" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -299,9 +299,9 @@
                     </div>
                 </a>
 
-                <a href="images/illustrations-salvation.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/illustrations-salvation.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/illustrations-salvation.webp" alt="Salvation" class="portfolio-image">
+                        <img src="/images/illustrations-salvation.webp" alt="Salvation" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -309,9 +309,9 @@
                     </div>
                 </a>
 
-                <a href="images/illustrations-jungle-temple-ruins-stage.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/illustrations-jungle-temple-ruins-stage.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/illustrations-jungle-temple-ruins-stage.webp" alt="Jungle Temple Ruins Stage" class="portfolio-image">
+                        <img src="/images/illustrations-jungle-temple-ruins-stage.webp" alt="Jungle Temple Ruins Stage" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -329,7 +329,7 @@
                 <a href="/games/small-world" onclick="event.preventDefault(); loadPage('small-world');"
                     class="portfolio-card">
                     <div class="card-image-container">
-                        <img src="images/smallworld4.jpg" alt="Small World" class="portfolio-image">
+                        <img src="/images/smallworld4.jpg" alt="Small World" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -340,7 +340,7 @@
                 <a href="/games/frostfire" onclick="event.preventDefault(); loadPage('frostfire');"
                     class="portfolio-card">
                     <div class="card-image-container">
-                        <img src="images/home-frostfire.jpg" alt="FrostFire" class="portfolio-image">
+                        <img src="/images/home-frostfire.jpg" alt="FrostFire" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -351,7 +351,7 @@
                 <a href="/games/the-return" onclick="event.preventDefault(); loadPage('the-return');"
                     class="portfolio-card">
                     <div class="card-image-container">
-                        <img src="images/thereturn.jpg" alt="The Return" class="portfolio-image">
+                        <img src="/images/thereturn.jpg" alt="The Return" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-gamepad play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -367,9 +367,9 @@
                 <h2 class="section-title">Comics</h2>
             </a>
             <div class="portfolio-grid">
-                <a href="images/comics-fishing.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/comics-fishing.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/comics-fishing.webp" alt="Fishing" class="portfolio-image">
+                        <img src="/images/comics-fishing.webp" alt="Fishing" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -377,9 +377,9 @@
                     </div>
                 </a>
 
-                <a href="images/comics-wheres-my-money.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/comics-wheres-my-money.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/comics-wheres-my-money.webp" alt="Where's My Money?" class="portfolio-image">
+                        <img src="/images/comics-wheres-my-money.webp" alt="Where's My Money?" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -387,9 +387,9 @@
                     </div>
                 </a>
 
-                <a href="images/comics-so-much-to-live-for.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/comics-so-much-to-live-for.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/comics-so-much-to-live-for.webp" alt="So Much to Live For" class="portfolio-image">
+                        <img src="/images/comics-so-much-to-live-for.webp" alt="So Much to Live For" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -397,9 +397,9 @@
                     </div>
                 </a>
 
-                <a href="images/comics-clone-machine.webp" class="portfolio-card lightbox-trigger">
+                <a href="/images/comics-clone-machine.webp" class="portfolio-card lightbox-trigger">
                     <div class="card-image-container natural">
-                        <img src="images/comics-clone-machine.webp" alt="Clone Machine" class="portfolio-image">
+                        <img src="/images/comics-clone-machine.webp" alt="Clone Machine" class="portfolio-image">
                         <div class="image-overlay"><i class="fas fa-search-plus play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -415,28 +415,28 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Animations</h1>
         <div class="animations-section-grid">
-            <a href="/animations/stick" onclick="event.preventDefault(); loadPage('animations-stick');"
+            <a href="/stick" onclick="event.preventDefault(); loadPage('animations-stick');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Stick Animations</h2>
                 <div class="card-image-container hub-media">
-                    <video src="videos/girls-like-assholes.mp4" class="portfolio-image" autoplay muted loop playsinline aria-label="Stick Animations"></video>
+                    <video src="/videos/girls-like-assholes.mp4" class="portfolio-image" autoplay muted loop playsinline aria-label="Stick Animations"></video>
                 </div>
             </a>
-            <a href="/animations/costco" onclick="event.preventDefault(); loadPage('animations-costco');"
+            <a href="/costco" onclick="event.preventDefault(); loadPage('animations-costco');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Day in the Life of a Costco Worker</h2>
                 <div class="card-image-container hub-media">
                     <img src="https://i.ytimg.com/vi/f-usoZC0KqI/maxresdefault.jpg" alt="Day in the Life of a Costco Worker" class="portfolio-image">
                 </div>
             </a>
-            <a href="/animations/2d" onclick="event.preventDefault(); loadPage('animations-2d');"
+            <a href="/2d-animations" onclick="event.preventDefault(); loadPage('animations-2d');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Animations</h2>
                 <div class="card-image-container hub-media">
                     <img src="https://i.ytimg.com/vi/EpdP7DglHfw/maxresdefault.jpg" alt="Animations" class="portfolio-image">
                 </div>
             </a>
-            <a href="/animations/misc" onclick="event.preventDefault(); loadPage('animations-misc');"
+            <a href="/misc" onclick="event.preventDefault(); loadPage('animations-misc');"
                 class="portfolio-section category-card">
                 <h2 class="section-title">Misc</h2>
                 <div class="card-image-container hub-media">
@@ -453,9 +453,9 @@
             <div class="game-grid">
                 <a href="/games/knights-gambit" onclick="event.preventDefault(); loadPage('knights-gambit');" class="game-card"" data-tags="Strategy, Turn-Based">
                     <div class="card-image-container">
-                        <img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit" class="game-image"
-                            data-static-src="images/knights_vs_goblins_screenshot.png"
-                            data-gif-src="images/knights_gambit_anim.gif">
+                        <img src="/images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit" class="game-image"
+                            data-static-src="/images/knights_vs_goblins_screenshot.png"
+                            data-gif-src="/images/knights_gambit_anim.gif">
                         <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -465,8 +465,8 @@
                 </a>
                 <a href="/games/revenge-of-the-ants" onclick="event.preventDefault(); loadPage('revenge-of-the-ants');" class="game-card"" data-tags="Survival, Arcade">
                     <div class="card-image-container">
-                        <img src="images/rota_screenshot.png" alt="Revenge of the Ants" class="game-image"
-                            data-static-src="images/rota_screenshot.png" data-gif-src="images/rota_anim.gif">
+                        <img src="/images/rota_screenshot.png" alt="Revenge of the Ants" class="game-image"
+                            data-static-src="/images/rota_screenshot.png" data-gif-src="/images/rota_anim.gif">
                         <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -477,8 +477,8 @@
                 </a>
                 <a href="/games/kingsfall-chess" onclick="event.preventDefault(); loadPage('kingsfall-chess');" class="game-card"" data-tags="Strategy, Chess">
                     <div class="card-image-container">
-                        <img src="images/chess_screenshot.jpg" alt="Kingsfall Chess" class="game-image"
-                            data-static-src="images/chess_screenshot.jpg" data-gif-src="images/chess_anim.gif">
+                        <img src="/images/chess_screenshot.jpg" alt="Kingsfall Chess" class="game-image"
+                            data-static-src="/images/chess_screenshot.jpg" data-gif-src="/images/chess_anim.gif">
                         <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -489,8 +489,8 @@
                 </a>
                 <a href="/games/risen-realms" onclick="event.preventDefault(); loadPage('risen-realms');" class="game-card"" data-tags="Card Game, Strategy">
                     <div class="card-image-container">
-                        <img src="images/tcg_screenshot.png" alt="Risen Realms" class="game-image"
-                            data-static-src="images/tcg_screenshot.png" data-gif-src="images/tcg_anim.gif">
+                        <img src="/images/tcg_screenshot.png" alt="Risen Realms" class="game-image"
+                            data-static-src="/images/tcg_screenshot.png" data-gif-src="/images/tcg_anim.gif">
                         <div class="image-overlay"><i class="fas fa-play play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -507,7 +507,7 @@
                 <a href="/games/yoink-the-king" onclick="event.preventDefault(); loadPage('yoink-the-king');"
                     class="game-card">
                     <div class="card-image-container">
-                        <img src="images/yoinktheking_anim.gif" alt="Yoink the King" class="game-image">
+                        <img src="/images/yoinktheking_anim.gif" alt="Yoink the King" class="game-image">
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -517,7 +517,7 @@
                 </a>
                 <a href="/games/frostfire" onclick="event.preventDefault(); loadPage('frostfire');" class="game-card">
                     <div class="card-image-container">
-                        <img src="images/frostfire_anim.gif" alt="Frostfire" class="game-image">
+                        <img src="/images/frostfire_anim.gif" alt="Frostfire" class="game-image">
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -528,7 +528,7 @@
                 <a href="/games/small-world" onclick="event.preventDefault(); loadPage('small-world');"
                     class="game-card">
                     <div class="card-image-container">
-                        <img src="images/smallworld.jpg" alt="Small World" class="game-image">
+                        <img src="/images/smallworld.jpg" alt="Small World" class="game-image">
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -539,7 +539,7 @@
                 </a>
                 <a href="/games/the-return" onclick="event.preventDefault(); loadPage('the-return');" class="game-card">
                     <div class="card-image-container">
-                        <img src="images/thereturn.jpg" alt="The Return" class="game-image">
+                        <img src="/images/thereturn.jpg" alt="The Return" class="game-image">
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -550,7 +550,7 @@
                 <a href="/games/ashes-of-veridian" onclick="event.preventDefault(); loadPage('ashes-of-veridian');"
                     class="game-card">
                     <div class="card-image-container">
-                        <img src="images/ashesofveridian.jpg" alt="Ashes of Veridian" class="game-image">
+                        <img src="/images/ashesofveridian.jpg" alt="Ashes of Veridian" class="game-image">
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -561,7 +561,7 @@
                 <a href="/games/ninja-arena" onclick="event.preventDefault(); loadPage('ninja-arena');"
                     class="game-card">
                     <div class="card-image-container">
-                        <img src="images/ninjaarena.jpg" alt="Ninja Arena" class="game-image">
+                        <img src="/images/ninjaarena.jpg" alt="Ninja Arena" class="game-image">
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -577,7 +577,7 @@
             <div class="game-grid">
                 <a href="#" class="game-card gate-play" data-game="medieval-math" data-tier="3" prototype-card">
                     <div class="card-image-container">
-                        <img src="images/medieval_math_screenshot.jpg" alt="Medieval Math" class="game-image">
+                        <img src="/images/medieval_math_screenshot.jpg" alt="Medieval Math" class="game-image">
                         <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -588,7 +588,7 @@
                 </a>
                 <a href="#" class="game-card gate-play" data-game="ascii-adventure" data-tier="3" prototype-card">
                     <div class="card-image-container">
-                        <img src="images/ascii_screenshot.jpg" alt="ASCII Adventure" class="game-image">
+                        <img src="/images/ascii_screenshot.jpg" alt="ASCII Adventure" class="game-image">
                         <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -599,7 +599,7 @@
                 </a>
                 <a href="#" class="game-card gate-play" data-game="color-cascade" data-tier="3" prototype-card">
                     <div class="card-image-container">
-                        <img src="images/color_cascade_screenshot.jpg" alt="Color Cascade" class="game-image">
+                        <img src="/images/color_cascade_screenshot.jpg" alt="Color Cascade" class="game-image">
                         <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -610,7 +610,7 @@
                 </a>
                 <a href="#" class="game-card gate-play" data-game="goblin-siege-defense" data-tier="3" prototype-card">
                     <div class="card-image-container">
-                        <img src="images/goblin_siege_defense_screenshot.jpg" alt="Goblin Siege Defense"
+                        <img src="/images/goblin_siege_defense_screenshot.jpg" alt="Goblin Siege Defense"
                             class="game-image">
                         <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
                     </div>
@@ -622,7 +622,7 @@
                 </a>
                 <a href="#" class="game-card gate-play" data-game="typing-knight" data-tier="3" prototype-card">
                     <div class="card-image-container">
-                        <img src="images/typing_invasion_screenshot.jpg" alt="Typing Knight" class="game-image">
+                        <img src="/images/typing_invasion_screenshot.jpg" alt="Typing Knight" class="game-image">
                         <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -633,7 +633,7 @@
                 </a>
                 <a href="#" class="game-card gate-play" data-game="pyro-knight-dash" data-tier="3" prototype-card">
                     <div class="card-image-container">
-                        <img src="images/pyro_knight_dash_screenshot.jpg" alt="Pyro Knight Dash" class="game-image">
+                        <img src="/images/pyro_knight_dash_screenshot.jpg" alt="Pyro Knight Dash" class="game-image">
                         <div class="image-overlay"><i class="fas fa-flask play-icon"></i></div>
                     </div>
                     <div class="card-content">
@@ -655,7 +655,7 @@
                 <div class="game-detail-tags"><span class="tag">Strategy</span><span class="tag">Turn-Based</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit"></div>
+                <div class="video-placeholder"><img src="/images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -664,9 +664,9 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/knights_vs_goblins_screenshot.png" class="lightbox-trigger"><img src="images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit - Screenshot"></a>
-                    <a href="images/knights_gambit_anim.gif" class="lightbox-trigger"><img src="images/knights_gambit_anim.gif" alt="Knight's Gambit - Animated"></a>
-                    <a href="images/knights_vs_goblins_anim.gif" class="lightbox-trigger"><img src="images/knights_vs_goblins_anim.gif" alt="Knight's Gambit - Knights vs Goblins"></a>
+                    <a href="/images/knights_vs_goblins_screenshot.png" class="lightbox-trigger"><img src="/images/knights_vs_goblins_screenshot.png" alt="Knight's Gambit - Screenshot"></a>
+                    <a href="/images/knights_gambit_anim.gif" class="lightbox-trigger"><img src="/images/knights_gambit_anim.gif" alt="Knight's Gambit - Animated"></a>
+                    <a href="/images/knights_vs_goblins_anim.gif" class="lightbox-trigger"><img src="/images/knights_vs_goblins_anim.gif" alt="Knight's Gambit - Knights vs Goblins"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -710,7 +710,7 @@
                 <div class="game-detail-tags"><span class="tag">Survival</span><span class="tag">Arcade</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/rota_screenshot.png" alt="Revenge of the Ants"></div>
+                <div class="video-placeholder"><img src="/images/rota_screenshot.png" alt="Revenge of the Ants"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -719,8 +719,8 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/rota_screenshot.png" class="lightbox-trigger"><img src="images/rota_screenshot.png" alt="Revenge of the Ants - Screenshot"></a>
-                    <a href="images/rota_anim.gif" class="lightbox-trigger"><img src="images/rota_anim.gif" alt="Revenge of the Ants - Animated"></a>
+                    <a href="/images/rota_screenshot.png" class="lightbox-trigger"><img src="/images/rota_screenshot.png" alt="Revenge of the Ants - Screenshot"></a>
+                    <a href="/images/rota_anim.gif" class="lightbox-trigger"><img src="/images/rota_anim.gif" alt="Revenge of the Ants - Animated"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -757,7 +757,7 @@
                 <div class="game-detail-tags"><span class="tag">Strategy</span><span class="tag">Chess</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/chess_screenshot.jpg" alt="Kingsfall Chess"></div>
+                <div class="video-placeholder"><img src="/images/chess_screenshot.jpg" alt="Kingsfall Chess"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -766,8 +766,8 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/chess_screenshot.jpg" class="lightbox-trigger"><img src="images/chess_screenshot.jpg" alt="Kingsfall Chess - Screenshot"></a>
-                    <a href="images/chess_anim.gif" class="lightbox-trigger"><img src="images/chess_anim.gif" alt="Kingsfall Chess - Animated"></a>
+                    <a href="/images/chess_screenshot.jpg" class="lightbox-trigger"><img src="/images/chess_screenshot.jpg" alt="Kingsfall Chess - Screenshot"></a>
+                    <a href="/images/chess_anim.gif" class="lightbox-trigger"><img src="/images/chess_anim.gif" alt="Kingsfall Chess - Animated"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -804,7 +804,7 @@
                 <div class="game-detail-tags"><span class="tag">Card Game</span><span class="tag">Strategy</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/tcg_screenshot.png" alt="Risen Realms"></div>
+                <div class="video-placeholder"><img src="/images/tcg_screenshot.png" alt="Risen Realms"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -813,8 +813,8 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/tcg_screenshot.png" class="lightbox-trigger"><img src="images/tcg_screenshot.png" alt="Risen Realms - Screenshot"></a>
-                    <a href="images/tcg_anim.gif" class="lightbox-trigger"><img src="images/tcg_anim.gif" alt="Risen Realms - Animated"></a>
+                    <a href="/images/tcg_screenshot.png" class="lightbox-trigger"><img src="/images/tcg_screenshot.png" alt="Risen Realms - Screenshot"></a>
+                    <a href="/images/tcg_anim.gif" class="lightbox-trigger"><img src="/images/tcg_anim.gif" alt="Risen Realms - Animated"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -870,7 +870,7 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/yoinktheking_anim.gif" class="lightbox-trigger"><img src="images/yoinktheking_anim.gif" alt="Yoink the King - Gameplay Animation"></a>
+                    <a href="/images/yoinktheking_anim.gif" class="lightbox-trigger"><img src="/images/yoinktheking_anim.gif" alt="Yoink the King - Gameplay Animation"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -912,7 +912,7 @@
                         class="tag">Fantasy</span><span class="tag tag-dev">Elements</span></div>
             </header>
             <section class="game-trailer">
-                <div class="image-placeholder"><img src="images/frostfire0.jpg" alt="Frostfire Screenshot"></div>
+                <div class="image-placeholder"><img src="/images/frostfire0.jpg" alt="Frostfire Screenshot"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -923,11 +923,11 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/frostfire1.jpg" class="lightbox-trigger"><img src="images/frostfire1.jpg" alt="Frostfire - Snowy Village"></a>
-                    <a href="images/frostfire_anim.gif" class="lightbox-trigger"><img src="images/frostfire_anim.gif" alt="Frostfire - Gameplay Animation"></a>
-                    <a href="images/frostfire3.gif" class="lightbox-trigger"><img src="images/frostfire3.gif" alt="Frostfire - Gameplay"></a>
-                    <a href="images/frostfire4.jpg" class="lightbox-trigger"><img src="images/frostfire4.jpg" alt="Frostfire - Screenshot"></a>
-                    <a href="images/frostfire5.jpg" class="lightbox-trigger"><img src="images/frostfire5.jpg" alt="Frostfire - Screenshot"></a>
+                    <a href="/images/frostfire1.jpg" class="lightbox-trigger"><img src="/images/frostfire1.jpg" alt="Frostfire - Snowy Village"></a>
+                    <a href="/images/frostfire_anim.gif" class="lightbox-trigger"><img src="/images/frostfire_anim.gif" alt="Frostfire - Gameplay Animation"></a>
+                    <a href="/images/frostfire3.gif" class="lightbox-trigger"><img src="/images/frostfire3.gif" alt="Frostfire - Gameplay"></a>
+                    <a href="/images/frostfire4.jpg" class="lightbox-trigger"><img src="/images/frostfire4.jpg" alt="Frostfire - Screenshot"></a>
+                    <a href="/images/frostfire5.jpg" class="lightbox-trigger"><img src="/images/frostfire5.jpg" alt="Frostfire - Screenshot"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -964,7 +964,7 @@
                         class="tag">Adventure</span><span class="tag tag-dev">Miniature</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/smallworld.jpg" alt="Small World"></div>
+                <div class="video-placeholder"><img src="/images/smallworld.jpg" alt="Small World"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -975,13 +975,13 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <a href="images/smallworld1.jpg" class="lightbox-trigger"><img src="images/smallworld1.jpg" alt="Small World - Screenshot 1"></a>
-                    <a href="images/smallworld2.jpg" class="lightbox-trigger"><img src="images/smallworld2.jpg" alt="Small World - Screenshot 2"></a>
-                    <a href="images/smallworld3.jpg" class="lightbox-trigger"><img src="images/smallworld3.jpg" alt="Small World - Screenshot 3"></a>
-                    <a href="images/smallworld4.jpg" class="lightbox-trigger"><img src="images/smallworld4.jpg" alt="Small World - Screenshot 4"></a>
-                    <a href="images/smallworld5.jpg" class="lightbox-trigger"><img src="images/smallworld5.jpg" alt="Small World - Screenshot 5"></a>
-                    <a href="images/smallworld6.jpg" class="lightbox-trigger"><img src="images/smallworld6.jpg" alt="Small World - Screenshot 6"></a>
-                    <a href="images/smallworld7.jpg" class="lightbox-trigger"><img src="images/smallworld7.jpg" alt="Small World - Screenshot 7"></a>
+                    <a href="/images/smallworld1.jpg" class="lightbox-trigger"><img src="/images/smallworld1.jpg" alt="Small World - Screenshot 1"></a>
+                    <a href="/images/smallworld2.jpg" class="lightbox-trigger"><img src="/images/smallworld2.jpg" alt="Small World - Screenshot 2"></a>
+                    <a href="/images/smallworld3.jpg" class="lightbox-trigger"><img src="/images/smallworld3.jpg" alt="Small World - Screenshot 3"></a>
+                    <a href="/images/smallworld4.jpg" class="lightbox-trigger"><img src="/images/smallworld4.jpg" alt="Small World - Screenshot 4"></a>
+                    <a href="/images/smallworld5.jpg" class="lightbox-trigger"><img src="/images/smallworld5.jpg" alt="Small World - Screenshot 5"></a>
+                    <a href="/images/smallworld6.jpg" class="lightbox-trigger"><img src="/images/smallworld6.jpg" alt="Small World - Screenshot 6"></a>
+                    <a href="/images/smallworld7.jpg" class="lightbox-trigger"><img src="/images/smallworld7.jpg" alt="Small World - Screenshot 7"></a>
                 </div>
             </section>
             <section class="game-features">
@@ -1020,7 +1020,7 @@
                         class="tag">Story-Driven</span><span class="tag tag-dev">Atmospheric</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"> <img src="images/thereturn.jpg" alt="The Return"></div>
+                <div class="video-placeholder"> <img src="/images/thereturn.jpg" alt="The Return"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -1061,7 +1061,7 @@
                         class="tag tag-dev">Post-Apocalyptic</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/ashesofveridian.jpg" alt="Ashes of Veridian"
+                <div class="video-placeholder"><img src="/images/ashesofveridian.jpg" alt="Ashes of Veridian"
                         class="game-image"></div>
             </section>
             <section class="game-description-full">
@@ -1105,7 +1105,7 @@
                         class="tag tag-dev">Multiplayer</span></div>
             </header>
             <section class="game-trailer">
-                <div class="video-placeholder"><img src="images/ninjaarena.jpg" alt="Ninja Arena"></div>
+                <div class="video-placeholder"><img src="/images/ninjaarena.jpg" alt="Ninja Arena"></div>
             </section>
             <section class="game-description-full">
                 <h2>Description</h2>
@@ -1142,168 +1142,168 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Illustrations</h1>
         <div class="portfolio-grid">
-            <a href="images/illustrations-jungle-temple-ruins-stage.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-jungle-temple-ruins-stage.webp" alt="Jungle Temple Ruins Stage"
+            <a href="/images/illustrations-jungle-temple-ruins-stage.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-jungle-temple-ruins-stage.webp" alt="Jungle Temple Ruins Stage"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-kira-and-gaston-concepts.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-kira-and-gaston-concepts.webp" alt="Kira &amp; Gaston Concepts"
+            <a href="/images/illustrations-kira-and-gaston-concepts.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-kira-and-gaston-concepts.webp" alt="Kira &amp; Gaston Concepts"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-pokemon-boy.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-pokemon-boy.webp" alt="Pokemon Boy"
+            <a href="/images/illustrations-pokemon-boy.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-pokemon-boy.webp" alt="Pokemon Boy"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-pokemon-girl.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-pokemon-girl.webp" alt="Pokemon Girl"
+            <a href="/images/illustrations-pokemon-girl.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-pokemon-girl.webp" alt="Pokemon Girl"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-haunter-1.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-haunter-1.webp" alt="Haunter 1"
+            <a href="/images/illustrations-haunter-1.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-haunter-1.webp" alt="Haunter 1"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-haunter-2.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-haunter-2.webp" alt="Haunter 2"
+            <a href="/images/illustrations-haunter-2.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-haunter-2.webp" alt="Haunter 2"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-flying-dutchman.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-flying-dutchman.webp" alt="The Flying Dutchman"
+            <a href="/images/illustrations-flying-dutchman.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-flying-dutchman.webp" alt="The Flying Dutchman"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-kubo-and-the-two-sisters.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-kubo-and-the-two-sisters.webp" alt="Kubo and the Two Sisters"
+            <a href="/images/illustrations-kubo-and-the-two-sisters.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-kubo-and-the-two-sisters.webp" alt="Kubo and the Two Sisters"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-salvation.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-salvation.webp" alt="Salvation"
+            <a href="/images/illustrations-salvation.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-salvation.webp" alt="Salvation"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-the-treehouse.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-the-treehouse.webp" alt="The Treehouse"
+            <a href="/images/illustrations-the-treehouse.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-the-treehouse.webp" alt="The Treehouse"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-christmas-speedpainting.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-christmas-speedpainting.webp" alt="Christmas Speedpainting"
+            <a href="/images/illustrations-christmas-speedpainting.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-christmas-speedpainting.webp" alt="Christmas Speedpainting"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-christmas-grinch.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-christmas-grinch.webp" alt="Christmas Grinch"
+            <a href="/images/illustrations-christmas-grinch.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-christmas-grinch.webp" alt="Christmas Grinch"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-jungle-ruins-stage.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-jungle-ruins-stage.webp" alt="Jungle Ruins Stage"
+            <a href="/images/illustrations-jungle-ruins-stage.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-jungle-ruins-stage.webp" alt="Jungle Ruins Stage"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-frostfire-finale.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-frostfire-finale.webp" alt="Frostfire Finale"
+            <a href="/images/illustrations-frostfire-finale.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-frostfire-finale.webp" alt="Frostfire Finale"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-king-concept.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-king-concept.webp" alt="King Concept"
+            <a href="/images/illustrations-king-concept.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-king-concept.webp" alt="King Concept"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-king-character-concept.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-king-character-concept.webp" alt="King Character Concept"
+            <a href="/images/illustrations-king-character-concept.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-king-character-concept.webp" alt="King Character Concept"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-anatomy-of-a-cholo.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-anatomy-of-a-cholo.webp" alt="Anatomy of a Cholo"
+            <a href="/images/illustrations-anatomy-of-a-cholo.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-anatomy-of-a-cholo.webp" alt="Anatomy of a Cholo"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-frostfire-sora-concept.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-frostfire-sora-concept.webp" alt="Frostfire Sora Concept"
+            <a href="/images/illustrations-frostfire-sora-concept.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-frostfire-sora-concept.webp" alt="Frostfire Sora Concept"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-frostfire-raid-scene-concept.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-frostfire-raid-scene-concept.webp" alt="Frostfire Raid Scene — Concept"
+            <a href="/images/illustrations-frostfire-raid-scene-concept.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-frostfire-raid-scene-concept.webp" alt="Frostfire Raid Scene — Concept"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-japan-mine-painting.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-japan-mine-painting.webp" alt="Japan Mine Painting"
+            <a href="/images/illustrations-japan-mine-painting.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-japan-mine-painting.webp" alt="Japan Mine Painting"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-maggie-and-the-magic-trout.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-maggie-and-the-magic-trout.webp" alt="Maggie and the Magic Trout"
+            <a href="/images/illustrations-maggie-and-the-magic-trout.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-maggie-and-the-magic-trout.webp" alt="Maggie and the Magic Trout"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-the-river-gives-book-cover.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-the-river-gives-book-cover.webp" alt="The River Gives — Book Cover"
+            <a href="/images/illustrations-the-river-gives-book-cover.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-the-river-gives-book-cover.webp" alt="The River Gives — Book Cover"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-terror-town.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-terror-town.webp" alt="Terror Town"
+            <a href="/images/illustrations-terror-town.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-terror-town.webp" alt="Terror Town"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-costco-speed-paintings.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-costco-speed-paintings.webp" alt="Costco Speed Paintings"
+            <a href="/images/illustrations-costco-speed-paintings.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-costco-speed-paintings.webp" alt="Costco Speed Paintings"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-environment-concepts.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-environment-concepts.webp" alt="Environment Concepts"
+            <a href="/images/illustrations-environment-concepts.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-environment-concepts.webp" alt="Environment Concepts"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-trees-of-evergreen-valley.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-trees-of-evergreen-valley.webp" alt="Trees of Evergreen Valley"
+            <a href="/images/illustrations-trees-of-evergreen-valley.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-trees-of-evergreen-valley.webp" alt="Trees of Evergreen Valley"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-vibrant-fields.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-vibrant-fields.webp" alt="Vibrant Fields"
+            <a href="/images/illustrations-vibrant-fields.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-vibrant-fields.webp" alt="Vibrant Fields"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-golden-gate-bridge.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-golden-gate-bridge.webp" alt="Golden Gate Bridge"
+            <a href="/images/illustrations-golden-gate-bridge.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-golden-gate-bridge.webp" alt="Golden Gate Bridge"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-redditgetsdrawn-rick.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-redditgetsdrawn-rick.webp" alt="RedditGetsDrawn — Rick"
+            <a href="/images/illustrations-redditgetsdrawn-rick.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-redditgetsdrawn-rick.webp" alt="RedditGetsDrawn — Rick"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-johnny-cash-portrait.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-johnny-cash-portrait.webp" alt="Johnny Cash Portrait"
+            <a href="/images/illustrations-johnny-cash-portrait.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-johnny-cash-portrait.webp" alt="Johnny Cash Portrait"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-dog-portrait.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-dog-portrait.webp" alt="Dog Portrait"
+            <a href="/images/illustrations-dog-portrait.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-dog-portrait.webp" alt="Dog Portrait"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-road-story.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-road-story.webp" alt="Road Story"
+            <a href="/images/illustrations-road-story.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-road-story.webp" alt="Road Story"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-phoenix.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-phoenix.webp" alt="Phoenix"
+            <a href="/images/illustrations-phoenix.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-phoenix.webp" alt="Phoenix"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-frostfire-the-end.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-frostfire-the-end.webp" alt="Frostfire — The End"
+            <a href="/images/illustrations-frostfire-the-end.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-frostfire-the-end.webp" alt="Frostfire — The End"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-shade.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-shade.webp" alt="Shade"
+            <a href="/images/illustrations-shade.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-shade.webp" alt="Shade"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-steampunk-slender-man.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-steampunk-slender-man.webp" alt="Steampunk Slender Man"
+            <a href="/images/illustrations-steampunk-slender-man.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-steampunk-slender-man.webp" alt="Steampunk Slender Man"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-the-waiter.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-the-waiter.webp" alt="The Waiter"
+            <a href="/images/illustrations-the-waiter.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-the-waiter.webp" alt="The Waiter"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-gaston-concepts.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-gaston-concepts.webp" alt="Gaston Concepts"
+            <a href="/images/illustrations-gaston-concepts.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-gaston-concepts.webp" alt="Gaston Concepts"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-the-boy-in-the-shadows.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-the-boy-in-the-shadows.webp" alt="The Boy in the Shadows"
+            <a href="/images/illustrations-the-boy-in-the-shadows.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-the-boy-in-the-shadows.webp" alt="The Boy in the Shadows"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-the-last-hour.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-the-last-hour.webp" alt="The Last Hour"
+            <a href="/images/illustrations-the-last-hour.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-the-last-hour.webp" alt="The Last Hour"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/illustrations-rat-room.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/illustrations-rat-room.webp" alt="Rat Room"
+            <a href="/images/illustrations-rat-room.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/illustrations-rat-room.webp" alt="Rat Room"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1314,80 +1314,80 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Sketches</h1>
         <div class="portfolio-grid">
-            <a href="images/sketches-clothing-study-100.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-clothing-study-100.webp" alt="Clothing Study 100"
+            <a href="/images/sketches-clothing-study-100.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-clothing-study-100.webp" alt="Clothing Study 100"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-tree-sketches.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-tree-sketches.webp" alt="Tree Sketches"
+            <a href="/images/sketches-tree-sketches.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-tree-sketches.webp" alt="Tree Sketches"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-skeleton-studies.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-skeleton-studies.webp" alt="Skeleton Studies"
+            <a href="/images/sketches-skeleton-studies.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-skeleton-studies.webp" alt="Skeleton Studies"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-life-drawing.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-life-drawing.webp" alt="Life Drawing"
+            <a href="/images/sketches-life-drawing.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-life-drawing.webp" alt="Life Drawing"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-old-man-portrait.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-old-man-portrait.webp" alt="Old Man Portrait"
+            <a href="/images/sketches-old-man-portrait.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-old-man-portrait.webp" alt="Old Man Portrait"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-muscle-man-study.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-muscle-man-study.webp" alt="Muscle Man Study"
+            <a href="/images/sketches-muscle-man-study.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-muscle-man-study.webp" alt="Muscle Man Study"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-pirate.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-pirate.webp" alt="Pirate"
+            <a href="/images/sketches-pirate.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-pirate.webp" alt="Pirate"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-creature-design.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-creature-design.webp" alt="Creature Design"
+            <a href="/images/sketches-creature-design.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-creature-design.webp" alt="Creature Design"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-nathan-fowkes-master-study.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-nathan-fowkes-master-study.webp" alt="Nathan Fowkes Master Study"
+            <a href="/images/sketches-nathan-fowkes-master-study.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-nathan-fowkes-master-study.webp" alt="Nathan Fowkes Master Study"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-thinking-small.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-thinking-small.webp" alt="Thinking Small"
+            <a href="/images/sketches-thinking-small.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-thinking-small.webp" alt="Thinking Small"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-random-inventions-and-designs.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-random-inventions-and-designs.webp" alt="Random Inventions and Designs"
+            <a href="/images/sketches-random-inventions-and-designs.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-random-inventions-and-designs.webp" alt="Random Inventions and Designs"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-nightmare-creatures-sketches.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-nightmare-creatures-sketches.webp" alt="Nightmare Creatures Sketches"
+            <a href="/images/sketches-nightmare-creatures-sketches.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-nightmare-creatures-sketches.webp" alt="Nightmare Creatures Sketches"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-gesture-drawings.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-gesture-drawings.webp" alt="Gesture Drawings"
+            <a href="/images/sketches-gesture-drawings.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-gesture-drawings.webp" alt="Gesture Drawings"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-medieval-armor-studies.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-medieval-armor-studies.webp" alt="Medieval Armor Studies"
+            <a href="/images/sketches-medieval-armor-studies.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-medieval-armor-studies.webp" alt="Medieval Armor Studies"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-simpsons-sketches.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-simpsons-sketches.webp" alt="Simpsons Sketches"
+            <a href="/images/sketches-simpsons-sketches.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-simpsons-sketches.webp" alt="Simpsons Sketches"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-tim-burton-characters.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-tim-burton-characters.webp" alt="Tim Burton Characters"
+            <a href="/images/sketches-tim-burton-characters.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-tim-burton-characters.webp" alt="Tim Burton Characters"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-pen-portrait.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-pen-portrait.webp" alt="Pen Portrait"
+            <a href="/images/sketches-pen-portrait.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-pen-portrait.webp" alt="Pen Portrait"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-skeleton-warriors.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-skeleton-warriors.webp" alt="Skeleton Warriors"
+            <a href="/images/sketches-skeleton-warriors.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-skeleton-warriors.webp" alt="Skeleton Warriors"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/sketches-skull-village.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/sketches-skull-village.webp" alt="Skull Village"
+            <a href="/images/sketches-skull-village.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/sketches-skull-village.webp" alt="Skull Village"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1398,128 +1398,128 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Drawlloween 2022</h1>
         <div class="portfolio-grid">
-            <a href="images/drawlloween-2022-day-1-ghost.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-1-ghost.webp" alt="Day 1 — Ghost"
+            <a href="/images/drawlloween-2022-day-1-ghost.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-1-ghost.webp" alt="Day 1 — Ghost"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-2-scarecrow.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-2-scarecrow.webp" alt="Day 2 — Scarecrow"
+            <a href="/images/drawlloween-2022-day-2-scarecrow.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-2-scarecrow.webp" alt="Day 2 — Scarecrow"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-3-owl.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-3-owl.webp" alt="Day 3 — Owl"
+            <a href="/images/drawlloween-2022-day-3-owl.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-3-owl.webp" alt="Day 3 — Owl"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-4-wednesday-addams.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-4-wednesday-addams.webp" alt="Day 4 — Wednesday Addams"
+            <a href="/images/drawlloween-2022-day-4-wednesday-addams.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-4-wednesday-addams.webp" alt="Day 4 — Wednesday Addams"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-5-frankenstein.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-5-frankenstein.webp" alt="Day 5 — Frankenstein"
+            <a href="/images/drawlloween-2022-day-5-frankenstein.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-5-frankenstein.webp" alt="Day 5 — Frankenstein"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-6-puppet.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-6-puppet.webp" alt="Day 6 — Puppet"
+            <a href="/images/drawlloween-2022-day-6-puppet.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-6-puppet.webp" alt="Day 6 — Puppet"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-7-alien.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-7-alien.webp" alt="Day 7 — Alien"
+            <a href="/images/drawlloween-2022-day-7-alien.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-7-alien.webp" alt="Day 7 — Alien"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-8-boogeyman.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-8-boogeyman.webp" alt="Day 8 — Boogeyman"
+            <a href="/images/drawlloween-2022-day-8-boogeyman.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-8-boogeyman.webp" alt="Day 8 — Boogeyman"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-9-skull.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-9-skull.webp" alt="Day 9 — Skull"
+            <a href="/images/drawlloween-2022-day-9-skull.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-9-skull.webp" alt="Day 9 — Skull"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-10-tree.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-10-tree.webp" alt="Day 10 — Tree"
+            <a href="/images/drawlloween-2022-day-10-tree.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-10-tree.webp" alt="Day 10 — Tree"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-11-clown.gif" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-11-clown.gif" alt="Day 11 — Clown"
+            <a href="/images/drawlloween-2022-day-11-clown.gif" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-11-clown.gif" alt="Day 11 — Clown"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-12-witch.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-12-witch.webp" alt="Day 12 — Witch"
+            <a href="/images/drawlloween-2022-day-12-witch.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-12-witch.webp" alt="Day 12 — Witch"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-13-headless-horseman.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-13-headless-horseman.webp" alt="Day 13 — Headless Horseman"
+            <a href="/images/drawlloween-2022-day-13-headless-horseman.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-13-headless-horseman.webp" alt="Day 13 — Headless Horseman"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-14-demon.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-14-demon.webp" alt="Day 14 — Demon"
+            <a href="/images/drawlloween-2022-day-14-demon.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-14-demon.webp" alt="Day 14 — Demon"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-15-candle.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-15-candle.webp" alt="Day 15 — Candle"
+            <a href="/images/drawlloween-2022-day-15-candle.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-15-candle.webp" alt="Day 15 — Candle"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-16-grim-reaper.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-16-grim-reaper.webp" alt="Day 16 — Grim Reaper"
+            <a href="/images/drawlloween-2022-day-16-grim-reaper.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-16-grim-reaper.webp" alt="Day 16 — Grim Reaper"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-17-moth.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-17-moth.webp" alt="Day 17 — Moth"
+            <a href="/images/drawlloween-2022-day-17-moth.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-17-moth.webp" alt="Day 17 — Moth"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-18-teeth.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-18-teeth.webp" alt="Day 18 — Teeth"
+            <a href="/images/drawlloween-2022-day-18-teeth.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-18-teeth.webp" alt="Day 18 — Teeth"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-19-costume.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-19-costume.webp" alt="Day 19 — Costume"
+            <a href="/images/drawlloween-2022-day-19-costume.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-19-costume.webp" alt="Day 19 — Costume"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-20-tarot.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-20-tarot.webp" alt="Day 20 — Tarot"
+            <a href="/images/drawlloween-2022-day-20-tarot.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-20-tarot.webp" alt="Day 20 — Tarot"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-21-moon.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-21-moon.webp" alt="Day 21 — Moon"
+            <a href="/images/drawlloween-2022-day-21-moon.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-21-moon.webp" alt="Day 21 — Moon"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-22-mushrooms.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-22-mushrooms.webp" alt="Day 22 — Mushrooms"
+            <a href="/images/drawlloween-2022-day-22-mushrooms.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-22-mushrooms.webp" alt="Day 22 — Mushrooms"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-23-bat.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-23-bat.webp" alt="Day 23 — Bat"
+            <a href="/images/drawlloween-2022-day-23-bat.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-23-bat.webp" alt="Day 23 — Bat"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-24-goat.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-24-goat.webp" alt="Day 24 — Goat"
+            <a href="/images/drawlloween-2022-day-24-goat.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-24-goat.webp" alt="Day 24 — Goat"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-25-plague-doctor.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-25-plague-doctor.webp" alt="Day 25 — Plague Doctor"
+            <a href="/images/drawlloween-2022-day-25-plague-doctor.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-25-plague-doctor.webp" alt="Day 25 — Plague Doctor"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-26-werewolf.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-26-werewolf.webp" alt="Day 26 — Werewolf"
+            <a href="/images/drawlloween-2022-day-26-werewolf.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-26-werewolf.webp" alt="Day 26 — Werewolf"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-27-monster.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-27-monster.webp" alt="Day 27 — Monster"
+            <a href="/images/drawlloween-2022-day-27-monster.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-27-monster.webp" alt="Day 27 — Monster"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-28-bones.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-28-bones.webp" alt="Day 28 — Bones"
+            <a href="/images/drawlloween-2022-day-28-bones.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-28-bones.webp" alt="Day 28 — Bones"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-29-pumpkin.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-29-pumpkin.webp" alt="Day 29 — Pumpkin"
+            <a href="/images/drawlloween-2022-day-29-pumpkin.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-29-pumpkin.webp" alt="Day 29 — Pumpkin"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-30-robot.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-30-robot.webp" alt="Day 30 — Robot"
+            <a href="/images/drawlloween-2022-day-30-robot.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-30-robot.webp" alt="Day 30 — Robot"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/drawlloween-2022-day-31-black-cat.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/drawlloween-2022-day-31-black-cat.webp" alt="Day 31 — Black Cat"
+            <a href="/images/drawlloween-2022-day-31-black-cat.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/drawlloween-2022-day-31-black-cat.webp" alt="Day 31 — Black Cat"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1530,84 +1530,84 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Inktober 2017</h1>
         <div class="portfolio-grid">
-            <a href="images/inktober-2017-day-1.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-1.webp" alt="Day 1"
+            <a href="/images/inktober-2017-day-1.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-1.webp" alt="Day 1"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-2-divided.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-2-divided.webp" alt="Day 2 — Divided"
+            <a href="/images/inktober-2017-day-2-divided.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-2-divided.webp" alt="Day 2 — Divided"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-3-poison.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-3-poison.webp" alt="Day 3 — Poison"
+            <a href="/images/inktober-2017-day-3-poison.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-3-poison.webp" alt="Day 3 — Poison"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-3-poison-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-3-poison-colored.webp" alt="Day 3 — Poison (Colored)"
+            <a href="/images/inktober-2017-day-3-poison-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-3-poison-colored.webp" alt="Day 3 — Poison (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-4-underwater.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-4-underwater.webp" alt="Day 4 — Underwater"
+            <a href="/images/inktober-2017-day-4-underwater.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-4-underwater.webp" alt="Day 4 — Underwater"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-5-long.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-5-long.webp" alt="Day 5 — Long"
+            <a href="/images/inktober-2017-day-5-long.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-5-long.webp" alt="Day 5 — Long"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-5-long-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-5-long-colored.webp" alt="Day 5 — Long (Colored)"
+            <a href="/images/inktober-2017-day-5-long-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-5-long-colored.webp" alt="Day 5 — Long (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-6-sword.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-6-sword.webp" alt="Day 6 — Sword"
+            <a href="/images/inktober-2017-day-6-sword.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-6-sword.webp" alt="Day 6 — Sword"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-7-shy.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-7-shy.webp" alt="Day 7 — Shy"
+            <a href="/images/inktober-2017-day-7-shy.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-7-shy.webp" alt="Day 7 — Shy"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-7-shy-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-7-shy-colored.webp" alt="Day 7 — Shy (Colored)"
+            <a href="/images/inktober-2017-day-7-shy-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-7-shy-colored.webp" alt="Day 7 — Shy (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-8-crooked.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-8-crooked.webp" alt="Day 8 — Crooked"
+            <a href="/images/inktober-2017-day-8-crooked.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-8-crooked.webp" alt="Day 8 — Crooked"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-9-screech.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-9-screech.webp" alt="Day 9 — Screech"
+            <a href="/images/inktober-2017-day-9-screech.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-9-screech.webp" alt="Day 9 — Screech"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-9-screech-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-9-screech-colored.webp" alt="Day 9 — Screech (Colored)"
+            <a href="/images/inktober-2017-day-9-screech-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-9-screech-colored.webp" alt="Day 9 — Screech (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-10-gigantic.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-10-gigantic.webp" alt="Day 10 — Gigantic"
+            <a href="/images/inktober-2017-day-10-gigantic.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-10-gigantic.webp" alt="Day 10 — Gigantic"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-10-gigantic-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-10-gigantic-colored.webp" alt="Day 10 — Gigantic (Colored)"
+            <a href="/images/inktober-2017-day-10-gigantic-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-10-gigantic-colored.webp" alt="Day 10 — Gigantic (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-11-run.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-11-run.webp" alt="Day 11 — Run"
+            <a href="/images/inktober-2017-day-11-run.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-11-run.webp" alt="Day 11 — Run"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-16-fat.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-16-fat.webp" alt="Day 16 — Fat"
+            <a href="/images/inktober-2017-day-16-fat.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-16-fat.webp" alt="Day 16 — Fat"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-18-filthy.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-18-filthy.webp" alt="Day 18 — Filthy"
+            <a href="/images/inktober-2017-day-18-filthy.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-18-filthy.webp" alt="Day 18 — Filthy"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-19-cloud.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-19-cloud.webp" alt="Day 19 — Cloud"
+            <a href="/images/inktober-2017-day-19-cloud.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-19-cloud.webp" alt="Day 19 — Cloud"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2017-day-24-blind.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2017-day-24-blind.webp" alt="Day 24 — Blind"
+            <a href="/images/inktober-2017-day-24-blind.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2017-day-24-blind.webp" alt="Day 24 — Blind"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1618,52 +1618,52 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Inktober 2018</h1>
         <div class="portfolio-grid">
-            <a href="images/inktober-2018-day-1-poisonous.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-1-poisonous.webp" alt="Day 1 — Poisonous"
+            <a href="/images/inktober-2018-day-1-poisonous.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-1-poisonous.webp" alt="Day 1 — Poisonous"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-1-poisonous-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-1-poisonous-colored.webp" alt="Day 1 — Poisonous (Colored)"
+            <a href="/images/inktober-2018-day-1-poisonous-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-1-poisonous-colored.webp" alt="Day 1 — Poisonous (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-2-tranquil.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-2-tranquil.webp" alt="Day 2 — Tranquil"
+            <a href="/images/inktober-2018-day-2-tranquil.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-2-tranquil.webp" alt="Day 2 — Tranquil"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-6-drooling.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-6-drooling.webp" alt="Day 6 — Drooling"
+            <a href="/images/inktober-2018-day-6-drooling.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-6-drooling.webp" alt="Day 6 — Drooling"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-14-clock.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-14-clock.webp" alt="Day 14 — Clock"
+            <a href="/images/inktober-2018-day-14-clock.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-14-clock.webp" alt="Day 14 — Clock"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-14-clock-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-14-clock-colored.webp" alt="Day 14 — Clock (Colored)"
+            <a href="/images/inktober-2018-day-14-clock-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-14-clock-colored.webp" alt="Day 14 — Clock (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-18-bottle.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-18-bottle.webp" alt="Day 18 — Bottle"
+            <a href="/images/inktober-2018-day-18-bottle.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-18-bottle.webp" alt="Day 18 — Bottle"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-19-scorched.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-19-scorched.webp" alt="Day 19 — Scorched"
+            <a href="/images/inktober-2018-day-19-scorched.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-19-scorched.webp" alt="Day 19 — Scorched"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-21-drain.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-21-drain.webp" alt="Day 21 — Drain"
+            <a href="/images/inktober-2018-day-21-drain.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-21-drain.webp" alt="Day 21 — Drain"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-21-drain-colored.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-21-drain-colored.webp" alt="Day 21 — Drain (Colored)"
+            <a href="/images/inktober-2018-day-21-drain-colored.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-21-drain-colored.webp" alt="Day 21 — Drain (Colored)"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-22-expensive.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-22-expensive.webp" alt="Day 22 — Expensive"
+            <a href="/images/inktober-2018-day-22-expensive.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-22-expensive.webp" alt="Day 22 — Expensive"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/inktober-2018-day-25-prickly.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/inktober-2018-day-25-prickly.webp" alt="Day 25 — Prickly"
+            <a href="/images/inktober-2018-day-25-prickly.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/inktober-2018-day-25-prickly.webp" alt="Day 25 — Prickly"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1674,60 +1674,60 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Reddit Gets Drawn</h1>
         <div class="portfolio-grid">
-            <a href="images/reddit-gets-drawn-rick-the-muse.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-rick-the-muse.webp" alt="Rick The Muse"
+            <a href="/images/reddit-gets-drawn-rick-the-muse.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-rick-the-muse.webp" alt="Rick The Muse"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-pimp-doggy.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-pimp-doggy.webp" alt="Pimp Doggy"
+            <a href="/images/reddit-gets-drawn-pimp-doggy.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-pimp-doggy.webp" alt="Pimp Doggy"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-boxer.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-boxer.webp" alt="Boxer"
+            <a href="/images/reddit-gets-drawn-boxer.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-boxer.webp" alt="Boxer"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-snowbromance.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-snowbromance.webp" alt="Snowbromance"
+            <a href="/images/reddit-gets-drawn-snowbromance.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-snowbromance.webp" alt="Snowbromance"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-seven-days.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-seven-days.webp" alt="Seven Days"
+            <a href="/images/reddit-gets-drawn-seven-days.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-seven-days.webp" alt="Seven Days"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-night-of-the-goat.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-night-of-the-goat.webp" alt="Night of the Goat"
+            <a href="/images/reddit-gets-drawn-night-of-the-goat.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-night-of-the-goat.webp" alt="Night of the Goat"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-epic-beard-man.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-epic-beard-man.webp" alt="Epic Beard Man"
+            <a href="/images/reddit-gets-drawn-epic-beard-man.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-epic-beard-man.webp" alt="Epic Beard Man"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-the-gentle-giant.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-the-gentle-giant.webp" alt="The Gentle Giant"
+            <a href="/images/reddit-gets-drawn-the-gentle-giant.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-the-gentle-giant.webp" alt="The Gentle Giant"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-overly-manly-man.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-overly-manly-man.webp" alt="Overly Manly Man"
+            <a href="/images/reddit-gets-drawn-overly-manly-man.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-overly-manly-man.webp" alt="Overly Manly Man"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-senpai.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-senpai.webp" alt="Senpai"
+            <a href="/images/reddit-gets-drawn-senpai.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-senpai.webp" alt="Senpai"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-crazy-girlfriend.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-crazy-girlfriend.webp" alt="Crazy Girlfriend"
+            <a href="/images/reddit-gets-drawn-crazy-girlfriend.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-crazy-girlfriend.webp" alt="Crazy Girlfriend"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-banana-boy.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-banana-boy.webp" alt="Banana Boy"
+            <a href="/images/reddit-gets-drawn-banana-boy.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-banana-boy.webp" alt="Banana Boy"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-santas-turf.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-santas-turf.webp" alt="Santa&#x27;s Turf"
+            <a href="/images/reddit-gets-drawn-santas-turf.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-santas-turf.webp" alt="Santa&#x27;s Turf"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/reddit-gets-drawn-beardoctopus.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/reddit-gets-drawn-beardoctopus.webp" alt="Beardoctopus"
+            <a href="/images/reddit-gets-drawn-beardoctopus.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/reddit-gets-drawn-beardoctopus.webp" alt="Beardoctopus"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1738,24 +1738,24 @@
         <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 3rem; text-transform: none;">
             Pixel Art</h1>
         <div class="portfolio-grid">
-            <a href="images/pixel-art-sprites-characters.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/pixel-art-sprites-characters.webp" alt="Sprites — Characters"
+            <a href="/images/pixel-art-sprites-characters.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/pixel-art-sprites-characters.webp" alt="Sprites — Characters"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/pixel-art-sprites-tiles-and-doodads.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/pixel-art-sprites-tiles-and-doodads.webp" alt="Sprites — Tiles and Doodads"
+            <a href="/images/pixel-art-sprites-tiles-and-doodads.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/pixel-art-sprites-tiles-and-doodads.webp" alt="Sprites — Tiles and Doodads"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/pixel-art-sword-concept-sprites.webp" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/pixel-art-sword-concept-sprites.webp" alt="Sword Concept Sprites"
+            <a href="/images/pixel-art-sword-concept-sprites.webp" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/pixel-art-sword-concept-sprites.webp" alt="Sword Concept Sprites"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/pixel-art-quick-sprite-test.gif" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/pixel-art-quick-sprite-test.gif" alt="Quick Sprite Test"
+            <a href="/images/pixel-art-quick-sprite-test.gif" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/pixel-art-quick-sprite-test.gif" alt="Quick Sprite Test"
                         class="portfolio-image" loading="lazy"></div>
             </a>
-            <a href="images/pixel-art-beta202.jpg" class="portfolio-card lightbox-trigger">
-                <div class="card-image-container"><img src="images/pixel-art-beta202.jpg" alt="Beta202"
+            <a href="/images/pixel-art-beta202.jpg" class="portfolio-card lightbox-trigger">
+                <div class="card-image-container"><img src="/images/pixel-art-beta202.jpg" alt="Beta202"
                         class="portfolio-image" loading="lazy"></div>
             </a>
         </div>
@@ -1771,9 +1771,9 @@
                     <h2 class="section-title" style="text-align: left; margin-left: 0;">Strip Search — Elimination Rounds</h2>
                 </div>
                 <div class="comic-feed">
-                    <a href="images/comics-round-1-space-and-table-tennis.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-round-1-space-and-table-tennis.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-round-1-space-and-table-tennis.webp" alt="Round #1 — Space &amp; Table Tennis" loading="lazy">
+                            <img src="/images/comics-round-1-space-and-table-tennis.webp" alt="Round #1 — Space &amp; Table Tennis" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#1</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1783,9 +1783,9 @@
                             <h3>Round #1 — Space &amp; Table Tennis</h3>
                         </div>
                     </a>
-                    <a href="images/comics-round-2-being-lost-and-the-future.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-round-2-being-lost-and-the-future.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-round-2-being-lost-and-the-future.webp" alt="Round #2 — Being Lost &amp; The Future" loading="lazy">
+                            <img src="/images/comics-round-2-being-lost-and-the-future.webp" alt="Round #2 — Being Lost &amp; The Future" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#2</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1795,9 +1795,9 @@
                             <h3>Round #2 — Being Lost &amp; The Future</h3>
                         </div>
                     </a>
-                    <a href="images/comics-round-3-the-areola-and-circus.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-round-3-the-areola-and-circus.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-round-3-the-areola-and-circus.webp" alt="Round #3 — The Areola &amp; Circus" loading="lazy">
+                            <img src="/images/comics-round-3-the-areola-and-circus.webp" alt="Round #3 — The Areola &amp; Circus" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#3</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1807,9 +1807,9 @@
                             <h3>Round #3 — The Areola &amp; Circus</h3>
                         </div>
                     </a>
-                    <a href="images/comics-round-5-mermaids-and-ukelele.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-round-5-mermaids-and-ukelele.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-round-5-mermaids-and-ukelele.webp" alt="Round #5 — Mermaids &amp; Ukelele" loading="lazy">
+                            <img src="/images/comics-round-5-mermaids-and-ukelele.webp" alt="Round #5 — Mermaids &amp; Ukelele" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#4</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1819,9 +1819,9 @@
                             <h3>Round #5 — Mermaids &amp; Ukelele</h3>
                         </div>
                     </a>
-                    <a href="images/comics-round-8.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-round-8.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-round-8.webp" alt="Round #8" loading="lazy">
+                            <img src="/images/comics-round-8.webp" alt="Round #8" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#5</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1831,9 +1831,9 @@
                             <h3>Round #8</h3>
                         </div>
                     </a>
-                    <a href="images/comics-round-9-candy-and-religion.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-round-9-candy-and-religion.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-round-9-candy-and-religion.webp" alt="Round #9 — Candy &amp; Religion" loading="lazy">
+                            <img src="/images/comics-round-9-candy-and-religion.webp" alt="Round #9 — Candy &amp; Religion" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#6</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1850,9 +1850,9 @@
                     <h2 class="section-title" style="text-align: left; margin-left: 0;">Stick Strips</h2>
                 </div>
                 <div class="comic-feed">
-                    <a href="images/comics-clone-machine.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-clone-machine.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-clone-machine.webp" alt="Clone Machine" loading="lazy">
+                            <img src="/images/comics-clone-machine.webp" alt="Clone Machine" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#1</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1863,9 +1863,9 @@
                             <span class="comic-date">2011</span>
                         </div>
                     </a>
-                    <a href="images/comics-still-bad-for-you.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-still-bad-for-you.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-still-bad-for-you.webp" alt="Still Bad for You" loading="lazy">
+                            <img src="/images/comics-still-bad-for-you.webp" alt="Still Bad for You" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#2</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1876,9 +1876,9 @@
                             <span class="comic-date">Mar 2011</span>
                         </div>
                     </a>
-                    <a href="images/comics-a-knife.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-a-knife.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-a-knife.webp" alt="A Knife!" loading="lazy">
+                            <img src="/images/comics-a-knife.webp" alt="A Knife!" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#3</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1889,9 +1889,9 @@
                             <span class="comic-date">Jun 2011</span>
                         </div>
                     </a>
-                    <a href="images/comics-so-much-to-live-for.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-so-much-to-live-for.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-so-much-to-live-for.webp" alt="So Much to Live For" loading="lazy">
+                            <img src="/images/comics-so-much-to-live-for.webp" alt="So Much to Live For" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#4</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1902,9 +1902,9 @@
                             <span class="comic-date">2011</span>
                         </div>
                     </a>
-                    <a href="images/comics-wheres-my-money.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-wheres-my-money.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-wheres-my-money.webp" alt="Where&#x27;s My Money?" loading="lazy">
+                            <img src="/images/comics-wheres-my-money.webp" alt="Where&#x27;s My Money?" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#5</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1922,9 +1922,9 @@
                     <h2 class="section-title" style="text-align: left; margin-left: 0;">2024 Comics</h2>
                 </div>
                 <div class="comic-feed">
-                    <a href="images/comics-the-mouse.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-the-mouse.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-the-mouse.webp" alt="The Mouse" loading="lazy">
+                            <img src="/images/comics-the-mouse.webp" alt="The Mouse" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#1</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -1935,9 +1935,9 @@
                             <span class="comic-date">Mar 2024</span>
                         </div>
                     </a>
-                    <a href="images/comics-fishing.webp" class="comic-card lightbox-trigger">
+                    <a href="/images/comics-fishing.webp" class="comic-card lightbox-trigger">
                         <div class="comic-preview">
-                            <img src="images/comics-fishing.webp" alt="Fishing" loading="lazy">
+                            <img src="/images/comics-fishing.webp" alt="Fishing" loading="lazy">
                             <div class="comic-overlay">
                                 <span class="strip-num">#2</span>
                                 <i class="fas fa-expand-alt"></i>
@@ -2118,7 +2118,7 @@
             <div class="about-container">
                 <div class="about-image-column">
                     <div class="about-avatar">
-                        <img src="images/logo.png" alt="Sora Entertainment logo">
+                        <img src="/images/logo.png" alt="Sora Entertainment logo">
                     </div>
                 </div>
 
@@ -2139,18 +2139,18 @@
 <div class="comic-leaf leaf-cover">
                             <div class="seg seg-a">
                                 <div class="mini-face mini-front">
-                                    <img class="slice w2 o0" src="images/resume1.webp"
+                                    <img class="slice w2 o0" src="/images/resume1.webp"
                                         alt="Comic resume front cover - The Adventures of Sora Ngin">
                                 </div>
                                 <div class="mini-face mini-back">
-                                    <img class="slice w4 o1" src="images/resume2.webp" alt="" aria-hidden="true">
+                                    <img class="slice w4 o1" src="/images/resume2.webp" alt="" aria-hidden="true">
                                 </div>
                                 <div class="seg seg-b">
                                     <div class="mini-face mini-front">
-                                        <img class="slice w2 o1" src="images/resume1.webp" alt="" aria-hidden="true">
+                                        <img class="slice w2 o1" src="/images/resume1.webp" alt="" aria-hidden="true">
                                     </div>
                                     <div class="mini-face mini-back">
-                                        <img class="slice w4 o0" src="images/resume2.webp" alt="" aria-hidden="true">
+                                        <img class="slice w4 o0" src="/images/resume2.webp" alt="" aria-hidden="true">
                                     </div>
                                 </div>
                             </div>
@@ -2158,18 +2158,18 @@
                         <div class="comic-leaf leaf-last">
                             <div class="seg seg-a">
                                 <div class="mini-face mini-front">
-                                    <img class="slice w4 o2" src="images/resume2.webp" alt="Comic resume inside pages - the legend and the skills list">
+                                    <img class="slice w4 o2" src="/images/resume2.webp" alt="Comic resume inside pages - the legend and the skills list">
                                 </div>
                                 <div class="mini-face mini-back">
-                                    <img class="slice w2 o1" src="images/resume3.webp"
+                                    <img class="slice w2 o1" src="/images/resume3.webp"
                                         alt="Comic resume back cover - Animator and Illustrator from California, contact details">
                                 </div>
                                 <div class="seg seg-b">
                                     <div class="mini-face mini-front">
-                                        <img class="slice w4 o3" src="images/resume2.webp" alt="" aria-hidden="true">
+                                        <img class="slice w4 o3" src="/images/resume2.webp" alt="" aria-hidden="true">
                                     </div>
                                     <div class="mini-face mini-back">
-                                        <img class="slice w2 o0" src="images/resume3.webp" alt="" aria-hidden="true">
+                                        <img class="slice w2 o0" src="/images/resume3.webp" alt="" aria-hidden="true">
                                     </div>
                                 </div>
                             </div>

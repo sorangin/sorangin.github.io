@@ -396,17 +396,17 @@ const navLinks = document.querySelectorAll('.main-nav a');
 const PAGE_PATHS = {
     "home": "/",
     "animations": "/animations",
-    "animations-stick": "/animations/stick",
-    "animations-costco": "/animations/costco",
-    "animations-2d": "/animations/2d",
-    "animations-misc": "/animations/misc",
-    "art-illustrations": "/art/illustrations",
-    "art-sketches": "/art/sketches",
-    "art-drawlloween-2022": "/art/drawlloween-2022",
-    "art-inktober-2017": "/art/inktober-2017",
-    "art-inktober-2018": "/art/inktober-2018",
-    "art-reddit-gets-drawn": "/art/reddit-gets-drawn",
-    "art-pixel-art": "/art/pixel-art",
+    "animations-stick": "/stick",
+    "animations-costco": "/costco",
+    "animations-2d": "/2d-animations",
+    "animations-misc": "/misc",
+    "art-illustrations": "/illustrations",
+    "art-sketches": "/sketches",
+    "art-drawlloween-2022": "/drawlloween-2022",
+    "art-inktober-2017": "/inktober-2017",
+    "art-inktober-2018": "/inktober-2018",
+    "art-reddit-gets-drawn": "/reddit-gets-drawn",
+    "art-pixel-art": "/pixel-art",
     "comics": "/comics",
     "games": "/games",
     "knights-gambit": "/games/knights-gambit",
@@ -422,6 +422,19 @@ const PAGE_PATHS = {
     "about": "/about"
 };
 function pagePath(pageName) { return PAGE_PATHS[pageName] || '/'; }
+const LEGACY_PAGE_PATHS = {
+    "/animations/stick": "animations-stick",
+    "/animations/costco": "animations-costco",
+    "/animations/2d": "animations-2d",
+    "/animations/misc": "animations-misc",
+    "/art/illustrations": "art-illustrations",
+    "/art/sketches": "art-sketches",
+    "/art/drawlloween-2022": "art-drawlloween-2022",
+    "/art/inktober-2017": "art-inktober-2017",
+    "/art/inktober-2018": "art-inktober-2018",
+    "/art/reddit-gets-drawn": "art-reddit-gets-drawn",
+    "/art/pixel-art": "art-pixel-art",
+};
 function pageFromPath(path) {
     if (!path) return null;
     let p = path.replace(/\/+$/, '');
@@ -429,7 +442,7 @@ function pageFromPath(path) {
     for (const page of Object.keys(PAGE_PATHS)) {
         if (PAGE_PATHS[page] === p) return page;
     }
-    return null;
+    return LEGACY_PAGE_PATHS[p] || null;
 }
 
 function loadPage(pageName, sectionId) {
