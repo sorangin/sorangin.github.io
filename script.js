@@ -419,11 +419,11 @@ const PAGE_PATHS = {
     "the-return": "/games/the-return",
     "ashes-of-veridian": "/games/ashes-of-veridian",
     "ninja-arena": "/games/ninja-arena",
-    "about": "/about",
-    "membership": "/membership"
+    "about": "/about"
 };
 function pagePath(pageName) { return PAGE_PATHS[pageName] || '/'; }
 const LEGACY_PAGE_PATHS = {
+    "/membership": "home",
     "/animations/stick": "animations-stick",
     "/animations/costco": "animations-costco",
     "/animations/2d": "animations-2d",
@@ -436,6 +436,10 @@ const LEGACY_PAGE_PATHS = {
     "/art/reddit-gets-drawn": "art-reddit-gets-drawn",
     "/art/pixel-art": "art-pixel-art",
 };
+// Membership has no separate page: it is the section at the bottom of Home.
+function goToMembership() {
+    loadPage('home', 'membership');
+}
 function pageFromPath(path) {
     if (!path) return null;
     let p = path.replace(/\/+$/, '');
@@ -466,7 +470,7 @@ function loadPage(pageName, sectionId) {
         appContainer.appendChild(clone);
         
         // Update Classes for Formatting
-        if (['home', 'animations', 'illustrations', 'comics', 'games', 'about', 'membership'].includes(pageName) || pageName.startsWith('art-') || pageName.startsWith('animations-')) {
+        if (['home', 'animations', 'illustrations', 'comics', 'games', 'about'].includes(pageName) || pageName.startsWith('art-') || pageName.startsWith('animations-')) {
             appContainer.className = 'content-area';
         } else {
             appContainer.className = 'content-area game-detail-page';
@@ -927,6 +931,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialHash = window.location.hash.substring(1);
     
     if (document.getElementById('app-container')) {
-        loadPage(pageToLoad, initialHash);
+        const bootPath = spaPath || window.location.pathname;
+        loadPage(pageToLoad, bootPath === '/membership' ? 'membership' : initialHash);
     }
 });
