@@ -419,7 +419,8 @@ const PAGE_PATHS = {
     "the-return": "/games/the-return",
     "ashes-of-veridian": "/games/ashes-of-veridian",
     "ninja-arena": "/games/ninja-arena",
-    "about": "/about"
+    "about": "/about",
+    "membership": "/membership"
 };
 function pagePath(pageName) { return PAGE_PATHS[pageName] || '/'; }
 const LEGACY_PAGE_PATHS = {
@@ -465,7 +466,7 @@ function loadPage(pageName, sectionId) {
         appContainer.appendChild(clone);
         
         // Update Classes for Formatting
-        if (['home', 'animations', 'illustrations', 'comics', 'games', 'about'].includes(pageName) || pageName.startsWith('art-') || pageName.startsWith('animations-')) {
+        if (['home', 'animations', 'illustrations', 'comics', 'games', 'about', 'membership'].includes(pageName) || pageName.startsWith('art-') || pageName.startsWith('animations-')) {
             appContainer.className = 'content-area';
         } else {
             appContainer.className = 'content-area game-detail-page';
@@ -650,7 +651,26 @@ function loadYouTubeFeed(container) {
         initModals(feedContainer);
     }
 
-    // Try fetching live data
+        // Backup path: if the feed proxy is down, read the channel RSS directly
+    // through a mirror before giving up and showing the fallback videos.
+    function renderBackupFeed() {
+        fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`)
+            .then(r => { if (!r.ok) throw new Error("Backup feed request failed"); return r.text(); })
+            .then(xmlText => {
+                const doc = new DOMParser().parseFromString(xmlText, "text/xml");
+                const videos = [...doc.querySelectorAll("entry")].slice(0, 3).map(entry => {
+                    const idEl = entry.getElementsByTagName("yt:videoId")[0];
+                    const titleEl = entry.querySelector("title");
+                    const vid = idEl ? idEl.textContent : "";
+                    return { title: titleEl ? titleEl.textContent : "", id: vid, thumbnail: `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` };
+                }).filter(v => v.id);
+                if (videos.length === 0) throw new Error("Backup feed empty");
+                renderVideos(videos);
+            })
+            .catch(() => renderVideos(fallbackVideos));
+    }
+
+// Try fetching live data
     fetch(rss2jsonUrl)
         .then(response => {
             if (!response.ok) throw new Error("Feed request failed");
@@ -681,10 +701,7 @@ function loadYouTubeFeed(container) {
                 renderVideos(fallbackVideos);
             }
         })
-        .catch(error => {
-            console.error("Failed to load live YouTube feed:", error);
-            renderVideos(fallbackVideos);
-        });
+        .catch(() => renderBackupFeed());
 }
 
 // Navigation State Management

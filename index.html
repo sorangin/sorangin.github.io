@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sora Ngin - Portfolio</title>
+    <meta name="description" content="Portfolio of Sora Ngin, animator and illustrator: stick-figure comedy animations, art galleries, and playable games.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sorangin.github.io/">
+    <meta property="og:title" content="Sora Ngin - Portfolio">
+    <meta property="og:description" content="Portfolio of Sora Ngin, animator and illustrator: stick-figure comedy animations, art galleries, and playable games.">
+    <meta property="og:image" content="https://sorangin.github.io/images/illustrations-jungle-temple-ruins-stage.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sora Ngin - Portfolio">
+    <meta name="twitter:description" content="Portfolio of Sora Ngin, animator and illustrator: stick-figure comedy animations, art galleries, and playable games.">
+    <meta name="twitter:image" content="https://sorangin.github.io/images/illustrations-jungle-temple-ruins-stage.webp">
 
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
@@ -126,6 +136,7 @@
                         </div>
                         <a href="/games" onclick="event.preventDefault(); loadPage('games');">Games</a>
                         <a href="/comics" onclick="event.preventDefault(); loadPage('comics');">Comics</a>
+                        <a href="/membership" onclick="event.preventDefault(); loadPage('membership');">Membership</a>
                         <a href="/about" onclick="event.preventDefault(); loadPage('about');">About</a>
                     </nav>
                 </div>
@@ -408,6 +419,12 @@
                 </a>
             </div>
         </section>
+        <section id="membership" class="portfolio-section membership-strip">
+            <h2 class="section-title">Join the Ranks</h2>
+            <p>Support the cartoons as a member and unlock the game downloads, member-only files, and a monthly illustration.</p>
+            <div class="tier-chips"><span class="tier-chip">Commoner &middot; $5/mo</span><span class="tier-chip">Footman &middot; $10/mo</span><span class="tier-chip">Archer &middot; $30/mo</span></div>
+            <a class="cta-button" href="/membership" onclick="event.preventDefault(); loadPage('membership');">See membership tiers</a>
+        </section>
         </template>
 
     <!-- ANIMATIONS HUB TEMPLATE -->
@@ -644,7 +661,13 @@
                 </a>
             </div>
         </section>
-    </template>
+        <section id="apps-tools" class="game-section">
+            <h2 class="section-title">Apps &amp; Tools</h2>
+            <p>I also build web apps and tools: a file organizer, a screenwriting app, a to-do list, voice and screen recorders, and more. They all run right in the browser.</p>
+            <a class="cta-button" href="https://sorangin.github.io/apps/" target="_blank" rel="noopener">Browse my apps</a>
+        </section>
+
+</template>
 
     <!-- GAME TEMPLATE: YOINK -->
     <template id="tpl-knights-gambit">
@@ -1144,167 +1167,208 @@
         <div class="portfolio-grid">
             <a href="/images/illustrations-jungle-temple-ruins-stage.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-jungle-temple-ruins-stage.webp" alt="Jungle Temple Ruins Stage"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Jungle Temple Ruins Stage</span></div></div>
             </a>
             <a href="/images/illustrations-kira-and-gaston-concepts.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-kira-and-gaston-concepts.webp" alt="Kira &amp; Gaston Concepts"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Kira &amp;amp; Gaston Concepts</span></div></div>
             </a>
             <a href="/images/illustrations-pokemon-boy.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-pokemon-boy.webp" alt="Pokemon Boy"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Pokemon Boy</span></div></div>
             </a>
             <a href="/images/illustrations-pokemon-girl.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-pokemon-girl.webp" alt="Pokemon Girl"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Pokemon Girl</span></div></div>
             </a>
             <a href="/images/illustrations-haunter-1.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-haunter-1.webp" alt="Haunter 1"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Haunter 1</span></div></div>
             </a>
             <a href="/images/illustrations-haunter-2.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-haunter-2.webp" alt="Haunter 2"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Haunter 2</span></div></div>
             </a>
             <a href="/images/illustrations-flying-dutchman.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-flying-dutchman.webp" alt="The Flying Dutchman"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The Flying Dutchman</span></div></div>
             </a>
             <a href="/images/illustrations-kubo-and-the-two-sisters.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-kubo-and-the-two-sisters.webp" alt="Kubo and the Two Sisters"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Kubo and the Two Sisters</span></div></div>
             </a>
             <a href="/images/illustrations-salvation.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-salvation.webp" alt="Salvation"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Salvation</span></div></div>
             </a>
             <a href="/images/illustrations-the-treehouse.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-the-treehouse.webp" alt="The Treehouse"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The Treehouse</span></div></div>
             </a>
             <a href="/images/illustrations-christmas-speedpainting.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-christmas-speedpainting.webp" alt="Christmas Speedpainting"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Christmas Speedpainting</span></div></div>
             </a>
             <a href="/images/illustrations-christmas-grinch.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-christmas-grinch.webp" alt="Christmas Grinch"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Christmas Grinch</span></div></div>
             </a>
             <a href="/images/illustrations-jungle-ruins-stage.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-jungle-ruins-stage.webp" alt="Jungle Ruins Stage"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Jungle Ruins Stage</span></div></div>
             </a>
             <a href="/images/illustrations-frostfire-finale.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-frostfire-finale.webp" alt="Frostfire Finale"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Frostfire Finale</span></div></div>
             </a>
             <a href="/images/illustrations-king-concept.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-king-concept.webp" alt="King Concept"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">King Concept</span></div></div>
             </a>
             <a href="/images/illustrations-king-character-concept.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-king-character-concept.webp" alt="King Character Concept"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">King Character Concept</span></div></div>
             </a>
             <a href="/images/illustrations-anatomy-of-a-cholo.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-anatomy-of-a-cholo.webp" alt="Anatomy of a Cholo"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Anatomy of a Cholo</span></div></div>
             </a>
             <a href="/images/illustrations-frostfire-sora-concept.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-frostfire-sora-concept.webp" alt="Frostfire Sora Concept"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Frostfire Sora Concept</span></div></div>
             </a>
             <a href="/images/illustrations-frostfire-raid-scene-concept.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-frostfire-raid-scene-concept.webp" alt="Frostfire Raid Scene — Concept"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Frostfire Raid Scene — Concept</span></div></div>
             </a>
             <a href="/images/illustrations-japan-mine-painting.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-japan-mine-painting.webp" alt="Japan Mine Painting"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Japan Mine Painting</span></div></div>
             </a>
             <a href="/images/illustrations-maggie-and-the-magic-trout.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-maggie-and-the-magic-trout.webp" alt="Maggie and the Magic Trout"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Maggie and the Magic Trout</span></div></div>
             </a>
             <a href="/images/illustrations-the-river-gives-book-cover.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-the-river-gives-book-cover.webp" alt="The River Gives — Book Cover"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The River Gives — Book Cover</span></div></div>
             </a>
             <a href="/images/illustrations-terror-town.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-terror-town.webp" alt="Terror Town"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Terror Town</span></div></div>
             </a>
             <a href="/images/illustrations-costco-speed-paintings.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-costco-speed-paintings.webp" alt="Costco Speed Paintings"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Costco Speed Paintings</span></div></div>
             </a>
             <a href="/images/illustrations-environment-concepts.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-environment-concepts.webp" alt="Environment Concepts"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Environment Concepts</span></div></div>
             </a>
             <a href="/images/illustrations-trees-of-evergreen-valley.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-trees-of-evergreen-valley.webp" alt="Trees of Evergreen Valley"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Trees of Evergreen Valley</span></div></div>
             </a>
             <a href="/images/illustrations-vibrant-fields.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-vibrant-fields.webp" alt="Vibrant Fields"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Vibrant Fields</span></div></div>
             </a>
             <a href="/images/illustrations-golden-gate-bridge.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-golden-gate-bridge.webp" alt="Golden Gate Bridge"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Golden Gate Bridge</span></div></div>
             </a>
             <a href="/images/illustrations-redditgetsdrawn-rick.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-redditgetsdrawn-rick.webp" alt="RedditGetsDrawn — Rick"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">RedditGetsDrawn — Rick</span></div></div>
             </a>
             <a href="/images/illustrations-johnny-cash-portrait.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-johnny-cash-portrait.webp" alt="Johnny Cash Portrait"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Johnny Cash Portrait</span></div></div>
             </a>
             <a href="/images/illustrations-dog-portrait.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-dog-portrait.webp" alt="Dog Portrait"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Dog Portrait</span></div></div>
             </a>
             <a href="/images/illustrations-road-story.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-road-story.webp" alt="Road Story"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Road Story</span></div></div>
             </a>
             <a href="/images/illustrations-phoenix.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-phoenix.webp" alt="Phoenix"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Phoenix</span></div></div>
             </a>
             <a href="/images/illustrations-frostfire-the-end.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-frostfire-the-end.webp" alt="Frostfire — The End"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Frostfire — The End</span></div></div>
             </a>
             <a href="/images/illustrations-shade.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-shade.webp" alt="Shade"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Shade</span></div></div>
             </a>
             <a href="/images/illustrations-steampunk-slender-man.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-steampunk-slender-man.webp" alt="Steampunk Slender Man"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Steampunk Slender Man</span></div></div>
             </a>
             <a href="/images/illustrations-the-waiter.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-the-waiter.webp" alt="The Waiter"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The Waiter</span></div></div>
             </a>
             <a href="/images/illustrations-gaston-concepts.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-gaston-concepts.webp" alt="Gaston Concepts"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Gaston Concepts</span></div></div>
             </a>
             <a href="/images/illustrations-the-boy-in-the-shadows.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-the-boy-in-the-shadows.webp" alt="The Boy in the Shadows"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The Boy in the Shadows</span></div></div>
             </a>
             <a href="/images/illustrations-the-last-hour.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-the-last-hour.webp" alt="The Last Hour"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The Last Hour</span></div></div>
             </a>
             <a href="/images/illustrations-rat-room.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/illustrations-rat-room.webp" alt="Rat Room"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Rat Room</span></div></div>
             </a>
         </div>
     </template>
@@ -1316,79 +1380,98 @@
         <div class="portfolio-grid">
             <a href="/images/sketches-clothing-study-100.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-clothing-study-100.webp" alt="Clothing Study 100"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Clothing Study 100</span></div></div>
             </a>
             <a href="/images/sketches-tree-sketches.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-tree-sketches.webp" alt="Tree Sketches"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Tree Sketches</span></div></div>
             </a>
             <a href="/images/sketches-skeleton-studies.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-skeleton-studies.webp" alt="Skeleton Studies"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Skeleton Studies</span></div></div>
             </a>
             <a href="/images/sketches-life-drawing.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-life-drawing.webp" alt="Life Drawing"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Life Drawing</span></div></div>
             </a>
             <a href="/images/sketches-old-man-portrait.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-old-man-portrait.webp" alt="Old Man Portrait"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Old Man Portrait</span></div></div>
             </a>
             <a href="/images/sketches-muscle-man-study.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-muscle-man-study.webp" alt="Muscle Man Study"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Muscle Man Study</span></div></div>
             </a>
             <a href="/images/sketches-pirate.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-pirate.webp" alt="Pirate"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Pirate</span></div></div>
             </a>
             <a href="/images/sketches-creature-design.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-creature-design.webp" alt="Creature Design"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Creature Design</span></div></div>
             </a>
             <a href="/images/sketches-nathan-fowkes-master-study.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-nathan-fowkes-master-study.webp" alt="Nathan Fowkes Master Study"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Nathan Fowkes Master Study</span></div></div>
             </a>
             <a href="/images/sketches-thinking-small.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-thinking-small.webp" alt="Thinking Small"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Thinking Small</span></div></div>
             </a>
             <a href="/images/sketches-random-inventions-and-designs.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-random-inventions-and-designs.webp" alt="Random Inventions and Designs"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Random Inventions and Designs</span></div></div>
             </a>
             <a href="/images/sketches-nightmare-creatures-sketches.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-nightmare-creatures-sketches.webp" alt="Nightmare Creatures Sketches"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Nightmare Creatures Sketches</span></div></div>
             </a>
             <a href="/images/sketches-gesture-drawings.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-gesture-drawings.webp" alt="Gesture Drawings"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Gesture Drawings</span></div></div>
             </a>
             <a href="/images/sketches-medieval-armor-studies.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-medieval-armor-studies.webp" alt="Medieval Armor Studies"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Medieval Armor Studies</span></div></div>
             </a>
             <a href="/images/sketches-simpsons-sketches.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-simpsons-sketches.webp" alt="Simpsons Sketches"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Simpsons Sketches</span></div></div>
             </a>
             <a href="/images/sketches-tim-burton-characters.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-tim-burton-characters.webp" alt="Tim Burton Characters"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Tim Burton Characters</span></div></div>
             </a>
             <a href="/images/sketches-pen-portrait.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-pen-portrait.webp" alt="Pen Portrait"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Pen Portrait</span></div></div>
             </a>
             <a href="/images/sketches-skeleton-warriors.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-skeleton-warriors.webp" alt="Skeleton Warriors"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Skeleton Warriors</span></div></div>
             </a>
             <a href="/images/sketches-skull-village.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/sketches-skull-village.webp" alt="Skull Village"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Skull Village</span></div></div>
             </a>
         </div>
     </template>
@@ -1400,127 +1483,158 @@
         <div class="portfolio-grid">
             <a href="/images/drawlloween-2022-day-1-ghost.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-1-ghost.webp" alt="Day 1 — Ghost"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 1 — Ghost</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-2-scarecrow.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-2-scarecrow.webp" alt="Day 2 — Scarecrow"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 2 — Scarecrow</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-3-owl.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-3-owl.webp" alt="Day 3 — Owl"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 3 — Owl</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-4-wednesday-addams.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-4-wednesday-addams.webp" alt="Day 4 — Wednesday Addams"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 4 — Wednesday Addams</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-5-frankenstein.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-5-frankenstein.webp" alt="Day 5 — Frankenstein"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 5 — Frankenstein</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-6-puppet.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-6-puppet.webp" alt="Day 6 — Puppet"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 6 — Puppet</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-7-alien.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-7-alien.webp" alt="Day 7 — Alien"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 7 — Alien</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-8-boogeyman.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-8-boogeyman.webp" alt="Day 8 — Boogeyman"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 8 — Boogeyman</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-9-skull.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-9-skull.webp" alt="Day 9 — Skull"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 9 — Skull</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-10-tree.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-10-tree.webp" alt="Day 10 — Tree"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 10 — Tree</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-11-clown.gif" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-11-clown.gif" alt="Day 11 — Clown"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 11 — Clown</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-12-witch.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-12-witch.webp" alt="Day 12 — Witch"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 12 — Witch</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-13-headless-horseman.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-13-headless-horseman.webp" alt="Day 13 — Headless Horseman"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 13 — Headless Horseman</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-14-demon.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-14-demon.webp" alt="Day 14 — Demon"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 14 — Demon</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-15-candle.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-15-candle.webp" alt="Day 15 — Candle"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 15 — Candle</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-16-grim-reaper.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-16-grim-reaper.webp" alt="Day 16 — Grim Reaper"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 16 — Grim Reaper</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-17-moth.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-17-moth.webp" alt="Day 17 — Moth"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 17 — Moth</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-18-teeth.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-18-teeth.webp" alt="Day 18 — Teeth"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 18 — Teeth</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-19-costume.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-19-costume.webp" alt="Day 19 — Costume"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 19 — Costume</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-20-tarot.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-20-tarot.webp" alt="Day 20 — Tarot"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 20 — Tarot</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-21-moon.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-21-moon.webp" alt="Day 21 — Moon"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 21 — Moon</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-22-mushrooms.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-22-mushrooms.webp" alt="Day 22 — Mushrooms"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 22 — Mushrooms</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-23-bat.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-23-bat.webp" alt="Day 23 — Bat"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 23 — Bat</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-24-goat.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-24-goat.webp" alt="Day 24 — Goat"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 24 — Goat</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-25-plague-doctor.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-25-plague-doctor.webp" alt="Day 25 — Plague Doctor"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 25 — Plague Doctor</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-26-werewolf.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-26-werewolf.webp" alt="Day 26 — Werewolf"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 26 — Werewolf</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-27-monster.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-27-monster.webp" alt="Day 27 — Monster"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 27 — Monster</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-28-bones.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-28-bones.webp" alt="Day 28 — Bones"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 28 — Bones</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-29-pumpkin.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-29-pumpkin.webp" alt="Day 29 — Pumpkin"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 29 — Pumpkin</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-30-robot.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-30-robot.webp" alt="Day 30 — Robot"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 30 — Robot</span></div></div>
             </a>
             <a href="/images/drawlloween-2022-day-31-black-cat.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/drawlloween-2022-day-31-black-cat.webp" alt="Day 31 — Black Cat"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 31 — Black Cat</span></div></div>
             </a>
         </div>
     </template>
@@ -1532,83 +1646,103 @@
         <div class="portfolio-grid">
             <a href="/images/inktober-2017-day-1.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-1.webp" alt="Day 1"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 1</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-2-divided.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-2-divided.webp" alt="Day 2 — Divided"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 2 — Divided</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-3-poison.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-3-poison.webp" alt="Day 3 — Poison"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 3 — Poison</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-3-poison-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-3-poison-colored.webp" alt="Day 3 — Poison (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 3 — Poison (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-4-underwater.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-4-underwater.webp" alt="Day 4 — Underwater"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 4 — Underwater</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-5-long.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-5-long.webp" alt="Day 5 — Long"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 5 — Long</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-5-long-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-5-long-colored.webp" alt="Day 5 — Long (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 5 — Long (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-6-sword.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-6-sword.webp" alt="Day 6 — Sword"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 6 — Sword</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-7-shy.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-7-shy.webp" alt="Day 7 — Shy"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 7 — Shy</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-7-shy-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-7-shy-colored.webp" alt="Day 7 — Shy (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 7 — Shy (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-8-crooked.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-8-crooked.webp" alt="Day 8 — Crooked"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 8 — Crooked</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-9-screech.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-9-screech.webp" alt="Day 9 — Screech"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 9 — Screech</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-9-screech-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-9-screech-colored.webp" alt="Day 9 — Screech (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 9 — Screech (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-10-gigantic.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-10-gigantic.webp" alt="Day 10 — Gigantic"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 10 — Gigantic</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-10-gigantic-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-10-gigantic-colored.webp" alt="Day 10 — Gigantic (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 10 — Gigantic (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-11-run.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-11-run.webp" alt="Day 11 — Run"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 11 — Run</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-16-fat.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-16-fat.webp" alt="Day 16 — Fat"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 16 — Fat</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-18-filthy.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-18-filthy.webp" alt="Day 18 — Filthy"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 18 — Filthy</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-19-cloud.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-19-cloud.webp" alt="Day 19 — Cloud"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 19 — Cloud</span></div></div>
             </a>
             <a href="/images/inktober-2017-day-24-blind.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2017-day-24-blind.webp" alt="Day 24 — Blind"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 24 — Blind</span></div></div>
             </a>
         </div>
     </template>
@@ -1620,51 +1754,63 @@
         <div class="portfolio-grid">
             <a href="/images/inktober-2018-day-1-poisonous.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-1-poisonous.webp" alt="Day 1 — Poisonous"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 1 — Poisonous</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-1-poisonous-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-1-poisonous-colored.webp" alt="Day 1 — Poisonous (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 1 — Poisonous (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-2-tranquil.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-2-tranquil.webp" alt="Day 2 — Tranquil"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 2 — Tranquil</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-6-drooling.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-6-drooling.webp" alt="Day 6 — Drooling"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 6 — Drooling</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-14-clock.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-14-clock.webp" alt="Day 14 — Clock"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 14 — Clock</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-14-clock-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-14-clock-colored.webp" alt="Day 14 — Clock (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 14 — Clock (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-18-bottle.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-18-bottle.webp" alt="Day 18 — Bottle"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 18 — Bottle</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-19-scorched.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-19-scorched.webp" alt="Day 19 — Scorched"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 19 — Scorched</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-21-drain.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-21-drain.webp" alt="Day 21 — Drain"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 21 — Drain</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-21-drain-colored.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-21-drain-colored.webp" alt="Day 21 — Drain (Colored)"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 21 — Drain (Colored)</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-22-expensive.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-22-expensive.webp" alt="Day 22 — Expensive"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 22 — Expensive</span></div></div>
             </a>
             <a href="/images/inktober-2018-day-25-prickly.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/inktober-2018-day-25-prickly.webp" alt="Day 25 — Prickly"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Day 25 — Prickly</span></div></div>
             </a>
         </div>
     </template>
@@ -1676,59 +1822,73 @@
         <div class="portfolio-grid">
             <a href="/images/reddit-gets-drawn-rick-the-muse.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-rick-the-muse.webp" alt="Rick The Muse"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Rick The Muse</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-pimp-doggy.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-pimp-doggy.webp" alt="Pimp Doggy"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Pimp Doggy</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-boxer.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-boxer.webp" alt="Boxer"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Boxer</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-snowbromance.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-snowbromance.webp" alt="Snowbromance"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Snowbromance</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-seven-days.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-seven-days.webp" alt="Seven Days"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Seven Days</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-night-of-the-goat.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-night-of-the-goat.webp" alt="Night of the Goat"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Night of the Goat</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-epic-beard-man.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-epic-beard-man.webp" alt="Epic Beard Man"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Epic Beard Man</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-the-gentle-giant.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-the-gentle-giant.webp" alt="The Gentle Giant"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">The Gentle Giant</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-overly-manly-man.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-overly-manly-man.webp" alt="Overly Manly Man"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Overly Manly Man</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-senpai.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-senpai.webp" alt="Senpai"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Senpai</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-crazy-girlfriend.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-crazy-girlfriend.webp" alt="Crazy Girlfriend"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Crazy Girlfriend</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-banana-boy.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-banana-boy.webp" alt="Banana Boy"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Banana Boy</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-santas-turf.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-santas-turf.webp" alt="Santa&#x27;s Turf"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Santa&amp;#x27;s Turf</span></div></div>
             </a>
             <a href="/images/reddit-gets-drawn-beardoctopus.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/reddit-gets-drawn-beardoctopus.webp" alt="Beardoctopus"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Beardoctopus</span></div></div>
             </a>
         </div>
     </template>
@@ -1740,23 +1900,28 @@
         <div class="portfolio-grid">
             <a href="/images/pixel-art-sprites-characters.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/pixel-art-sprites-characters.webp" alt="Sprites — Characters"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Sprites — Characters</span></div></div>
             </a>
             <a href="/images/pixel-art-sprites-tiles-and-doodads.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/pixel-art-sprites-tiles-and-doodads.webp" alt="Sprites — Tiles and Doodads"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Sprites — Tiles and Doodads</span></div></div>
             </a>
             <a href="/images/pixel-art-sword-concept-sprites.webp" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/pixel-art-sword-concept-sprites.webp" alt="Sword Concept Sprites"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Sword Concept Sprites</span></div></div>
             </a>
             <a href="/images/pixel-art-quick-sprite-test.gif" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/pixel-art-quick-sprite-test.gif" alt="Quick Sprite Test"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Quick Sprite Test</span></div></div>
             </a>
             <a href="/images/pixel-art-beta202.jpg" class="portfolio-card lightbox-trigger">
                 <div class="card-image-container"><img src="/images/pixel-art-beta202.jpg" alt="Beta202"
-                        class="portfolio-image" loading="lazy"></div>
+                        class="portfolio-image" loading="lazy">
+                        <div class="image-overlay art-overlay"><span class="art-overlay-title">Beta202</span></div></div>
             </a>
         </div>
     </template>
@@ -2129,7 +2294,12 @@
                                     </div>
             </div>
         
-            <div class="comic-resume">
+            <div class="work-with-me">
+            <h2>Work With Me</h2>
+            <p>I'm available for freelance and contract work: 2D animation, illustration, and comic book coloring. If you have a project in mind, email me and tell me about it.</p>
+            <a class="cta-button" href="mailto:sorangin@gmail.com">sorangin@gmail.com</a>
+        </div>
+        <div class="comic-resume">
                 <h2 class="comic-resume-title">Resume</h2>
                 <div class="comic-stage">
                     <div class="comic-book" data-state="0" role="button" tabindex="0"
@@ -2180,6 +2350,48 @@
             </div>
         </section>
     </template>
+<template id="tpl-membership">
+    <section class="portfolio-section">
+        <h1 class="hero-name" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem; text-transform: none;">Membership</h1>
+        <p style="text-align: center; max-width: 720px; margin: 0 auto;">Join the ranks on Fourthwall and support the cartoons directly. Members unlock the game downloads on this site, get member-only posts and files, and collect one high-res illustration download every month.</p>
+        <div class="membership-tiers">
+            <div class="tier-card">
+                <h3>Commoner</h3>
+                <p class="tier-price">$5 <span>/ month</span></p>
+                <ul>
+                    <li>Digital member badge</li>
+                    <li>Member-only posts and files</li>
+                </ul>
+                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
+            </div>
+            <div class="tier-card">
+                <h3>Footman</h3>
+                <p class="tier-price">$10 <span>/ month</span></p>
+                <ul>
+                    <li>Everything in Commoner</li>
+                    <li>Production files, sprites, and wallpapers</li>
+                    <li>Upgraded digital badge</li>
+                </ul>
+                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
+            </div>
+            <div class="tier-card">
+                <h3>Archer</h3>
+                <p class="tier-price">$30 <span>/ month</span></p>
+                <ul>
+                    <li>Everything in Footman</li>
+                    <li>Mailed art print with the real badge card inside the package</li>
+                    <li>Your own stick-figure portrait</li>
+                    <li>A brief cameo in an animation</li>
+                    <li>Preview game builds and beta testing (Rank 3+ downloads)</li>
+                    <li>Game source files (.gmx)</li>
+                </ul>
+                <a class="cta-button" href="https://sora-ngin-shop.fourthwall.com" target="_blank" rel="noopener">Join on Fourthwall</a>
+            </div>
+        </div>
+        <p style="text-align: center;">Memberships are handled through Fourthwall. Members receive the download password for their rank.</p>
+    </section>
+</template>
+
 
     <script src="script.js"></script>
 </body>
