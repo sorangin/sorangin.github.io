@@ -2625,3 +2625,7 @@ body {
     font-size: 0.92rem;
     min-height: 1.2em;
 }
+
+/* Game detail screenshots open the lightbox gallery */
+.game-detail-page .screenshot-grid a.lightbox-trigger { display: block; }
+.game-detail-page .screenshot-grid a.lightbox-trigger img { display: block; }
