@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sora Ngin</title>
+<script>
+    // Clean-URL handoff: remember the requested path, then load the app root.
+    // script.js reads 'spa_path' on boot, opens that page, and restores the clean URL.
+    sessionStorage.setItem('spa_path', window.location.pathname);
+    window.location.replace('/' + window.location.hash);
+</script>
+</head>
+<body></body>
+</html>
