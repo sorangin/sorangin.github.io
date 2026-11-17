@@ -2556,9 +2556,6 @@ body {
 .showcase-thumb.is-playing .now-playing-badge {
     display: flex;
 }
-.showcase-thumb.is-playing .thumb-title {
-    visibility: hidden;
-}
 .thumb-title {
     display: block;
     margin-top: 0.5rem;
@@ -2629,3 +2626,6 @@ body {
 /* Game detail screenshots open the lightbox gallery */
 .game-detail-page .screenshot-grid a.lightbox-trigger { display: block; }
 .game-detail-page .screenshot-grid a.lightbox-trigger img { display: block; }
+
+/* Showcase card titles: reserve exactly two lines so every card aligns the same, one-line titles included */
+.thumb-title { line-height: 1.4; min-height: 2.8em; }
