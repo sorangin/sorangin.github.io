@@ -2649,3 +2649,6 @@ body {
 .portfolio-card:hover .image-overlay.art-overlay, .portfolio-card:focus-visible .image-overlay.art-overlay { opacity: 1; }
 .art-overlay-title { color: #fff; font-weight: 600; font-size: 0.95rem; padding: 0.7rem 0.85rem; text-align: left; }
 @media (hover: none) { .image-overlay.art-overlay { opacity: 1; } }
+
+/* Merch section (2026-11-17) */
+.merch-strip { text-align: center; }
