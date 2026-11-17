@@ -2632,3 +2632,20 @@ body {
 
 /* Fix list item 1 (Sora, 2026-11-16): the playing showcase cards title turns gold */
 .showcase-thumb.is-playing .thumb-title { color: #FFD700; }
+
+/* Membership page, home strip, Work With Me (2026-11-17) */
+.membership-tiers { display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center; margin: 2rem auto; max-width: 1100px; }
+.tier-card { flex: 1 1 260px; max-width: 340px; background: #141419; border: 1px solid #2a2a33; border-radius: 16px; padding: 1.5rem; text-align: left; }
+.tier-card h3 { margin: 0 0 .25rem; font-size: 1.35rem; }
+.tier-price { font-size: 1.6rem; font-weight: 700; color: #FFD700; margin: .25rem 0 1rem; }
+.tier-price span { font-size: .9rem; font-weight: 500; color: #b9b9c4; }
+.tier-card ul { margin: 0 0 1.25rem; padding-left: 1.15rem; line-height: 1.55; }
+.membership-strip { text-align: center; }
+.membership-strip .tier-chips { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0 1.4rem; }
+.tier-chip { border: 1px solid #2a2a33; background: #141419; border-radius: 999px; padding: .4rem .95rem; font-weight: 600; }
+.work-with-me { max-width: 880px; margin: 3rem auto 0; text-align: center; }
+/* Art gallery hover titles (2026-11-17) */
+.image-overlay.art-overlay { background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 55%); align-items: flex-end; justify-content: flex-start; opacity: 0; transition: opacity 0.25s ease; pointer-events: none; }
+.portfolio-card:hover .image-overlay.art-overlay, .portfolio-card:focus-visible .image-overlay.art-overlay { opacity: 1; }
+.art-overlay-title { color: #fff; font-weight: 600; font-size: 0.95rem; padding: 0.7rem 0.85rem; text-align: left; }
+@media (hover: none) { .image-overlay.art-overlay { opacity: 1; } }
