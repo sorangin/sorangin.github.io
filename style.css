@@ -2629,3 +2629,6 @@ body {
 
 /* Showcase card titles: reserve exactly two lines so every card aligns the same, one-line titles included */
 .thumb-title { line-height: 1.4; min-height: 2.8em; }
+
+/* Fix list item 1 (Sora, 2026-11-16): the playing showcase cards title turns gold */
+.showcase-thumb.is-playing .thumb-title { color: #FFD700; }
