@@ -2605,6 +2605,15 @@ body {
     display: block;
 }
 
+.game-detail-page .screenshot-grid video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    background-color: var(--card-background);
+}
+
 #hub-lightbox-video {
     display: block;
     width: 100%;
