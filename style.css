@@ -949,6 +949,7 @@ body {
 
 .animations-section-grid .section-title {
     font-size: clamp(1.35rem, 3vw, 1.8rem);
+    margin-bottom: calc(var(--base-spacing) * 0.25);
     line-height: 1.2;
     min-height: calc(2.4em + (var(--base-spacing) * 0.5));
     display: flex;
