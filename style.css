@@ -2601,6 +2601,7 @@ body {
 #hub-lightbox-video {
     display: block;
     width: 100%;
+    min-width: 0;
     max-height: 82vh;
     border-radius: 12px;
     background: #000;

@@ -874,15 +874,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const hubLightbox = document.getElementById('hub-lightbox');
     const hubLightboxVideo = document.getElementById('hub-lightbox-video');
     if (hubLightbox && hubLightboxVideo) {
+        let hubIndex = 0;
+        const hubThumbs = () => Array.from(document.querySelectorAll('.hub-gallery video'));
+        const showHubVideo = (idx) => {
+            const thumbs = hubThumbs();
+            if (!thumbs.length) return;
+            hubIndex = ((idx % thumbs.length) + thumbs.length) % thumbs.length;
+            hubLightboxVideo.src = thumbs[hubIndex].getAttribute('src');
+            hubLightboxVideo.play();
+        };
         document.addEventListener('click', (e) => {
             const thumb = e.target.closest('.hub-gallery video');
             if (thumb) {
+                hubIndex = hubThumbs().indexOf(thumb);
                 hubLightboxVideo.src = thumb.getAttribute('src');
                 hubLightbox.classList.add('show');
                 document.body.style.overflow = 'hidden';
                 hubLightboxVideo.play();
             }
         });
+        const hubPrev = document.getElementById('hub-lightbox-prev');
+        const hubNext = document.getElementById('hub-lightbox-next');
+        if (hubPrev) hubPrev.addEventListener('click', () => showHubVideo(hubIndex - 1));
+        if (hubNext) hubNext.addEventListener('click', () => showHubVideo(hubIndex + 1));
         const stopHubVideo = () => {
             hubLightboxVideo.pause();
             hubLightboxVideo.removeAttribute('src');
@@ -892,7 +906,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === hubLightbox || e.target.closest('.modal-close')) stopHubVideo();
         });
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && hubLightbox.classList.contains('show')) stopHubVideo();
+            if (!hubLightbox.classList.contains('show')) return;
+            if (e.key === 'Escape') stopHubVideo();
+            if (e.key === 'ArrowLeft') showHubVideo(hubIndex - 1);
+            if (e.key === 'ArrowRight') showHubVideo(hubIndex + 1);
         });
     }
 

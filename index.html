@@ -189,7 +189,11 @@
     <div id="hub-lightbox" class="modal-overlay">
         <div class="modal-container hub-lightbox-container">
             <button class="modal-close" aria-label="Close video">&times;</button>
-            <video id="hub-lightbox-video" loop playsinline controls></video>
+            <div class="lightbox-main">
+                <button class="lightbox-nav-btn prev-btn" id="hub-lightbox-prev" aria-label="Previous video"><i class="fas fa-chevron-left"></i></button>
+                <video id="hub-lightbox-video" loop playsinline controls></video>
+                <button class="lightbox-nav-btn next-btn" id="hub-lightbox-next" aria-label="Next video"><i class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
     </div>
 
