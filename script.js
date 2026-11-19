@@ -876,12 +876,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hubLightbox && hubLightboxVideo) {
         let hubIndex = 0;
         const hubThumbs = () => Array.from(document.querySelectorAll('.hub-gallery video'));
+        const hubThumbsBar = document.getElementById('hub-lightbox-thumbs');
+        const syncHubThumbs = () => {
+            if (!hubThumbsBar) return;
+            hubThumbsBar.querySelectorAll('.thumb-item').forEach((el, i) => {
+                el.classList.toggle('active', i === hubIndex);
+            });
+        };
+        const renderHubThumbs = () => {
+            if (!hubThumbsBar) return;
+            hubThumbsBar.innerHTML = '';
+            hubThumbs().forEach((v, i) => {
+                const item = document.createElement('div');
+                item.className = `thumb-item ${i === hubIndex ? 'active' : ''}`;
+                const tv = document.createElement('video');
+                tv.src = v.getAttribute('src') + '#t=0.1';
+                tv.muted = true;
+                tv.playsInline = true;
+                tv.preload = 'metadata';
+                item.appendChild(tv);
+                item.addEventListener('click', () => showHubVideo(i));
+                hubThumbsBar.appendChild(item);
+            });
+        };
         const showHubVideo = (idx) => {
             const thumbs = hubThumbs();
             if (!thumbs.length) return;
             hubIndex = ((idx % thumbs.length) + thumbs.length) % thumbs.length;
             hubLightboxVideo.src = thumbs[hubIndex].getAttribute('src');
             hubLightboxVideo.play();
+            syncHubThumbs();
         };
         document.addEventListener('click', (e) => {
             const thumb = e.target.closest('.hub-gallery video');
@@ -891,6 +915,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hubLightbox.classList.add('show');
                 document.body.style.overflow = 'hidden';
                 hubLightboxVideo.play();
+                renderHubThumbs();
             }
         });
         const hubPrev = document.getElementById('hub-lightbox-prev');
