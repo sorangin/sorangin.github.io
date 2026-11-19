@@ -934,12 +934,17 @@ body {
 .animations-section-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 1.25rem;
     align-items: start;
 }
 
 .animations-section-grid .section-title::after {
     display: none;
+}
+
+.animations-section-grid .portfolio-section {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .animations-section-grid .section-title {
@@ -954,7 +959,7 @@ body {
 @media (max-width: 992px) {
     .animations-section-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
 }
 
