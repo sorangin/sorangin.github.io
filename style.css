@@ -663,7 +663,7 @@ body {
 
 .game-detail-page .screenshot-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: calc(var(--base-spacing) * 1.25);
 }
 .game-detail-page .screenshot-grid img {
@@ -2607,11 +2607,23 @@ body {
 
 .game-detail-page .screenshot-grid video {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     display: block;
     border-radius: var(--border-radius);
     border: 2px solid var(--border-color);
     background-color: var(--card-background);
+    cursor: pointer;
+}
+
+.lightbox-image-wrapper video {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    transition: opacity 0.2s ease;
+    background: #000;
 }
 
 #hub-lightbox-video {

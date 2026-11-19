@@ -227,6 +227,7 @@
                         class="fas fa-chevron-left"></i></button>
                 <div class="lightbox-image-wrapper">
                     <img id="lightbox-img" src="" alt="Full view">
+                    <video id="lightbox-video" loop playsinline controls style="display: none;"></video>
                 </div>
                 <button class="lightbox-nav-btn next-btn" aria-label="Next"><i
                         class="fas fa-chevron-right"></i></button>
@@ -958,7 +959,7 @@
             <section class="game-screenshots">
                 <h2>Screenshots & Concepts</h2>
                 <div class="screenshot-grid">
-                    <video src="/videos/stick-together.mp4" autoplay muted loop playsinline aria-label="Yoink the King - Gameplay Animation"></video>
+                    <a href="/videos/stick-together.mp4" class="lightbox-trigger"><video src="/videos/stick-together.mp4" autoplay muted loop playsinline aria-label="Yoink the King - Gameplay Animation"></video></a>
                     <a href="/images/yoinktheking1.jpg" class="lightbox-trigger"><img src="/images/yoinktheking1.jpg" alt="Yoink the King - Screenshot"></a>
                 </div>
             </section>

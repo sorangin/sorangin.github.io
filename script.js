@@ -305,10 +305,14 @@ function initModals(context) {
             
             // Get all items in the current page gallery
             const galleryElements = Array.from(context.querySelectorAll('.lightbox-trigger'));
-            currentGalleryItems = galleryElements.map(t => ({
-                src: t.getAttribute('href') || t.querySelector('img')?.src,
-                alt: t.querySelector('img')?.alt || 'Artwork'
-            }));
+            currentGalleryItems = galleryElements.map(t => {
+                const src = t.getAttribute('href') || t.querySelector('img')?.src || t.querySelector('video')?.getAttribute('src');
+                return {
+                    src: src,
+                    alt: t.querySelector('img')?.alt || t.querySelector('video')?.getAttribute('aria-label') || 'Artwork',
+                    type: /\.(mp4|webm)([?#]|$)/i.test(src || '') ? 'video' : 'image'
+                };
+            });
             
             currentGalleryIndex = index;
             updateLightbox();
@@ -327,15 +331,34 @@ let currentGalleryIndex = 0;
 
 function updateLightbox() {
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
     const item = currentGalleryItems[currentGalleryIndex];
     
     if (item && lightboxImg) {
-        lightboxImg.style.opacity = '0';
-        setTimeout(() => {
-            lightboxImg.src = item.src;
-            lightboxImg.alt = item.alt;
-            lightboxImg.style.opacity = '1';
-        }, 150);
+        if (item.type === 'video' && lightboxVideo) {
+            lightboxImg.style.display = 'none';
+            lightboxVideo.style.display = 'block';
+            lightboxVideo.style.opacity = '0';
+            setTimeout(() => {
+                lightboxVideo.src = item.src;
+                lightboxVideo.style.opacity = '1';
+                lightboxVideo.play();
+            }, 150);
+        } else {
+            if (lightboxVideo) {
+                lightboxVideo.pause();
+                lightboxVideo.removeAttribute('src');
+                lightboxVideo.load();
+                lightboxVideo.style.display = 'none';
+            }
+            lightboxImg.style.display = 'block';
+            lightboxImg.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImg.src = item.src;
+                lightboxImg.alt = item.alt;
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
         
         renderThumbnails();
 
@@ -356,7 +379,9 @@ function renderThumbnails() {
     currentGalleryItems.forEach((item, index) => {
         const thumb = document.createElement('div');
         thumb.className = `thumb-item ${index === currentGalleryIndex ? 'active' : ''}`;
-        thumb.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+        thumb.innerHTML = item.type === 'video'
+            ? `<video src="${item.src}#t=0.1" muted playsinline preload="metadata"></video>`
+            : `<img src="${item.src}" alt="${item.alt}">`;
         thumb.onclick = (e) => {
             e.stopPropagation();
             currentGalleryIndex = index;
@@ -953,6 +978,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
+        // Pause any gallery video playing in the image lightbox
+        const galleryVideo = document.getElementById('lightbox-video');
+        if (galleryVideo) {
+            galleryVideo.pause();
+            galleryVideo.removeAttribute('src');
+            galleryVideo.load();
+            galleryVideo.style.display = 'none';
+        }
+        
         document.body.style.overflow = 'auto'; // Re-enable background scrolling
     };
 
@@ -969,7 +1003,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === overlay) { closeModal(); return; }
             if (overlay.id === 'image-lightbox') {
                 const img = document.getElementById('lightbox-img');
-                if (e.target !== img && !e.target.closest('.lightbox-nav-btn, .thumb-item, .modal-close')) {
+                const vid = document.getElementById('lightbox-video');
+                if (e.target !== img && e.target !== vid && !e.target.closest('.lightbox-nav-btn, .thumb-item, .modal-close')) {
                     closeModal();
                 }
             } else if (overlay.id === 'video-modal') {
