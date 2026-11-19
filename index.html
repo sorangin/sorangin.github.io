@@ -185,6 +185,14 @@
         </div>
     </div>
 
+    <!-- Hub Gallery Lightbox -->
+    <div id="hub-lightbox" class="modal-overlay">
+        <div class="modal-container hub-lightbox-container">
+            <button class="modal-close" aria-label="Close video">&times;</button>
+            <video id="hub-lightbox-video" loop playsinline controls></video>
+        </div>
+    </div>
+
 
     <!-- Members Download Gate -->
     <div id="gate-modal" class="modal-overlay">
@@ -500,7 +508,7 @@
                 class="portfolio-section category-card">
                 <h2 class="section-title">Misc</h2>
                 <div class="card-image-container hub-media">
-                    <img src="https://i.ytimg.com/vi/zAr3p59q3BM/maxresdefault.jpg" alt="Misc Animations" class="portfolio-image">
+                    <video src="/videos/stick-together.mp4" class="portfolio-image" autoplay muted loop playsinline aria-label="Misc Animations"></video>
                 </div>
             </a>
         </div>
@@ -509,7 +517,6 @@
             <video src="/videos/nara-line-drawing.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Nara line drawing animation loop"></video>
             <video src="/videos/rope-door-loop.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Rope Door animation loop"></video>
             <video src="/videos/stick-fight-loop.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Stick Fight animation loop"></video>
-            <video src="/videos/stick-together.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Stick Together animation loop"></video>
             <video src="/videos/sun-barrel-loop.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Sun Barrel animation loop"></video>
             <video src="/videos/ufo-sword-loop.mp4" autoplay muted loop playsinline preload="metadata" aria-label="UFO Sword animation loop"></video>
             <video src="/videos/gone-camping.mp4" class="hub-gallery-contain" autoplay muted loop playsinline preload="metadata" aria-label="Gone Camping animation loop"></video>
@@ -577,7 +584,7 @@
                 <a href="/games/yoink-the-king" onclick="event.preventDefault(); loadPage('yoink-the-king');"
                     class="game-card">
                     <div class="card-image-container">
-                        <img src="/images/yoinktheking_anim.gif" alt="Yoink the King" class="game-image">
+                        <video src="/videos/stick-together.mp4" class="game-image" autoplay muted loop playsinline aria-label="Yoink the King"></video>
                         <div class="image-overlay"><i class="fas fa-info-circle play-icon"></i></div>
                     </div>
                     <div class="card-content">

@@ -945,7 +945,7 @@ body {
 .animations-section-grid .section-title {
     font-size: clamp(1.35rem, 3vw, 1.8rem);
     line-height: 1.2;
-    min-height: 2.4em;
+    min-height: calc(2.4em + (var(--base-spacing) * 0.5));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2586,6 +2586,19 @@ body {
     aspect-ratio: 16 / 10;
     object-fit: cover;
     border-radius: 16px;
+}
+.hub-gallery video {
+    cursor: pointer;
+}
+.hub-lightbox-container {
+    max-width: 900px;
+}
+#hub-lightbox-video {
+    display: block;
+    width: 100%;
+    max-height: 82vh;
+    border-radius: 12px;
+    background: #000;
 }
 .hub-gallery video.hub-gallery-contain {
     object-fit: contain;

@@ -870,6 +870,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Hub Gallery Lightbox ---
+    const hubLightbox = document.getElementById('hub-lightbox');
+    const hubLightboxVideo = document.getElementById('hub-lightbox-video');
+    if (hubLightbox && hubLightboxVideo) {
+        document.addEventListener('click', (e) => {
+            const thumb = e.target.closest('.hub-gallery video');
+            if (thumb) {
+                hubLightboxVideo.src = thumb.getAttribute('src');
+                hubLightbox.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                hubLightboxVideo.play();
+            }
+        });
+        const stopHubVideo = () => {
+            hubLightboxVideo.pause();
+            hubLightboxVideo.removeAttribute('src');
+            hubLightboxVideo.load();
+        };
+        hubLightbox.addEventListener('click', (e) => {
+            if (e.target === hubLightbox || e.target.closest('.modal-close')) stopHubVideo();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && hubLightbox.classList.contains('show')) stopHubVideo();
+        });
+    }
+
     // --- Modal Closing Logic (Global) ---
     const closeModal = () => {
         document.querySelectorAll('.modal-overlay.show').forEach(modal => {
