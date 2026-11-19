@@ -953,7 +953,7 @@ body {
     line-height: 1.2;
     min-height: calc(2.4em + (var(--base-spacing) * 0.5));
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 

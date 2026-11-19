@@ -832,9 +832,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, true);
 
-    // Gallery Navigation
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    // Gallery Navigation (scoped to the image lightbox: the hub lightbox
+    // earlier in the document reuses the same button classes)
+    const prevBtn = document.querySelector('#image-lightbox .prev-btn');
+    const nextBtn = document.querySelector('#image-lightbox .next-btn');
     if (prevBtn) prevBtn.onclick = (e) => { e.stopPropagation(); navigateGallery(-1); };
     if (nextBtn) nextBtn.onclick = (e) => { e.stopPropagation(); navigateGallery(1); };
 
