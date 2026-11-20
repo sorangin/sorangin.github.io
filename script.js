@@ -903,6 +903,40 @@ document.addEventListener('DOMContentLoaded', () => {
         let hubIndex = 0;
         const hubThumbs = () => Array.from(document.querySelectorAll('.hub-gallery video'));
         const hubThumbsBar = document.getElementById('hub-lightbox-thumbs');
+        // Only play hub videos that are on screen, and pause them all while
+        // the lightbox is open, so the lightbox video gets the decoder alone.
+        const hubPageVideos = () => document.querySelectorAll('.hub-gallery video, .hub-media video');
+        const hubVideoVisible = (v) => {
+            const r = v.getBoundingClientRect();
+            return r.bottom > 0 && r.right > 0 && r.top < window.innerHeight && r.left < window.innerWidth;
+        };
+        const playHubVideo = (v) => { const p = v.play(); if (p) p.catch(() => {}); };
+        if ('IntersectionObserver' in window) {
+            const hubVideoObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (hubLightbox.classList.contains('show')) return;
+                    if (entry.isIntersecting) playHubVideo(entry.target);
+                    else entry.target.pause();
+                });
+            }, { threshold: 0.15 });
+            const watchHubVideo = (v) => {
+                if (v.dataset.hubWatched) return;
+                v.dataset.hubWatched = '1';
+                v.removeAttribute('autoplay');
+                v.pause();
+                hubVideoObserver.observe(v);
+            };
+            const scanHubVideos = () => hubPageVideos().forEach(watchHubVideo);
+            scanHubVideos();
+            new MutationObserver(scanHubVideos).observe(document.body, { childList: true, subtree: true });
+        }
+        new MutationObserver(() => {
+            const open = hubLightbox.classList.contains('show');
+            hubPageVideos().forEach((v) => {
+                if (open) v.pause();
+                else if (hubVideoVisible(v)) playHubVideo(v);
+            });
+        }).observe(hubLightbox, { attributes: true, attributeFilter: ['class'] });
         const syncHubThumbs = () => {
             if (!hubThumbsBar) return;
             hubThumbsBar.querySelectorAll('.thumb-item').forEach((el, i) => {
