@@ -1277,21 +1277,8 @@ body {
     gap: 2rem;
 }
 
-.header-social-links {
-    display: flex;
-    gap: 1rem;
-}
 
-.header-social-links a {
-    color: var(--text-muted);
-    font-size: 1.4rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
 
-.header-social-links a:hover {
-    color: var(--accent-color);
-    transform: translateY(-2px);
-}
 
 .section-title-link {
     text-decoration: none;
@@ -1638,11 +1625,6 @@ body {
         width: 100%;
     }
 
-    .header-social-links {
-        margin-bottom: 12px;
-        justify-content: flex-start;
-        width: 100%;
-    }
 
     .dropdown-menu {
         position: static;
@@ -2296,34 +2278,17 @@ body {
     object-fit: contain;
 }
 
-.header-social-links .kofi-icon {
-    width: 1.05em;
-    height: auto;
-    display: block;
-}
 
 /* Social row: center all six icons on one line; brand SVGs carry their own sizes */
-.header-social-links {
-    align-items: center;
-}
-.header-social-links a {
-    display: inline-flex;
-    align-items: center;
-}
-.header-social-links .fw-icon {
-    width: 1.35em;
-    height: auto;
-    display: block;
-}
+
+
 
 /* Home fixes: no underlines under the header social icons (the anchors
    never opted out of the default link underline); the Illustrations row
    gets one uniform 3:2 box with whole artwork fitted inside, so the
    portrait piece shrinks to the same margins as the landscape ones;
    home Comics grid is 2x2 on desktop */
-.header-social-links a {
-    text-decoration: none;
-}
+
 #illustrations .card-image-container.natural {
     aspect-ratio: 3 / 2;
 }
@@ -2378,12 +2343,11 @@ body {
     }
 }
 /* Header social icons in their brand colors, readable at a glance */
-.header-social-links a[href*="youtube.com"] { color: #FF0000; }
-.header-social-links a[href*="facebook.com"] { color: #1877F2; }
-.header-social-links a[href*="tiktok.com"] { color: #FFFFFF; }
-.header-social-links a[href*="instagram.com"] { color: #E1306C; }
-.header-social-links a[href*="fourthwall.com"] { color: #FFFFFF; }
-.header-social-links a[href*="ko-fi.com"] { color: #00B9FE; }
+.footer-social-links a[href*="youtube.com"] { color: #FF0000; }
+.footer-social-links a[href*="facebook.com"] { color: #1877F2; }
+.footer-social-links a[href*="tiktok.com"] { color: #FFFFFF; }
+.footer-social-links a[href*="instagram.com"] { color: #E1306C; }
+.footer-social-links a[href*="ko-fi.com"] { color: #00B9FE; }
 
 /* Same no-box system for home Comics and Games: no outer box or shadow,
    one shared height, every image at its natural proportional width.
@@ -2627,32 +2591,15 @@ body {
     background: #000;
 }
 
-.main-nav a.nav-icon-btn {
-    border: 2px solid var(--border-color);
-    border-radius: 999px;
-    padding: 0.3rem 0.9rem 0.3rem 0.35rem;
-    gap: 0.5rem;
-}
 
-.main-nav a.nav-icon-btn::after {
-    display: none;
-}
 
-.main-nav a.nav-icon-btn:hover {
-    border-color: var(--accent-color);
-}
 
-.main-nav a.nav-icon-btn img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-}
 
-.main-nav a.nav-icon-btn img.badge-icon {
-    object-position: left center;
-}
+
+
+
+
+
 
 #hub-lightbox-video {
     display: block;

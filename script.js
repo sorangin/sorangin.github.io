@@ -792,7 +792,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close mobile menu when a link is clicked
-    const mobileNavLinks = document.querySelectorAll('.main-nav a, .dropdown-menu a, .header-social-links a');
+    const mobileNavLinks = document.querySelectorAll('.main-nav a, .dropdown-menu a, .footer-social-links a');
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
             document.body.classList.remove('mobile-nav-open');
