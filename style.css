@@ -2709,3 +2709,7 @@ body {
 /* Hotlinked shop images (2026-11-17) */
 .merch-image { display: block; width: min(420px, 100%); border-radius: 16px; margin: 1rem auto 1.4rem; }
 .tier-badge { display: block; width: 100%; border-radius: 10px; margin-bottom: 1rem; }
+
+/* Low-key footer text links (2026-11-22) */
+.footer-extra-links a { color: var(--text-muted); font-size: 0.9rem; text-decoration: none; transition: color 0.3s ease; }
+.footer-extra-links a:hover { color: var(--accent-color); }
